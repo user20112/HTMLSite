@@ -1,0 +1,326 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    dir="ltr"
+    xml:lang="en"
+    lang="en">
+  
+<!-- Mirrored from nehe.gamedev.net/article/contest_minidemo_2003/4804966745112576/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jan 2019 02:34:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>NeHe Productions: Contest: Mini-Demo 2003</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../static/css/public_base.css" />
+    <link type="text/css" rel="stylesheet" href="../../../static/css/syntax_highlighter/shThemeMidnight.css"/>
+    
+    <link rel="alternate" type="application/atom+xml" title="Atom feed" href="../../../atom/index.html" />
+    <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../rss/index.html" />
+    
+    <meta name="author" content="Luke Benstead + Carsten Haubold" />
+    <meta name="description" content="OpenGL Tutorials, Demos, Games and More..." />
+    <meta name="keywords" content="opengl, tutorial, article, demo, game, blend, texturemap, lighting, contest, 3D" />
+
+    
+    
+
+    
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '../../../../button.flattr.com/loadera0da.js?mode=auto&amp;uid=cars10';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+
+</script>
+
+
+    
+    
+    
+        <script type='text/javascript'>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') + 
+        '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+        })();
+        </script>
+
+        <script type='text/javascript'>
+        googletag.cmd.push(function() {
+        googletag.defineSlot('/1004699/Leaderboard_NeHe', [728, 90], 'div-gpt-ad-1327940144417-0').addService(googletag.pubads());
+        googletag.defineSlot('/1004699/Skyscraper_NeHe', [160, 600], 'div-gpt-ad-1327940144417-1').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        });
+        </script>
+    
+    
+  </head>
+
+  <body>
+    
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "../../../../connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+    <table cellpadding="0" cellspacing="0" border="0" id="layout_table">
+    <tr><td>
+        <div id="header">
+                <a href="../../../index.html"><img class="logo" class="logo" src="../../../static/images/nehe.png" border="0" alt="Nehe" /></a>
+        </div>            
+    </td></tr>
+    <tr><td colspan="2">
+            
+<div class="navbar">
+    <a href="../../../index.html">HOME</a>
+    <a href="http://twitter.com/#!/nehegl">TWITTER</a>  
+    <a href="http://www.facebook.com/pages/NeHe/300582493323181">FACEBOOK</a>     
+    <a href="../../../rss/index.html">RSS</a>    
+    <a href="../../../atom/index.html">ATOM</a>    
+    <a href="http://www.gamedev.net/forum/27-nehe-productions/page__forum_title__NeHe+Productions">FORUM</a>    
+</div>
+    
+    </td></tr>
+    <tr>
+        <td class="col1">
+
+            
+<div id="article_container">
+
+
+<h1 class="article-header">Contest: Mini-Demo 2003</h1>
+<div class="social-media">
+<!-- Place this tag where you want the +1 button to render -->
+<div class="g-plusone" data-size="medium" data-width="120" data-annotation="inline"></div>
+<div class="fb-like" data-send="false" data-layout="button_count" data-width="60" data-show-faces="false" data-colorscheme="dark" data-font="arial"></div>
+</div>
+<div style="clear:both;"></div>
+<center><span style="font-size: medium;"><strong><span style="text-decoration: underline;"><span>Welcome To The Sixth NeHe Productions OpenGL Challenge!</span></span></strong></span></center>
+<p><strong>Theme:</strong> Anything You Want!!! <br /><br /> <strong>Rules:</strong></p>
+<ul>
+<li>All demos <span style="text-decoration: underline;">must</span> use OpenGL.</li>
+<li>Full source code <span style="text-decoration: underline;">must</span> be included with each entry.</li>
+<li>Code <span style="text-decoration: underline;">must</span> compile as is. Code that will not compile will not win.</li>
+<li>All files must be compressed with <strong>ZIP</strong> or <strong>RAR</strong>. Do not send Ace, Tar, Etc.</li>
+<li>The source should be in it's <span style="text-decoration: underline;">own</span> zip file and must include all files required to compile and run.</li>
+<li>The exe should be in it's <span style="text-decoration: underline;">own</span> zip file and must include all files required to run.</li>
+<li>Freeware libraries are allowed, but remember to <span style="text-decoration: underline;">include</span> any files required to compile the source.</li>
+<li>The maximum size of your compiled demo and all required libraries and data files can be no more than 500k.</li>
+<li>The demo <span style="text-decoration: underline;">must</span> run without any user interaction from start to finish.</li>
+<li>The demo should run for at least one minute without repeating. After a minute you can loop if you want.</li>
+<li>Try to include as many effects as possible while staying under 500k.</li>
+<li>Code should have some type of commenting (even if it's minimal).</li>
+<li>If you use extensions, you better have something to fall back on if the card doesn't support it!</li>
+<li>There is no target hardware, your demo should run bearably at the very least on a 450MHz system w/ TNT2.</li>
+<li>This contest is open to everyone!</li>
+</ul>
+<p><strong>Summary:</strong> <br /><br /> Create an amazing, mindblowing, thrilling, exciting, super cool mini demo. It must be under 500k in size including graphics, sound and any libraries. It should run for at least 60 seconds without repeating. A tune of some sort will get you bonus points. The demo should run without keyboard interaction (aside from a key to quit and one to toggle fullscreen). There is no theme... be creative!!! Source code must be included with your demo, and it MUST compile without issues. The demos will be posted Friday, January 31st. A winner will be selected based on visitor feedback and a small judging panel. The prize is a BRAND NEW... STILL IN THE PACKAGE copy of <strong>MindCandy</strong>!!! One of the coolest and most hard to get ahold of DVD's out there! 230 minutes of Demos on a double sided DVD (oldschool and new), Interviews with big names in the scene, Video from Assembly, Audio commentary on all demos, A 12 page full color booklet, Animated chapter menus and Hidden demos / easter eggs. Thanks to |Laz| for the contest idea! <br /><br /></p>
+<center><strong>* * * CONTEST IS NOW OVER. ENTRIES CAN BE FOUND BELOW. * * *</strong></center>
+<table border="1" align="left">
+<tbody>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/quin_pendragon.jpg" alt="" /></td>
+<td><strong>Superstars by Quin Pendragon (Winning Demo)</strong><br /> Cool demo with a catchy tune and little dancing people. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/quin_pendragon.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/quin_pendragon.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/andreas_hammar.jpg" alt="" /></td>
+<td><strong>The Thing 2003 by Andreas Hammar</strong><br /> Love this demo... definitely one of my favorites. Soothing music and crisp graphics. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/andreas_hammar.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/andreas_hammar.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/armand_niehaus.jpg" alt="" /></td>
+<td><strong>The Hollow by Armand Niehaus</strong><br /> The spinning flower in a tunnel is a must see! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/armand_niehaus.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/armand_niehaus.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/axl.jpg" alt="" /></td>
+<td><strong>Naskel3D by Axl</strong><br /> This demo contains nudity and should not be viewed by minors. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/axl.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/axl.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/brian_washburn.jpg" alt="" /></td>
+<td><strong>Fudo Style by Brian Washburn</strong><br /> Cool effects, speedy music, and nice synchronization. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/brian_washburn.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/brian_washburn.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/david_ducker.jpg" alt="" /></td>
+<td><strong>Interminable Tunnel by David Ducker</strong><br /> An awesome hallway scene. Game quality graphics! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/david_ducker.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/david_ducker.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/evgeny_karataev.jpg" alt="" /></td>
+<td><strong>Boom by Evgeny Karataev</strong><br /> A pretty cool looking butterfly. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/evgeny_karataev.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/evgeny_karataev.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/georgi_khomeriki.jpg" alt="" /></td>
+<td><strong>Model Demo by Georgi Khomeriki</strong><br /> Excellent model animation along with a cool tune. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/georgi_khomeriki.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/georgi_khomeriki.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/gyasi_grey.jpg" alt="" /></td>
+<td><strong>Model Demo by Gyasi Grey</strong><br /> A very simple and very cool dancing techno ball. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/gyasi_grey.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/gyasi_grey.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/henrik_carlgren.jpg" alt="" /></td>
+<td><strong>a64ki by Henrik Carlgren</strong><br /> Very tiny demo packed with some excellent effects. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/henrik_carlgren.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/henrik_carlgren.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/jacob_persson.jpg" alt="" /></td>
+<td><strong>Kap by Jacob Persson</strong><br /> Linux Demo... Anyone care to port it to Windows? <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/jacob_persson.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/jacob_persson.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/julien_amsellem.jpg" alt="" /></td>
+<td><strong>Mini-Demo by Julien Amsellem</strong><br /> A high-speed race through space. Complete with a mouse controlled ship! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/julien_amsellem.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/julien_amsellem.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/libor_capak.jpg" alt="" /></td>
+<td><strong>Popcorn by Libor Capak</strong><br /> Really nice synchonization to the music. Cool multilayered background. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/libor_capak.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/libor_capak.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/mirko_teran.jpg" alt="" /></td>
+<td><strong>Ravers Nature by Mirko Teran</strong><br /> What can I say... another top notch Mirko production. The mountains are absolutely AMAZING!!! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/mirko_teran.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/mirko_teran.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/pete_corey.jpg" alt="" /></td>
+<td><strong>PmanC by Pete Corey</strong><br /> Very nice rolling sinewave effect. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/pete_corey.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/pete_corey.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/peter_wallstrom.jpg" alt="" /></td>
+<td><strong>CF by Peter "Overlord" Wallstrom</strong><br /> Reminds me of an old school demo... chiptune and all! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/peter_wallstrom.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/peter_wallstrom.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/phil_freeman.jpg" alt="" /></td>
+<td><strong>Demolition by Phil Freeman (Exsanity)</strong><br /> Some very cool lighting effects along with a cool torus... http://www.exsanity.freeola.com <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/phil_freeman.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/phil_freeman.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/ralph_tittensor.jpg" alt="" /></td>
+<td><strong>Mindstorm by Ralph Tittensor</strong><br /> Extremely cool particle text. Awesome 3d rooms! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/ralph_tittensor.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/ralph_tittensor.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/rishi_ramraj.jpg" alt="" /></td>
+<td><strong>Pescao Loco by Rishi Ramraj</strong><br /> Very nice 3D fishtank. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/rishi_ramraj.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/rishi_ramraj.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/rus_bogdan.jpg" alt="" /></td>
+<td><strong>Demosity by Rus Bogdan</strong><br /> Some cool CG effects going to the beat of the music (windowed). <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/rus_bogdan.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/rus_bogdan.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/sebastian_brandt.jpg" alt="" /></td>
+<td><strong>60.0f Seconds by Sebastian Brandt</strong><br /> 60 seconds of hardcore effects. Cool tune as well! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/sebastian_brandt.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/sebastian_brandt.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/stanciu_ciprian.jpg" alt="" /></td>
+<td><strong>Star Flare by Stanciu Ciprian</strong><br /> Model of the solar system with information about each planet (borderless window) <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/stanciu_ciprian.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/stanciu_ciprian.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/steven_ashley.jpg" alt="" /></td>
+<td><strong>OpenGL Demo 2003 by Steven Ashley</strong><br /> A very cool demo that can stream it's soundtrack from the net. Nice effects! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/steven_ashley.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/steven_ashley.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/tuomas_volotinen.jpg" alt="" /></td>
+<td><strong>PornoIntro by Tuomas Volotinen (MoonHazard)</strong><br /> Really trippy and colorful effects with some nice chiptune music (no porn) <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/tuomas_volotinen.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/tuomas_volotinen.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_minidemo/yuval_sarna.jpg" alt="" /></td>
+<td><strong>Life vs. Routine by Yuval Sarna</strong><br /> Some nice particle effects, great music and a tree. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/yuval_sarna.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/yuval_sarna.zip">Source</a></td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+
+
+
+            <div style="width:728px;padding:0px;margin:auto; margin-top: 10px;">
+            
+                <!-- Leaderboard_NeHe -->
+                <div id='div-gpt-ad-1327940144417-0' style='width:728px; height:90px;'>
+                <script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1327940144417-0'); });
+                </script>
+                </div>
+                                       
+            </div>   
+        </td>
+        <td class="col2">
+            
+
+
+<h3 style="text-align: center">Support this Author</h3>
+<p style="text-align: center">
+<a class="FlattrButton" style="display:none;"
+    title="Contest: Mini-Demo 2003"
+    rel="flattr;uid:cars10;category:text;tags:opengl,article,nehe,gamedev;"
+    href="index.html">
+</a>
+</p>
+
+
+            
+        </td>
+    </table>
+    <div id="footer">
+        <p>
+            
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">
+        <img alt="Creative Commons Licence" style="border-width:0" src="../../../../licensebuttons.net/l/by-nc/3.0/88x31.png" />
+    </a>
+    <br/><br/>
+    This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">work</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.
+    <br/><br/>
+    
+    © 1997-2014 Carsten Haubold. All rights reserved.<br/>
+
+			NeHe™ and NeHe Productions™ are trademarks of GameDev.net, LLC<br/>
+			OpenGL® is a registered trademark of Silicon Graphics Inc.<br/>
+		</p>        
+		<br/>
+    </div>
+
+    
+    
+	    <script type="text/javascript" src="../../../static/js/syntax_highlighter/shCore.js"></script>
+        <script type="text/javascript" src="../../../static/js/syntax_highlighter/shBrushCpp.js"></script>
+	    <script type="text/javascript" src="../../../static/js/syntax_highlighter/shBrushJScript.js"></script>
+	    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    
+
+    <!-- Place this render call where appropriate -->
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = '../../../../apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+
+    
+<!-- GoogleAnalytics code -->
+<script src="../../../../www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-279474-2"; // Gamedev
+urchinTracker();
+</script> 
+  </body>
+
+<!-- Mirrored from nehe.gamedev.net/article/contest_minidemo_2003/4804966745112576/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jan 2019 02:34:39 GMT -->
+</html>

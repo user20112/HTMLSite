@@ -1,0 +1,677 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    dir="ltr"
+    xml:lang="en"
+    lang="en">
+  
+<!-- Mirrored from nehe.gamedev.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jan 2019 02:33:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>NeHe Productions - Everything OpenGL</title>
+
+    <link rel="stylesheet" type="text/css" href="static/css/public_base.css" />
+    <link type="text/css" rel="stylesheet" href="static/css/syntax_highlighter/shThemeMidnight.css"/>
+    
+    <link rel="alternate" type="application/atom+xml" title="Atom feed" href="atom/index.html" />
+    <link rel="alternate" type="application/rss+xml" title="RSS feed" href="rss/index.html" />
+    
+    <meta name="author" content="Luke Benstead + Carsten Haubold" />
+    <meta name="description" content="OpenGL Tutorials, Demos, Games and More..." />
+    <meta name="keywords" content="opengl, tutorial, article, demo, game, blend, texturemap, lighting, contest, 3D" />
+
+    
+    
+
+    
+    
+
+    
+<meta name="google-site-verification" content="zLpjthumtTXE3PiQDaKSFdLdkznFgVXj0PJyS-HjKag" />
+
+    
+    
+        <script type='text/javascript'>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') + 
+        '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+        })();
+        </script>
+
+        <script type='text/javascript'>
+        googletag.cmd.push(function() {
+        googletag.defineSlot('/1004699/Leaderboard_NeHe', [728, 90], 'div-gpt-ad-1327940144417-0').addService(googletag.pubads());
+        googletag.defineSlot('/1004699/Skyscraper_NeHe', [160, 600], 'div-gpt-ad-1327940144417-1').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        });
+        </script>
+    
+    
+  </head>
+
+  <body>
+    
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "../connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <table cellpadding="0" cellspacing="0" border="0" id="layout_table">
+    <tr><td>
+        <div id="header">
+                <a href="index.html"><img class="logo" class="logo" src="static/images/nehe.png" border="0" alt="Nehe" /></a>
+        </div>            
+    </td></tr>
+    <tr><td colspan="2">
+            
+<div class="navbar">
+    <a href="index.html">HOME</a>
+    <a href="http://twitter.com/#!/nehegl">TWITTER</a>  
+    <a href="http://www.facebook.com/pages/NeHe/300582493323181">FACEBOOK</a>     
+    <a href="rss/index.html">RSS</a>    
+    <a href="atom/index.html">ATOM</a>    
+    <a href="http://www.gamedev.net/forum/27-nehe-productions/page__forum_title__NeHe+Productions">FORUM</a>    
+</div>
+    
+    </td></tr>
+    <tr>
+        <td class="col1">
+
+            
+
+<div id="news_container">
+    <div class="news_header">
+        <img src="static/images/nehe_news.jpg" border="0" />
+    </div>
+    
+    
+        <div class="news_box">
+            <div class="title">
+                <a href="news/how_i_made_mario_kart_7_engine_in_opengl_over_the_weekend/5660980839186432/index.html">HOW I MADE MARIO KART 7 ENGINE IN OPENGL OVER THE WEEKEND</a>
+         
+            </div>
+    		<!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style">
+                <a class="addthis_button_facebook" addthis:url="http://nehe.gamedev.net/news/how_i_made_mario_kart_7_engine_in_opengl_over_the_weekend/5660980839186432/" addthis:title="How I Made Mario Kart 7 Engine in OpenGL Over The Weekend"></a>
+                <a class="addthis_button_twitter" addthis:url="http://nehe.gamedev.net/news/how_i_made_mario_kart_7_engine_in_opengl_over_the_weekend/5660980839186432/" addthis:title="How I Made Mario Kart 7 Engine in OpenGL Over The Weekend"></a>
+<!--                            
++1 IS MEGA SLOW!
+<a class="addthis_button_google_plusone" addthis:url="http://nehe.gamedev.net/news/how_i_made_mario_kart_7_engine_in_opengl_over_the_weekend/5660980839186432/" addthis:title="How I Made Mario Kart 7 Engine in OpenGL Over The Weekend"></a>  -->
+            </div>
+            <!-- AddThis Button END -->   
+            <div class="author">
+                by gregsidelnikov, posted at May 7, 2017, 6:02 p.m.
+            </div>
+            <div class="body">
+                <p>Actually, this post is not about <em>how</em> I made MK7 in OpenGL, but what the results were. I am currently porting it to WebGL as well. The level design geometry is so simple, that it might work in 4K. But we'll see.</p>
+<p>Go to this link to arrive at <a title="WenGL Tutorials, GLSL, Shaders, Demos, 2D games, Polygons, Triangles" href="http://www.webgltutorials.org/">WebGL tutorial</a> site, which is now home for the Mario Kart engine demo.</p>
+<p>The entire level was designed in Blender this weekend.</p>
+<p>Follow camera was the most fun to program, I added a little sway factor when the left or right keys are pressed.</p>
+            </div>
+            <div>
+            	<p>
+            	    <div class="continue">
+            		<strong><a href="news/how_i_made_mario_kart_7_engine_in_opengl_over_the_weekend/5660980839186432/index.html">CONTINUE READING</a></strong>
+            		</div>
+            		<div class="comment_count">
+                		<a href="news/how_i_made_mario_kart_7_engine_in_opengl_over_the_weekend/5660980839186432/index.html">
+                        <span class="livefyre-commentcount" data-lf-site-id="287475" data-lf-article-id="5660980839186432">0 Comments</span>
+                        </a>
+            		</div>
+            		<div class="clear"></div>
+            	</p>
+            </div>
+        </div>        
+    
+        <div class="news_box">
+            <div class="title">
+                <a href="news/webgl_shaders_tutorial_in_11_minutes/5724160613416960/index.html">WEBGL SHADERS TUTORIAL IN 11 MINUTES</a>
+         
+            </div>
+    		<!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style">
+                <a class="addthis_button_facebook" addthis:url="http://nehe.gamedev.net/news/webgl_shaders_tutorial_in_11_minutes/5724160613416960/" addthis:title="WebGL Shaders Tutorial In 11 Minutes"></a>
+                <a class="addthis_button_twitter" addthis:url="http://nehe.gamedev.net/news/webgl_shaders_tutorial_in_11_minutes/5724160613416960/" addthis:title="WebGL Shaders Tutorial In 11 Minutes"></a>
+<!--                            
++1 IS MEGA SLOW!
+<a class="addthis_button_google_plusone" addthis:url="http://nehe.gamedev.net/news/webgl_shaders_tutorial_in_11_minutes/5724160613416960/" addthis:title="WebGL Shaders Tutorial In 11 Minutes"></a>  -->
+            </div>
+            <!-- AddThis Button END -->   
+            <div class="author">
+                by gregsidelnikov, posted at April 19, 2017, 2:39 p.m.
+            </div>
+            <div class="body">
+                <p>Created and published this new <a title="webgl shader tutorial" href="https://www.youtube.com/watch?v=ijhwT6T8Zyg">WebGL shaders tutorial</a> on YouTube.</p>
+            </div>
+            <div>
+            	<p>
+            	    <div class="continue">
+            		<strong><a href="news/webgl_shaders_tutorial_in_11_minutes/5724160613416960/index.html">CONTINUE READING</a></strong>
+            		</div>
+            		<div class="comment_count">
+                		<a href="news/webgl_shaders_tutorial_in_11_minutes/5724160613416960/index.html">
+                        <span class="livefyre-commentcount" data-lf-site-id="287475" data-lf-article-id="5724160613416960">0 Comments</span>
+                        </a>
+            		</div>
+            		<div class="clear"></div>
+            	</p>
+            </div>
+        </div>        
+    
+        <div class="news_box">
+            <div class="title">
+                <a href="news/webgl_tutorials_site_is_up/5762637883244544/index.html">WEBGL TUTORIALS SITE IS UP</a>
+         
+            </div>
+    		<!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style">
+                <a class="addthis_button_facebook" addthis:url="http://nehe.gamedev.net/news/webgl_tutorials_site_is_up/5762637883244544/" addthis:title="WebGL Tutorials Site is Up"></a>
+                <a class="addthis_button_twitter" addthis:url="http://nehe.gamedev.net/news/webgl_tutorials_site_is_up/5762637883244544/" addthis:title="WebGL Tutorials Site is Up"></a>
+<!--                            
++1 IS MEGA SLOW!
+<a class="addthis_button_google_plusone" addthis:url="http://nehe.gamedev.net/news/webgl_tutorials_site_is_up/5762637883244544/" addthis:title="WebGL Tutorials Site is Up"></a>  -->
+            </div>
+            <!-- AddThis Button END -->   
+            <div class="author">
+                by gregsidelnikov, posted at April 5, 2017, 4:17 p.m.
+            </div>
+            <div class="body">
+                <p>I just launched my new website <a title="webgl tutorials" href="http://www.webgltutorials.org/">WebGLTutorials.org/</a> if you're interested in WebGL tutorials. It's just a first draft at this point, but it is currently updated every week or so with new material. I also wrote the book <a title="webgl pdf ebook" href="http://www.webgltutorials.org/gems/">WebGL Gems</a>, if you want it just browse around on the site to find more info on it.</p>
+            </div>
+            <div>
+            	<p>
+            	    <div class="continue">
+            		<strong><a href="news/webgl_tutorials_site_is_up/5762637883244544/index.html">CONTINUE READING</a></strong>
+            		</div>
+            		<div class="comment_count">
+                		<a href="news/webgl_tutorials_site_is_up/5762637883244544/index.html">
+                        <span class="livefyre-commentcount" data-lf-site-id="287475" data-lf-article-id="5762637883244544">0 Comments</span>
+                        </a>
+            		</div>
+            		<div class="clear"></div>
+            	</p>
+            </div>
+        </div>        
+    
+        <div class="news_box">
+            <div class="title">
+                <a href="news/rats_webgl_hit_a_snag/5652786310021120/index.html">RATS! WEBGL HIT A SNAG.</a>
+         
+            </div>
+    		<!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style">
+                <a class="addthis_button_facebook" addthis:url="http://nehe.gamedev.net/news/rats_webgl_hit_a_snag/5652786310021120/" addthis:title="Rats! WebGL Hit a Snag."></a>
+                <a class="addthis_button_twitter" addthis:url="http://nehe.gamedev.net/news/rats_webgl_hit_a_snag/5652786310021120/" addthis:title="Rats! WebGL Hit a Snag."></a>
+<!--                            
++1 IS MEGA SLOW!
+<a class="addthis_button_google_plusone" addthis:url="http://nehe.gamedev.net/news/rats_webgl_hit_a_snag/5652786310021120/" addthis:title="Rats! WebGL Hit a Snag."></a>  -->
+            </div>
+            <!-- AddThis Button END -->   
+            <div class="author">
+                by gregsidelnikov, posted at Aug. 1, 2016, 8:39 p.m.
+            </div>
+            <div class="body">
+                <p>I've been working on studying Web GL and I spotted a recent Chrome message when the browser is mis-configured. I guess Chrome developers had a good sense of humour and when this happens a pop-up message saying "Rats! WebGL hit a snag." is displayed just below the address bar on a yellow stripe.</p>
+<p>To see how this issue can be overcome, plus an insight into some hidden Chrome settings config, I created this brief YouTube video tutorial&nbsp;<a title="rats webgl hit a snag. and how to fix it" href="https://www.youtube.com/watch?v=9L6BZNz3x9o">Rats! WebGL hit a snag</a>, I hope it helps someone out there who is facing this issue in their browser.&nbsp;</p>
+            </div>
+            <div>
+            	<p>
+            	    <div class="continue">
+            		<strong><a href="news/rats_webgl_hit_a_snag/5652786310021120/index.html">CONTINUE READING</a></strong>
+            		</div>
+            		<div class="comment_count">
+                		<a href="news/rats_webgl_hit_a_snag/5652786310021120/index.html">
+                        <span class="livefyre-commentcount" data-lf-site-id="287475" data-lf-article-id="5652786310021120">0 Comments</span>
+                        </a>
+            		</div>
+            		<div class="clear"></div>
+            	</p>
+            </div>
+        </div>        
+    
+        <div class="news_box">
+            <div class="title">
+                <a href="news/how_to_initialize_webgl/5741031244955648/index.html">HOW TO INITIALIZE WEBGL</a>
+         
+            </div>
+    		<!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style">
+                <a class="addthis_button_facebook" addthis:url="http://nehe.gamedev.net/news/how_to_initialize_webgl/5741031244955648/" addthis:title="How To Initialize WebGL"></a>
+                <a class="addthis_button_twitter" addthis:url="http://nehe.gamedev.net/news/how_to_initialize_webgl/5741031244955648/" addthis:title="How To Initialize WebGL"></a>
+<!--                            
++1 IS MEGA SLOW!
+<a class="addthis_button_google_plusone" addthis:url="http://nehe.gamedev.net/news/how_to_initialize_webgl/5741031244955648/" addthis:title="How To Initialize WebGL"></a>  -->
+            </div>
+            <!-- AddThis Button END -->   
+            <div class="author">
+                by gregsidelnikov, posted at Oct. 6, 2015, 7 p.m.
+            </div>
+            <div class="body">
+                <p>So, we've all been fiddling with OpenGL in a desktop environment. And some of us have probably already heard of WebGL, but never got a chance to work with it.</p>
+<p>This led me to record <a title="webgl" href="https://www.youtube.com/watch?v=QkZGHgVBguc">How to Initialize WebGL in 11 Minutes</a>. After watching this tutorial, you would have your basic blank "3D canvas" box cleared to black background.</p>
+<p>Hope this helps someone out getting ready to transition to WebGL.</p>
+            </div>
+            <div>
+            	<p>
+            	    <div class="continue">
+            		<strong><a href="news/how_to_initialize_webgl/5741031244955648/index.html">CONTINUE READING</a></strong>
+            		</div>
+            		<div class="comment_count">
+                		<a href="news/how_to_initialize_webgl/5741031244955648/index.html">
+                        <span class="livefyre-commentcount" data-lf-site-id="287475" data-lf-article-id="5741031244955648">0 Comments</span>
+                        </a>
+            		</div>
+            		<div class="clear"></div>
+            	</p>
+            </div>
+        </div>        
+    
+        <div class="news_box">
+            <div class="title">
+                <a href="news/fallout_software_tutorials_updated/5730082031140864/index.html">FALLOUT SOFTWARE TUTORIALS UPDATED!</a>
+         
+            </div>
+    		<!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style">
+                <a class="addthis_button_facebook" addthis:url="http://nehe.gamedev.net/news/fallout_software_tutorials_updated/5730082031140864/" addthis:title="Fallout Software Tutorials Updated!"></a>
+                <a class="addthis_button_twitter" addthis:url="http://nehe.gamedev.net/news/fallout_software_tutorials_updated/5730082031140864/" addthis:title="Fallout Software Tutorials Updated!"></a>
+<!--                            
++1 IS MEGA SLOW!
+<a class="addthis_button_google_plusone" addthis:url="http://nehe.gamedev.net/news/fallout_software_tutorials_updated/5730082031140864/" addthis:title="Fallout Software Tutorials Updated!"></a>  -->
+            </div>
+            <!-- AddThis Button END -->   
+            <div class="author">
+                by <a href="http://www.twitter.com/#!/kazade">kazade</a>, posted at July 9, 2014, 8:25 p.m.
+            </div>
+            <div class="body">
+                <p>Greg Sidelnikov of FalloutSoftware.com has applied updates to his OpenGL tutorials. An entirely new article <a href="http://www.falloutsoftware.com/tutorials/gl/normal-map.html" target="_blank">Normal Mapping Tutorial</a> has been added providing several insights on what the pinkish/bluish colors actually represent. The difference between Immediate Mode (glBegin, glEnd) and the modern Vertex Buffer Object technique has been added to the <a href="http://www.falloutsoftware.com/tutorials/gl/gl3.htm" target="_blank">Drawing OpenGL Primitives via VBO tutorial</a>. Better diagrams have been improved in <a href="http://www.falloutsoftware.com/tutorials/gl/gl8.htm" target="_blank">OpenGL Light tutorial</a>. Greg is also planning to start adding GLSL fragment and vertex shader tutorials to the site soon. If this piques your interest you can subscribe to the tutorial newsletter on the site. Greg has been hosting OpenGL tutorials since 2003.</p>
+            </div>
+            <div>
+            	<p>
+            	    <div class="continue">
+            		<strong><a href="news/fallout_software_tutorials_updated/5730082031140864/index.html">CONTINUE READING</a></strong>
+            		</div>
+            		<div class="comment_count">
+                		<a href="news/fallout_software_tutorials_updated/5730082031140864/index.html">
+                        <span class="livefyre-commentcount" data-lf-site-id="287475" data-lf-article-id="5730082031140864">0 Comments</span>
+                        </a>
+            		</div>
+            		<div class="clear"></div>
+            	</p>
+            </div>
+        </div>        
+    
+        <div class="news_box">
+            <div class="title">
+                <a href="news/watch_how_valve_and_nvidia_ported_source_to_linux_and_gl/99001/index.html">WATCH HOW VALVE AND NVIDIA PORTED SOURCE TO LINUX (AND GL!)</a>
+         
+            </div>
+    		<!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style">
+                <a class="addthis_button_facebook" addthis:url="http://nehe.gamedev.net/news/watch_how_valve_and_nvidia_ported_source_to_linux_and_gl/99001/" addthis:title="Watch how Valve and Nvidia ported Source to Linux (and GL!)"></a>
+                <a class="addthis_button_twitter" addthis:url="http://nehe.gamedev.net/news/watch_how_valve_and_nvidia_ported_source_to_linux_and_gl/99001/" addthis:title="Watch how Valve and Nvidia ported Source to Linux (and GL!)"></a>
+<!--                            
++1 IS MEGA SLOW!
+<a class="addthis_button_google_plusone" addthis:url="http://nehe.gamedev.net/news/watch_how_valve_and_nvidia_ported_source_to_linux_and_gl/99001/" addthis:title="Watch how Valve and Nvidia ported Source to Linux (and GL!)"></a>  -->
+            </div>
+            <!-- AddThis Button END -->   
+            <div class="author">
+                by gamedev, posted at April 9, 2013, 2:19 p.m.
+            </div>
+            <div class="body">
+                <p>There is a really interesting video from the recent GDC 2013 conference that goes into detail about how Valve and Nvidia ported the Source engine to the Linux platform. The majority of the talk focuses on the port from D3D to OpenGL. There is nothing but glowing praise for OpenGL throughout the talk. Definitely worth checking out!</p>
+<p>&nbsp;</p>
+<p><iframe src="http://www.youtube.com/embed/btNVfUygvio" frameborder="0" width="560" height="315"></iframe></p>
+            </div>
+            <div>
+            	<p>
+            	    <div class="continue">
+            		<strong><a href="news/watch_how_valve_and_nvidia_ported_source_to_linux_and_gl/99001/index.html">CONTINUE READING</a></strong>
+            		</div>
+            		<div class="comment_count">
+                		<a href="news/watch_how_valve_and_nvidia_ported_source_to_linux_and_gl/99001/index.html">
+                        <span class="livefyre-commentcount" data-lf-site-id="287475" data-lf-article-id="99001">0 Comments</span>
+                        </a>
+            		</div>
+            		<div class="clear"></div>
+            	</p>
+            </div>
+        </div>        
+    
+        <div class="news_box">
+            <div class="title">
+                <a href="news/mesa_90_released_with_opengl_31_support/90001/index.html">MESA 9.0 RELEASED WITH OPENGL 3.1 SUPPORT</a>
+         
+            </div>
+    		<!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style">
+                <a class="addthis_button_facebook" addthis:url="http://nehe.gamedev.net/news/mesa_90_released_with_opengl_31_support/90001/" addthis:title="Mesa 9.0 Released with OpenGL 3.1 Support"></a>
+                <a class="addthis_button_twitter" addthis:url="http://nehe.gamedev.net/news/mesa_90_released_with_opengl_31_support/90001/" addthis:title="Mesa 9.0 Released with OpenGL 3.1 Support"></a>
+<!--                            
++1 IS MEGA SLOW!
+<a class="addthis_button_google_plusone" addthis:url="http://nehe.gamedev.net/news/mesa_90_released_with_opengl_31_support/90001/" addthis:title="Mesa 9.0 Released with OpenGL 3.1 Support"></a>  -->
+            </div>
+            <!-- AddThis Button END -->   
+            <div class="author">
+                by <a href="http://www.twitter.com/#!/kazade">kazade</a>, posted at Oct. 9, 2012, 9:54 a.m.
+            </div>
+            <div class="body">
+                <p>Mesa, the Open Source OpenGL implementation has released a new major version which includes support for OpenGL 3.1. The release announcement can be <a href="http://lists.freedesktop.org/archives/mesa-dev/2012-October/028420.html" target="_blank">found here</a>.</p>
+<p>Although Mesa works on multiple platforms, including Windows, it's on open source operating systems like Linux where it is most important. On Linux, Mesa provides hardware accelerated OpenGL when running open-source graphics drivers. This means that if your graphics card is supported, you will get hardware-accelerated OpenGL 3.1 out-of-the-box on operating systems such as Ubuntu and Debian, even when running from a Live CD or bootable USB stick.</p>
+            </div>
+            <div>
+            	<p>
+            	    <div class="continue">
+            		<strong><a href="news/mesa_90_released_with_opengl_31_support/90001/index.html">CONTINUE READING</a></strong>
+            		</div>
+            		<div class="comment_count">
+                		<a href="news/mesa_90_released_with_opengl_31_support/90001/index.html">
+                        <span class="livefyre-commentcount" data-lf-site-id="287475" data-lf-article-id="90001">0 Comments</span>
+                        </a>
+            		</div>
+            		<div class="clear"></div>
+            	</p>
+            </div>
+        </div>        
+    
+        <div class="news_box">
+            <div class="title">
+                <a href="news/new_opengl_tutorial_site/88001/index.html">NEW OPENGL TUTORIAL SITE</a>
+         
+            </div>
+    		<!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style">
+                <a class="addthis_button_facebook" addthis:url="http://nehe.gamedev.net/news/new_opengl_tutorial_site/88001/" addthis:title="New OpenGL Tutorial Site"></a>
+                <a class="addthis_button_twitter" addthis:url="http://nehe.gamedev.net/news/new_opengl_tutorial_site/88001/" addthis:title="New OpenGL Tutorial Site"></a>
+<!--                            
++1 IS MEGA SLOW!
+<a class="addthis_button_google_plusone" addthis:url="http://nehe.gamedev.net/news/new_opengl_tutorial_site/88001/" addthis:title="New OpenGL Tutorial Site"></a>  -->
+            </div>
+            <!-- AddThis Button END -->   
+            <div class="author">
+                by <a href="http://www.twitter.com/#!/kazade">kazade</a>, posted at Oct. 8, 2012, 2:12 p.m.
+            </div>
+            <div class="body">
+                <p><span>Damien</span>&nbsp;wrote in to tell us about his OpenGL tutorial website which focuses on OpenGL 3.3. Apparently this site was referenced during SIGGRAPH and in various books. It's definitely worth taking a look! You can <a href="http://www.opengl-tutorial.org/" target="_blank">find it here</a>.</p>
+            </div>
+            <div>
+            	<p>
+            	    <div class="continue">
+            		<strong><a href="news/new_opengl_tutorial_site/88001/index.html">CONTINUE READING</a></strong>
+            		</div>
+            		<div class="comment_count">
+                		<a href="news/new_opengl_tutorial_site/88001/index.html">
+                        <span class="livefyre-commentcount" data-lf-site-id="287475" data-lf-article-id="88001">0 Comments</span>
+                        </a>
+            		</div>
+            		<div class="clear"></div>
+            	</p>
+            </div>
+        </div>        
+    
+        <div class="news_box">
+            <div class="title">
+                <a href="news/khronos_releases_opengl_43_and_opengl_es_30/86001/index.html">KHRONOS RELEASES OPENGL 4.3 AND OPENGL ES 3.0</a>
+         
+            </div>
+    		<!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style">
+                <a class="addthis_button_facebook" addthis:url="http://nehe.gamedev.net/news/khronos_releases_opengl_43_and_opengl_es_30/86001/" addthis:title="Khronos Releases OpenGL 4.3 and OpenGL ES 3.0"></a>
+                <a class="addthis_button_twitter" addthis:url="http://nehe.gamedev.net/news/khronos_releases_opengl_43_and_opengl_es_30/86001/" addthis:title="Khronos Releases OpenGL 4.3 and OpenGL ES 3.0"></a>
+<!--                            
++1 IS MEGA SLOW!
+<a class="addthis_button_google_plusone" addthis:url="http://nehe.gamedev.net/news/khronos_releases_opengl_43_and_opengl_es_30/86001/" addthis:title="Khronos Releases OpenGL 4.3 and OpenGL ES 3.0"></a>  -->
+            </div>
+            <!-- AddThis Button END -->   
+            <div class="author">
+                by <a href="http://www.twitter.com/#!/kazade">kazade</a>, posted at Aug. 6, 2012, 3:03 p.m.
+            </div>
+            <div class="body">
+                <p>As is the tradition at SIGGRAPH, Khronos just announced the OpenGL 4.3 specification alongside its mobile-focused counter-part OpenGL ES 3.0. One of the more interesting announcements is the inclusion of a new royalty-free texture compression extension called ASTC.</p>
+<p>As usual you can find the latest specifications <a href="http://www.khronos.org/registry/" target="_blank">on the registry.</a></p>
+<p>The release announcements for the day can be found on the <a href="http://www.khronos.org/news/press/releases/khronos-releases-opengl-4.3-specification-with-major-enhancements" target="_blank">Khronos website.</a></p>
+            </div>
+            <div>
+            	<p>
+            	    <div class="continue">
+            		<strong><a href="news/khronos_releases_opengl_43_and_opengl_es_30/86001/index.html">CONTINUE READING</a></strong>
+            		</div>
+            		<div class="comment_count">
+                		<a href="news/khronos_releases_opengl_43_and_opengl_es_30/86001/index.html">
+                        <span class="livefyre-commentcount" data-lf-site-id="287475" data-lf-article-id="86001">0 Comments</span>
+                        </a>
+            		</div>
+            		<div class="clear"></div>
+            	</p>
+            </div>
+        </div>        
+    
+    <div>
+    	<div style="text-align: left; width: 150px; float: left;"></div>
+    	<div style="text-align: right; width: 150px; float:right;"><a href="index2679.html?page=1">Older Posts</a></div>
+    	<div style="clear:both;"></div>
+    </div>
+</div>
+
+
+
+            <div style="width:728px;padding:0px;margin:auto; margin-top: 10px;">
+            
+                <!-- Leaderboard_NeHe -->
+                <div id='div-gpt-ad-1327940144417-0' style='width:728px; height:90px;'>
+                <script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1327940144417-0'); });
+                </script>
+                </div>
+                                       
+            </div>   
+        </td>
+        <td class="col2">
+            
+
+<div class="tutorial_block">
+	
+		<h2>Community</h2>
+		<ul>
+			
+			
+			
+			<li><strong><a href="http://www.gamedev.net/forum/27-nehe-productions/page__forum_title__NeHe+Productions">NeHe Forums</a></strong></li>
+			
+			<li><a href="http://www.gamedev.net/forum/25-opengl/">OpenGL Forums</a></li>
+						
+		</ul>
+	
+</div>
+
+<div class="tutorial_block">
+	
+		<h2>Desktop Tutorials</h2>
+		<ul>
+			
+			
+			<li><a href="tutorial/prep_the_graphics_pipeline/59002/index.html">Prep: The Graphics Pipeline</a></li>
+			
+			<li><a href="news/rats_webgl_hit_a_snag/5652786310021120/index.html">Rats! WebGL Hit a Snag.</a></li>
+			
+			<li><a href="news/webgl_tutorials_site_is_up/5762637883244544/index.html">WebGL Tutorials Site is Up</a></li>
+			
+						
+		</ul>
+	
+		<h2>Mobile Tutorials</h2>
+		<ul>
+			
+			
+			<li><a href="tutorial/ios_lesson_01__setting_up_gl_es/44001/index.html">iOS Lesson 01 - Setting up GL ES</a></li>
+			
+			<li><a href="tutorial/ios_lesson_02__first_triangle/50001/index.html">iOS Lesson 02 - First Triangle</a></li>
+			
+						
+		</ul>
+	
+		<h2>Legacy Tutorials</h2>
+		<ul>
+			
+			
+			<li><a href="tutorial/lessons_01__05/22004/index.html">Lessons 01 - 05</a></li>
+			
+			<li><a href="tutorial/lessons_06__10/17010/index.html">Lessons 06 - 10</a></li>
+			
+			<li><a href="tutorial/lessons_11__15/28001/index.html">Lessons 11 - 15</a></li>
+			
+			<li><a href="tutorial/lessons_16__20/28002/index.html">Lessons 16 - 20</a></li>
+			
+			<li><a href="tutorial/lessons_21__25/25009/index.html">Lessons 21 - 25</a></li>
+			
+			<li><a href="tutorial/lessons_26__30/29002/index.html">Lessons 26 - 30</a></li>
+			
+			<li><a href="tutorial/lessons_31__35/25010/index.html">Lessons 31 - 35</a></li>
+			
+			<li><a href="tutorial/lessons_36__40/19005/index.html">Lessons 36 - 40</a></li>
+			
+			<li><a href="tutorial/lessons_41__45/28003/index.html">Lessons 41 - 45</a></li>
+			
+			<li><a href="tutorial/lessons_46__48/16016/index.html">Lessons 46 - 48</a></li>
+			
+						
+		</ul>
+	
+</div>
+
+<div class="tutorial_block">
+	
+		<h2>Articles</h2>
+		<ul>
+			
+				<li>None available</li>
+			
+			
+						
+		</ul>
+	
+		<h2>Legacy Articles</h2>
+		<ul>
+			
+			
+			<li><a href="article/contest_halloween_2000/5629499534213120/index.html">Contest: Halloween 2000</a></li>
+			
+			<li><a href="article/contest_christmas_2000/5732568548769792/index.html">Contest: Christmas 2000</a></li>
+			
+			<li><a href="article/contest_apocalypse_2001/5654313976201216/index.html">Contest: Apocalypse 2001</a></li>
+			
+			<li><a href="article/contest_the_fellowship_of_the_ring_2002/5644406560391168/index.html">Contest: The Fellowship Of The Ring 2002</a></li>
+			
+			<li><a href="article/contest_halloween_2002/5700305828184064/index.html">Contest: Halloween 2002</a></li>
+			
+			<li><a href="article/contest_minidemo_2003/4804966745112576/index.html">Contest: Mini-Demo 2003</a></li>
+			
+			<li><a href="article/contest_the_two_towers_2003/6192449487634432/index.html">Contest: The Two Towers 2003</a></li>
+			
+			<li><a href="article/contest_creative_labs_europe/5137355874762752/index.html">Contest: Creative Labs Europe</a></li>
+			
+			<li><a href="article/contest_winamp_gl_2005/5720147234914304/index.html">Contest: Winamp GL 2005</a></li>
+			
+			<li><a href="article/old_nehe_projects/5631986051842048/index.html">Old NeHe Projects</a></li>
+			
+			
+			<li><a href="article_index/1/index.html">Articles 01 - 05</a></li>
+			
+			<li><a href="article_index/2/index.html">Articles 06 - 10</a></li>
+			
+			<li><a href="article_index/3/index.html">Articles 11 - 15</a></li>
+						
+		</ul>
+	
+</div>
+
+<div class="tutorial_block">
+	
+		<h2>Beginning OpenGL Game Programming II</h2>
+		<ul>
+			
+			
+			<li><a href="tutorial/simpleglxwindow_class/35003/index.html">SimpleGLXWindow Class</a></li>
+			
+			
+			<li><a href="http://www.kazade.co.uk/downloads/boglgp/bug-fixes-2009-08-29.zip">Latest Source Files</a></li>
+						
+		</ul>
+	
+</div>
+
+<div class="tutorial_block">
+	
+		<h2>Useful Resources</h2>
+		<ul>
+			
+			
+			<li><a href="news/how_to_initialize_webgl/5741031244955648/index.html">How To Initialize WebGL</a></li>
+			
+			
+			<li><a href="http://www.learnopengles.com/">Learn OpenGL ES - for Android</a></li>
+						
+		</ul>
+	
+</div>
+
+<div style="padding-top: 10px;" class="fb-like-box" data-href="http://www.facebook.com/pages/NeHe/300582493323181" data-width="210" data-colorscheme="dark" data-show-faces="true" data-border-color="#0C5892" data-stream="false" data-header="false"></div>
+<div style="text-align: center; padding:10px;">
+    <!-- Skyscraper_NeHe -->
+    <div id='div-gpt-ad-1327940144417-1' style="width:160px; height:600px; margin:auto;">
+    <script type='text/javascript'>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1327940144417-1'); });
+    </script>
+    </div>
+    <a href="http://www.amazon.com/exec/obidos/ASIN/159863528X/ref=nosim/gamedev" onMouseOut="nd()" onMouseOver="overlib('A Totally Killer Book Written By The Staff At GameDev.', CAPTION, 'Featured Book');"><img style="margin-top: 20px;" src="static/images/boglgp.jpg" border="0" hspace="3" vspace="3" alt="Featured Book"></a><br/>
+</div>
+            
+        </td>
+    </table>
+    <div id="footer">
+        <p>
+            
+			© 1997-2012 <a href="http://www.gamedev.net/">Gamedev.net</a>. All rights reserved.<br/>
+			
+			NeHe™ and NeHe Productions™ are trademarks of GameDev.net, LLC<br/>
+			OpenGL® is a registered trademark of Silicon Graphics Inc.<br/>
+		</p>        
+		<br/>
+    </div>
+
+    
+    
+	    <script type="text/javascript" src="static/js/syntax_highlighter/shCore.js"></script>
+        <script type="text/javascript" src="static/js/syntax_highlighter/shBrushCpp.js"></script>
+	    <script type="text/javascript" src="static/js/syntax_highlighter/shBrushJScript.js"></script>
+	    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    
+    <script type="text/javascript" src="../zor.livefyre.com/wjs/v1.0/javascripts/CommentCount.js"></script>
+    <script type="text/javascript" src="../s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f1bd6c243eb4da4"></script>    
+
+    
+<!-- GoogleAnalytics code -->
+<script src="../www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-279474-2"; // Gamedev
+urchinTracker();
+</script> 
+  </body>
+
+<!-- Mirrored from nehe.gamedev.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jan 2019 02:33:15 GMT -->
+</html>

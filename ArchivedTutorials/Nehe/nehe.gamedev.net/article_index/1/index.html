@@ -1,0 +1,1491 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    dir="ltr"
+    xml:lang="en"
+    lang="en">
+  
+<!-- Mirrored from nehe.gamedev.net/article_index/1/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jan 2019 02:35:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>NeHe Productions: </title>
+
+    <link rel="stylesheet" type="text/css" href="../../static/css/public_base.css" />
+    <link type="text/css" rel="stylesheet" href="../../static/css/syntax_highlighter/shThemeMidnight.css"/>
+    
+    <link rel="alternate" type="application/atom+xml" title="Atom feed" href="../../atom/index.html" />
+    <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../rss/index.html" />
+    
+    <meta name="author" content="Luke Benstead + Carsten Haubold" />
+    <meta name="description" content="OpenGL Tutorials, Demos, Games and More..." />
+    <meta name="keywords" content="opengl, tutorial, article, demo, game, blend, texturemap, lighting, contest, 3D" />
+
+    
+    
+
+    
+    
+
+    
+    
+    
+        <script type='text/javascript'>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') + 
+        '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+        })();
+        </script>
+
+        <script type='text/javascript'>
+        googletag.cmd.push(function() {
+        googletag.defineSlot('/1004699/Leaderboard_NeHe', [728, 90], 'div-gpt-ad-1327940144417-0').addService(googletag.pubads());
+        googletag.defineSlot('/1004699/Skyscraper_NeHe', [160, 600], 'div-gpt-ad-1327940144417-1').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        });
+        </script>
+    
+    
+  </head>
+
+  <body>
+    
+    <table cellpadding="0" cellspacing="0" border="0" id="layout_table">
+    <tr><td>
+        <div id="header">
+                <a href="../../index.html"><img class="logo" class="logo" src="../../static/images/nehe.png" border="0" alt="Nehe" /></a>
+        </div>            
+    </td></tr>
+    <tr><td colspan="2">
+            
+<div class="navbar">
+    <a href="../../index.html">HOME</a>
+    <a href="http://twitter.com/#!/nehegl">TWITTER</a>  
+    <a href="http://www.facebook.com/pages/NeHe/300582493323181">FACEBOOK</a>     
+    <a href="../../rss/index.html">RSS</a>    
+    <a href="../../atom/index.html">ATOM</a>    
+    <a href="http://www.gamedev.net/forum/27-nehe-productions/page__forum_title__NeHe+Productions">FORUM</a>    
+</div>
+    
+    </td></tr>
+    <tr>
+        <td class="col1">
+
+            
+<div id="news_container">
+    <div class="news_header">
+        <h1>Articles </h1>
+    </div>
+    
+    
+        <div class="news_box">
+            <div class="title">
+                CONTEST: MINI-DEMO 2003
+            </div>
+            <div class="body">
+                <center><span style="font-size: medium;"><strong><span style="text-decoration: underline;"><span>Welcome To The Sixth NeHe Productions OpenGL Challenge!</span></span></strong></span></center>
+<p><strong>Theme:</strong> Anything You Want!!! <br /><br /> <strong>Rules:</strong></p>
+<ul>
+<li>All demos <span style="text-decoration: underline;">must</span> use OpenGL.</li>
+<li>Full source code <span style="text-decoration: underline;">must</span> be included with each entry.</li>
+<li>Code <span style="text-decoration: underline;">must</span> compile as is. Code that will not compile will not win.</li>
+<li>All files must be compressed with <strong>ZIP</strong> or <strong>RAR</strong>. Do not send Ace, Tar, Etc.</li>
+<li>The source should be in it's <span style="text-decoration: underline;">own</span> zip file and must include all files required to compile and run.</li>
+<li>The exe should be in it's <span style="text-decoration: underline;">own</span> zip file and must include all files required to run.</li>
+<li>Freeware libraries are allowed, but remember to <span style="text-decoration: underline;">include</span> any files required to compile the source.</li>
+<li>The maximum size of your compiled demo and all required libraries and data files can be no more than 500k.</li>
+<li>The demo <span style="text-decoration: underline;">must</span> run without any user interaction from start to finish.</li>
+<li>The demo should run for at least one minute without repeating. After a minute you can loop if you want.</li>
+<li>Try to include as many effects as possible while staying under 500k.</li>
+<li>Code should have some type of commenting (even if it's minimal).</li>
+<li>If you use extensions, you better have something to fall back on if the card doesn't support it!</li>
+<li>There is no target hardware, your demo should run bearably at the very least on a 450MHz system w/ TNT2.</li>
+<li>This contest is open to everyone!</li>
+</ul>
+<p><strong>Summary:</strong> <br /><br /> Create an amazing, mindblowing, thrilling, exciting, super cool mini demo. It must be under 500k in size including graphics, sound and any libraries. It should run for at least 60 seconds without repeating. A tune of some sort will get you bonus points. The demo should run without keyboard interaction (aside from a key to quit and one to toggle fullscreen). There is no theme... be creative!!! Source code must be included with your demo, and it MUST compile without issues. The demos will be posted Friday, January 31st. A winner will be selected based on visitor feedback and a small judging panel. The prize is a BRAND NEW... STILL IN THE PACKAGE copy of <strong>MindCandy</strong>!!! One of the coolest and most hard to get ahold of DVD's out there! 230 minutes of Demos on a double sided DVD (oldschool and new), Interviews with big names in the scene, Video from Assembly, Audio commentary on all demos, A 12 page full color booklet, Animated chapter menus and Hidden demos / easter eggs. Thanks to |Laz| for the contest idea! <br /><br /></p>
+<center><strong>* * * CONTEST IS NOW OVER. ENTRIES CAN BE FOUND BELOW. * * *</strong></center>
+<table border="1" align="left">
+<tbody>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/quin_pendragon.jpg" alt="" /></td>
+<td><strong>Superstars by Quin Pendragon (Winning Demo)</strong><br /> Cool demo with a catchy tune and little dancing people. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/quin_pendragon.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/quin_pendragon.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/andreas_hammar.jpg" alt="" /></td>
+<td><strong>The Thing 2003 by Andreas Hammar</strong><br /> Love this demo... definitely one of my favorites. Soothing music and crisp graphics. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/andreas_hammar.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/andreas_hammar.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/armand_niehaus.jpg" alt="" /></td>
+<td><strong>The Hollow by Armand Niehaus</strong><br /> The spinning flower in a tunnel is a must see! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/armand_niehaus.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/armand_niehaus.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/axl.jpg" alt="" /></td>
+<td><strong>Naskel3D by Axl</strong><br /> This demo contains nudity and should not be viewed by minors. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/axl.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/axl.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/brian_washburn.jpg" alt="" /></td>
+<td><strong>Fudo Style by Brian Washburn</strong><br /> Cool effects, speedy music, and nice synchronization. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/brian_washburn.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/brian_washburn.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/david_ducker.jpg" alt="" /></td>
+<td><strong>Interminable Tunnel by David Ducker</strong><br /> An awesome hallway scene. Game quality graphics! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/david_ducker.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/david_ducker.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/evgeny_karataev.jpg" alt="" /></td>
+<td><strong>Boom by Evgeny Karataev</strong><br /> A pretty cool looking butterfly. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/evgeny_karataev.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/evgeny_karataev.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/georgi_khomeriki.jpg" alt="" /></td>
+<td><strong>Model Demo by Georgi Khomeriki</strong><br /> Excellent model animation along with a cool tune. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/georgi_khomeriki.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/georgi_khomeriki.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/gyasi_grey.jpg" alt="" /></td>
+<td><strong>Model Demo by Gyasi Grey</strong><br /> A very simple and very cool dancing techno ball. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/gyasi_grey.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/gyasi_grey.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/henrik_carlgren.jpg" alt="" /></td>
+<td><strong>a64ki by Henrik Carlgren</strong><br /> Very tiny demo packed with some excellent effects. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/henrik_carlgren.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/henrik_carlgren.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/jacob_persson.jpg" alt="" /></td>
+<td><strong>Kap by Jacob Persson</strong><br /> Linux Demo... Anyone care to port it to Windows? <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/jacob_persson.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/jacob_persson.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/julien_amsellem.jpg" alt="" /></td>
+<td><strong>Mini-Demo by Julien Amsellem</strong><br /> A high-speed race through space. Complete with a mouse controlled ship! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/julien_amsellem.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/julien_amsellem.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/libor_capak.jpg" alt="" /></td>
+<td><strong>Popcorn by Libor Capak</strong><br /> Really nice synchonization to the music. Cool multilayered background. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/libor_capak.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/libor_capak.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/mirko_teran.jpg" alt="" /></td>
+<td><strong>Ravers Nature by Mirko Teran</strong><br /> What can I say... another top notch Mirko production. The mountains are absolutely AMAZING!!! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/mirko_teran.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/mirko_teran.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/pete_corey.jpg" alt="" /></td>
+<td><strong>PmanC by Pete Corey</strong><br /> Very nice rolling sinewave effect. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/pete_corey.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/pete_corey.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/peter_wallstrom.jpg" alt="" /></td>
+<td><strong>CF by Peter "Overlord" Wallstrom</strong><br /> Reminds me of an old school demo... chiptune and all! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/peter_wallstrom.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/peter_wallstrom.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/phil_freeman.jpg" alt="" /></td>
+<td><strong>Demolition by Phil Freeman (Exsanity)</strong><br /> Some very cool lighting effects along with a cool torus... http://www.exsanity.freeola.com <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/phil_freeman.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/phil_freeman.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/ralph_tittensor.jpg" alt="" /></td>
+<td><strong>Mindstorm by Ralph Tittensor</strong><br /> Extremely cool particle text. Awesome 3d rooms! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/ralph_tittensor.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/ralph_tittensor.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/rishi_ramraj.jpg" alt="" /></td>
+<td><strong>Pescao Loco by Rishi Ramraj</strong><br /> Very nice 3D fishtank. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/rishi_ramraj.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/rishi_ramraj.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/rus_bogdan.jpg" alt="" /></td>
+<td><strong>Demosity by Rus Bogdan</strong><br /> Some cool CG effects going to the beat of the music (windowed). <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/rus_bogdan.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/rus_bogdan.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/sebastian_brandt.jpg" alt="" /></td>
+<td><strong>60.0f Seconds by Sebastian Brandt</strong><br /> 60 seconds of hardcore effects. Cool tune as well! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/sebastian_brandt.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/sebastian_brandt.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/stanciu_ciprian.jpg" alt="" /></td>
+<td><strong>Star Flare by Stanciu Ciprian</strong><br /> Model of the solar system with information about each planet (borderless window) <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/stanciu_ciprian.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/stanciu_ciprian.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/steven_ashley.jpg" alt="" /></td>
+<td><strong>OpenGL Demo 2003 by Steven Ashley</strong><br /> A very cool demo that can stream it's soundtrack from the net. Nice effects! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/steven_ashley.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/steven_ashley.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/tuomas_volotinen.jpg" alt="" /></td>
+<td><strong>PornoIntro by Tuomas Volotinen (MoonHazard)</strong><br /> Really trippy and colorful effects with some nice chiptune music (no porn) <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/tuomas_volotinen.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/tuomas_volotinen.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2003_minidemo/yuval_sarna.jpg" alt="" /></td>
+<td><strong>Life vs. Routine by Yuval Sarna</strong><br /> Some nice particle effects, great music and a tree. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/demo/yuval_sarna.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_minidemo/source/yuval_sarna.zip">Source</a></td>
+</tr>
+</tbody>
+</table>
+            </div>
+            <div>
+            	<p>
+            		<strong><a href="../../article/contest_minidemo_2003/4804966745112576/index.html">CONTINUE READING</a></strong>
+            	</p>
+            </div>
+        </div>        
+    
+        <div class="news_box">
+            <div class="title">
+                CONTEST: CREATIVE LABS EUROPE
+            </div>
+            <div class="body">
+                <center><span style="font-size: medium;"><strong><span style="text-decoration: underline;"><span>NeHe Productions OpenGL Challenge Number Eight!</span></span></strong></span></center><center><strong>CREATED BY: <a href="http://uk.europe.creative.com/" target="_blank">Creative</a></strong><br /><br /></center>
+<p><strong>Deadline:</strong></p>
+<ul>All Entries must be in by midnight (MST) Jan 14th, 2004. This contest was announced Oct 2003.</ul>
+<p><strong>Theme:</strong></p>
+<ul>Create The Most Amazing OpenGL Demo You Can... Paying As Much Attention To Detail As Possible!</ul>
+<p><strong>Prize:</strong></p>
+<ul>I think we should mention the prize to give people the extra motivation. Basically I will upgrade the system of the winner with whatever I can. So this will probably be audio &amp; graphics. Lets just says it's a Creative Upgrade and I guarantee the winner will not be disappointed!</ul>
+<p><strong>Motivation:</strong></p>
+<ul>
+<ul>Now is your chance to be Creative!!!</ul>
+</ul>
+<p><a href="http://uk.europe.creative.com/estore" target="_blank">Creative Labs Europe</a></p>
+<ul>will be releasing a new video card very soon. To show off their video card they are looking for OpenGL demos that make people stop and stare with their mouths wide open. If you have what it takes, your demo could be selected as one of the demos packaged with their new video card. Not only is this super cool, but it's also a very rare opportunity to have your work viewed by thousands of users world wide! Want to make your friends jealous...? Here's your chance :)</ul>
+<p><strong>Rules:</strong></p>
+<ul>
+<li>All demos <span style="text-decoration: underline;">must</span> use OpenGL.</li>
+<li>Source code is <span style="text-decoration: underline;">optional</span>. However, it is the source code that benefits new programmers visiting this site.</li>
+<li>Because your demo could end up on a commercial CD I HIGHLY recommend you do some heavy bug testing before sending demos in.</li>
+<li>You are not required to use the NeHeGL basecode. Any basecode can be used as long as it's free to use in a commercial product.</li>
+<li>If you use extensions, you better have something to fall back on if the card doesn't support it! Most site visitors do not have high end cards.</li>
+<li>The demo <span style="text-decoration: underline;">must</span> provide a quick way to exit without crashing. ESC is the most common method.</li>
+<li>Demos should run from start to finish without interaction... It can loop, but <span style="text-decoration: underline;">must</span> allow the user to exit at any time.</li>
+<li>If you wish to code an interactive section, add a startup menu that allows the user to select "Run demo" or "Run interactive" (free to use your own wording).</li>
+<li>Demos do not require a sound track; however most people enjoy demos with music more than silent demos!</li>
+<li>On that note, if you use music in your demo, it must be an original score, PD, or you <span style="text-decoration: underline;">must</span> have signed permission from the author.</li>
+<li>If English is not your native language, have someone proof read your text to make sure it translates correctly.</li>
+<li>Try to keep effects original. Nothing worse than thousands of people thinking you're lame for stealing ideas!</li>
+<li>This contest is open to everyone!</li>
+</ul>
+<p><strong>Legal Issues:</strong></p>
+<ul>
+<ul>CREATIVE ALONG WITH NEHE PRODUCTIONS SHALL NOT BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY INFRINGEMENT</ul>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<ul>OF COPYRIGHT, TRADEMARK, TRADE NAME OR TRADE SECRETS RIGHTS OF AN UNAFFILIATED THIRD PARTY.</ul>
+</ul>
+<p><br /><br /></p>
+<ul>
+<li>All entries must include a disclaimer. NeHe Productions and Creative Labs Europe will not be held accountable, so protect yourself!</li>
+<li>Use of Commercial libraries, sounds, images and code is completely <span style="text-decoration: underline;">forbidden!</span> You <span style="text-decoration: underline;">must</span> have permission to use all borrowed content.</li>
+<li>Use of Trademark images, sounds, etc is also <span style="text-decoration: underline;">forbidden</span>. This means no Coke cans sitting on a desk, no pictures of a BMW, etc.</li>
+<li>Absolutely <span style="text-decoration: underline;">no</span> profanity, naked people, racist remarks, etc. Easter Eggs are fine as long as they are kid friendly and demo related.</li>
+<li>All entries require a readme file with the following information: Keys used to Interact, Quit the Demo, etc.</li>
+<li>All entrants must include the following information in a separate file: YOUR NAME, CONTACT INFORMATION, and The Following Text:</li>
+I HAVE READ, AND FULLY UNDERSTAND THE LEGAL ISSUES AS STATED ON THE NEHE PRODUCTIONS WEB SITE IN REGARDS TO THE CREATIVE 2004 CONTEST.</ul>
+<p><strong>Creative Labs:</strong></p>
+<ul>
+<ul>Extensions supported on the new card will more than likely be the same as the 5900FX.</ul>
+</ul>
+<ul>
+<ul>To answer the question and hopefully clarify a few other queries I saw on the web...</ul>
+</ul>
+<ul>
+<ul>1) The demo does not have to use any particular extensions or capabilities of the card. Most people developing will be using GeForce 2, 3, 4 so they can't do anything with extensions specific to GeForce FX based family.</ul>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<ul>2) The demo does not have to be a single effect as some people have read into it. Rather it should be a single scene that may incorporate multiple effects. For example...</ul>
+</ul>
+<p><br /><br /></p>
+<ul>
+<ul>You could have a nature scene with a pond surrounded by grass with a fog effect in the distance. So you would potentially be showing lots of effects... water effect with z-correct bump mapping, grass with masses of geometry or using alpha channel on textures to create the illusion, fog effect and / or other lighting effect. Alternatively one could go completely abstract and recreate a scene showing multi texturing, per-pixel lighting... there might be a particle system in there as well!</ul>
+</ul>
+<p>&nbsp;</p>
+<ul>The contest is to produce the most impressive visual effect possible. The means of getting there is not relevent. For example you could produce a flame effect using particle systems, or using shaders or a variety of other methods. The winner would obviously be the one that produced the most realistic flame effect regardless of whether it is 20K or 20MB. Hope that helps.</ul>
+<p>&nbsp;</p>
+<center><strong>* * * CONTEST IS NOW OVER. ENTRIES CAN BE FOUND BELOW. * * *</strong></center>
+<table border="1" align="left">
+<tbody>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/alexander_wendler.jpg" alt="" /></td>
+<td><strong>The Rhino-Isle by Alexander Wendler</strong><br /> This is a nature demo. The Camera flies over two islands. There are about 10.000 trees, grass and few rhinos. They all are animated, shaded and reflected on the water surface. To see all effects you will need at least Geforce3/Radeon8500 (not Geforce 4MX). Please use at least Forceware 52.14 driver on Nvidia cards or CATALYST 3.10 driver on ATI Cards. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/alexander_wendler.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/alexander_wendler.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/alexandre_leuckert_klein.jpg" alt="" /></td>
+<td><strong>Psycho Tah Tah by Alexandre Leuckert Klein</strong><br /> Interactive demo featuring: 16 Bit 512x512 RAW Terrain, Pak System, DLL Support, Scripting System, S3TC, Sound using OPENAL. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/alexandre_leuckert_klein.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/alexandre_leuckert_klein.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/andrew_voroshilov.jpg" alt="" /></td>
+<td><strong>Dentro by Andrew Voroshilov "XperienS"</strong><br /> Tested on several machines and went well enough even on a TNT 2 Riva ( a little bit slow ). So recommended requirements for this projects are: 600+ MHz CPU, about 128 Mb RAM, GeForce 2+. No Extensions used in this demo so it should run on TNT. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/andrew_voroshilov.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/andrew_voroshilov.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/annie_couyoumdjoglou.jpg" alt="" /></td>
+<td><strong>Rundolf by Annie Couyoumdjoglou</strong><br /> Christmas demo featuring Santa and his reindeer. Should run smooth on most hardware configurations. Keys: 'P' to pause, 'R' to restart, 'Esc' Exits. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/annie_couyoumdjoglou.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/annie_couyoumdjoglou.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/attila_incze.jpg" alt="" /></td>
+<td><strong>Maybe by Attila Incze</strong><br /> The author tries to affect your spirit... After you've seen it, permit Yourself a minute to think about it! Recommended hardware: 2*3GHz dual CPU, 2*4 GB RAM, GeForce FX 5900 Pro or Radeon 9800 Pro with 256 MB. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/attila_incze.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/attila_incze.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/christophe_riccio.jpg" alt="" /></td>
+<td><strong>Terrain Demo by Christophe Riccio "Groove"</strong><br /> You can change CLOD level with the key "PAGE UP" and "PAGE DOWN". The program will close when you press the escape key. Requires a graphics card with 4 textures units such as GF3, GF4 ti, GF FX, Radeon 8xxx and Radeon 9xxx. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/christophe_riccio.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/christophe_riccio.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/christopher_crowe.jpg" alt="" /></td>
+<td><strong>Night Light by Christopher Crowe</strong><br /> This demo SHOULD be compatible with just about any video card used today. All effects are still displayed / supported regardless of what extensions your video card has. Just be sure that the latest drivers for your video card are installed. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/christopher_crowe.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/christopher_crowe.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/david_negulici.jpg" alt="" /></td>
+<td><strong>DN by David Negulici</strong><br /> NPR Sketch-Type Shading. This is the second version of the final demo because of incompatability within Cal3D with Windows98SE. Works on Win98 / Win2000 P200MMX with ATIRage128Fury, Win2000 DualP3_500 with GF2 and Win XP P4_2600 with a GF3Ti200. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/david_negulici.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/david_negulici.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/derek_lamberti.jpg" alt="" /></td>
+<td><strong>Beach by Derek Lamberti</strong><br /> This demo is tried and tested on my GeForce 4400 Ti and a Radeon 9800 PRO. It requires 4 texture units to run and makes use of Vertex Buffer Objects, so the Latest Drivers will be required. It does not use vendor specific extensions, but CG may be a problem for some non-nVidia cards. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/derek_lamberti.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/derek_lamberti.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/esteve_olivier.jpg" alt="" /></td>
+<td><strong>Naskel 3D by Est&egrave;ve Olivier</strong><br /> Cartoon Rendering to the max. Tested on Windows XP Pro, Ati Radeon 9800 128 mo, P4@3Ghz, 1 Go Ram; Win2k Pro sp4, GF3 Ti200 64Mo, 512Mo, AMD Athlon XP 1700+; laptop: XP Pro, Radeon 7500, P4@2.4GHz, 512Mo; BI P3@500Mhz, 1280Mo SDRam, GF3; Win98, GF3 Ti 500, AMD@1.4GHz, 512 mb ram PC2100 and XP Pro, AMD Athlon XP 1800+, GF4 Ti 4200 128 Mo, 320Mo SDRam PC133. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/esteve_olivier.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/esteve_olivier.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/florian_rudolf.jpg" alt="" /></td>
+<td><strong>GLslang Shaders by Florian Rudolf</strong><br /> This demo shows some shaders written in the new high level shading language GLslang. Requirements: GL shading language support on your graphic card (this demo will NOT run without GLslang support). You will also need the OpenIL library (openil.sourceforge.net). <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/florian_rudolf.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/florian_rudolf.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/florian_zitzelsberger.jpg" alt="" /></td>
+<td><strong>Ocean Water Demo by Florian Zitzelsberger "ZMaster"</strong><br /> Advanced vertex and fragment shaders (v. 2.0) are not required but image quality is really crappy on hardware, which doesn't support them. Fragment shaders are used for per-pixel lighting, bump mapping of the water surface and cube map reflections. The boat model is also per-pixel lit on appropriate hardware. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/florian_zitzelsberger.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/florian_zitzelsberger.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/frank_de_bresser.jpg" alt="" /></td>
+<td><strong>Reflection by Frank de Bresser</strong><br /> Reflective scene with relaxing music. Download the latest drivers for your videocard. If sound isn't available, check if you've installed the latest drivers for your soundcard. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/frank_de_bresser.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/frank_de_bresser.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/gautam_narain.jpg" alt="" /></td>
+<td><strong>Destiny by Gautam Narain</strong><br /> Castle in the Forest... Requires OpenGL Compliant Video card and 256 MB Ram. Extensions Required : GL_ARB_multitexture and GL_EXT_fog_coord. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/gautam_narain.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/gautam_narain.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/graham_aldridge.jpg" alt="" /></td>
+<td><strong>Status Unknown by Graham Aldridge</strong><br /> Seek and Destroy... D3D is really dodgy, it's there just as a last resort so only use it if GL really breaks. If you don't have a 3D sound card you won't get any sound. Don't worry, I'm working on it. If your video card has only one texture unit (by god!) you won't get any lighting on the terrain. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/graham_aldridge.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/graham_aldridge.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/leonardo_boselli.jpg" alt="" /></td>
+<td><strong>Gun-Tactyx by Leonardo Boselli</strong><br /> A CROBOTS-like game with QUAKE3-style graphics. You can read more details about the game in the file "GUN-TACTYX_Manual.htm". This program is intended for the Windows platform (Win98 SE or higher). The development machine had the following hardware: Windows 98, Athlon 800 MHz, 256 Mb, Asus V6600 (GeForce 256 SDR 32 Mb), SoundBlaster Live! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/leonardo_boselli.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/leonardo_boselli.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/maarten_kronberger.jpg" alt="" /></td>
+<td><strong>Volition by Maarten Kronberger "McCLaw"</strong><br /> Trippy demo with cool soundtrack. Tested on a P3-733 with a Geforce 2 video card running at 800x600. It runs OK, but occasionally the frame rate drops to 40fps. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/maarten_kronberger.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/maarten_kronberger.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/matthew_strahan.jpg" alt="" /></td>
+<td><strong>A Study Of Effects by Matthew Strahan "Strider"</strong><br /> A new algorithm that creates great terrain along with an algorithm written from scratch to do terrain shadowing real time. Tested on a GeForce 4 Ti 4200 128MB. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/matthew_strahan.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/matthew_strahan.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/michael_edwards.jpg" alt="" /></td>
+<td><strong>Seasons by Michael Edwards</strong><br /> This demo loops between two seasons, winter and fall, among a randomly generated terrain filled with trees, snowflakes, and snowmen. This demo runs for about seven minutes. Features: Multipass texturing, Particle systems, Quadrics and Fog. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/michael_edwards.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/michael_edwards.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/michael_wallace.jpg" alt="" /></td>
+<td><strong>Fountain by Michael Wallace "Custard Slice"</strong><br /> Designed to run on any video card that supports multitexturing and vertex programs through nVidia's cg language. Please ensure that you have the latest video drivers for your card to prevent any problems. The demo is relatively CPU intensive too, so a 1Ghz+ Pentium III or Pentium IV CPU is highly recommeded. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/michael_wallace.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/michael_wallace.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/michal_staniszewski.jpg" alt="" /></td>
+<td><strong>Your Fingers So Gently On My Skin by Michal Staniszewski "bonzaj"</strong><br /> The engine uses PixelShaders 2.0 (that means ARB_fragment_program or NV_fragment_program). So here is the list of supported cards: nVidia GeForceFX5200+ (www.nvidia.com), ATI Radeon 9500+ (www.ati.com) and others that meet requirements from the Diagnostics panel. DivX version available from <a href="http://kolos.math.uni.lodz.pl/~plastic" target="_blank">http://kolos.math.uni.lodz.pl/~plastic</a>. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/michal_staniszewski.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/michal_staniszewski.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/mirko_teran_ravnikar.jpg" alt="" /></td>
+<td><strong>Tranquillity by Mirko Teran-Ravnikar "DarkWIng"</strong><br /> Demo was created for nVidia GeForce 3/4/FX series of cards and CPU @ 1.5GHz or more, running Windows 2000 or XP. Demo might work on other cards/CPU/OS combinations also, but with low quality/performance. Windows98/ME users can also expect some issues. Please use the newest graphic card drivers you can find. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/mirko_teran_ravnikar.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/mirko_teran_ravnikar.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/oliver_pilarski.jpg" alt="" /></td>
+<td><strong>Waving Flame by Oliver Pilarski</strong><br /> Simulates a one-phase 3D-fluid flow on a 16x16x16 grid. It renders a flame by 3D-volume rendering, using a 3D-texture, thus it is required to have a GeForce3 based card, in order to have 3D-textures in hardware. If not it may run, but in deed very, very slow. The flame is mirrored on the moving water surface, which is animated using a procedural perlin noise effect. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/oliver_pilarski.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/oliver_pilarski.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/patrick_maher.jpg" alt="" /></td>
+<td><strong>Water Garden by Patrick Maher</strong><br /> Extremely detailed water scene. Requires multitexturing extension. Tested and works on: P3 533Mhz, 256MB RAM, 16MB TNT, WIN2k - Runs Slow in certain areas; P3 866Mhz, 256MB RAM, 32MB TNT2, WIN2k - Runs Slow in certain areas; P4 2.4Ghz, 256MB RAM, 64MB GF4 MX440, WIN2k - Runs Good. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/patrick_maher.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/patrick_maher.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/paul_kitchin.jpg" alt="" /></td>
+<td><strong>Furries by Paul Kitchin "Enigma"</strong><br /> Bouncing Furries featuring Multi Pass (slow), Single Pass Multitexture (fast) or Fragment Program (fast) Terrain and Interactive or Non-Interactive modes. Interactive allows you to to control the camera and runs indefinitely. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/paul_kitchin.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/paul_kitchin.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/phil_bignall.jpg" alt="" /></td>
+<td><strong>The Voyage by Phil Bignall</strong><br /> Control a ship with the keyboard. Coded and built on a P4 1700 MHz with 512 MB Ram and a 64MB GeForce4 Graphics card. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/phil_bignall.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/phil_bignall.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/philip_leszczynski.jpg" alt="" /></td>
+<td><strong>Ball Dodger by Philip Leszczynski</strong><br /> Heightfield Terrain Map, Skybox, Particle System (for sparks) and "fake" skeletal animation. Uses the GL_EXT_compiled_vertex_arrays extension. The program will work if you don't have this extension but it's recommended that you do. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/philip_leszczynski.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/philip_leszczynski.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/pipes_clangor.jpg" alt="" /></td>
+<td><strong>Lake Of Fire by Pipes Clangor</strong><br /> Could this be hell? Tested on Windows Me, AMD Athlon 1.2 ghz, 320 MB of RAM, NVIDIA GeForce4 Ti 4200 AGP8x, SoundBlaster Live 5.1. Anything less will make it go really slow. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/pipes_clangor.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/pipes_clangor.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/samuel_and_david_larkin.jpg" alt="" /></td>
+<td><strong>Demo Engine by Samuel and David Larkin</strong><br /> You might need a big machine because there is a lot of particules in this demo. We used: AMD Athlon 2000+XP and GeForce4 Ti4680 and 512megs ram. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/samuel_and_david_larkin.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/samuel_and_david_larkin.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/shawn_silsbee.jpg" alt="" /></td>
+<td><strong>Floating City by Shawn Silsbee</strong><br /> A single-scene demo in which the user takes a guided tour through a "city-on-a-rock" floating in space. There is also a Free Look Mode, Written on an Athlon XP 2100+ with a Geforce4 Ti4200. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/shawn_silsbee.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/shawn_silsbee.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/steve_braeger.jpg" alt="" /></td>
+<td><strong>Ocean by Steve Braeger</strong><br /> A cool ocean scene with a neat lighthouse and a specially texture mapped dynamic ocean. Unfortunately, it wasn't finished in time because the author started at 11 am on Jan 31, 2003. He couldn't bring himself to just throw it all away when midnight hit, so here it is. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/steve_braeger.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/steve_braeger.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/tamas_marki.jpg" alt="" /></td>
+<td><strong>The Test by Tamas Marki</strong><br /> Requires Windows 2000/XP, a CPU of at least 1 GHz, OpenGL 1.2 compatible graphics card (GeForce 2 or above recommended) with up to date drivers. Developed with: AMD Athlon XP 1600+, 384 MB of 266 MHz DDR SDRAM, Connect3D Radeon 9200. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/tamas_marki.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/tamas_marki.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/tim_graupmann.jpg" alt="" /></td>
+<td><strong>Lost In The Details by Tim Graupmann</strong><br /> Details are often missed, so I'll list the effects I used so that it will be easier to see them when you run the demo. Card Drop Effect, Sweeper Effect, Sky Effect, Perspective Effect, Warped Effect, Collision Effect, Lighting/Fog Effect, Music Effect. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/tim_graupmann.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/tim_graupmann.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2004_creative/vrej_melkonian.jpg" alt="" /></td>
+<td><strong>Shader House by Vrej Melkonian</strong><br /> A collection of 30 shaders, all written using OpenGL's ARB_vertex_program and ARB_fragment_program. It is intended to "show off" and explain at the same time with subtitles. Your video drivers must support version 1.3 minimum and have certain extensions present: GL_ARB_vertex_program, GL_ARB_fragment_program, GL_EXT_texture_filter_anisotropic, GL_SGIS_generate_mipmap, GL_ARB_vertex_buffer_object. Anything below that will only allow you to see the intro. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/demo/vrej_melkonian.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2004_creative/source/vrej_melkonian.zip">Source</a></td>
+</tr>
+</tbody>
+</table>
+            </div>
+            <div>
+            	<p>
+            		<strong><a href="../../article/contest_creative_labs_europe/5137355874762752/index.html">CONTINUE READING</a></strong>
+            	</p>
+            </div>
+        </div>        
+    
+        <div class="news_box">
+            <div class="title">
+                CONTEST: HALLOWEEN 2000
+            </div>
+            <div class="body">
+                <center>
+<h1><span style="font-size: medium;"><strong><span style="text-decoration: underline;"><span>Welcome To The First NeHe Productions OpenGL Challenge!</span></span></strong></span></h1>
+<h1><img src="../../../nehe.gamedev5.net/data1/projects/halloween_2000/halloween_2000_3.jpg" alt="" width="160" height="120" /></h1>
+</center>
+<p><br /> The point of this contest was to create an OpenGL Halloween demo using basecode from this web site. The demo had to run in Windows, and full source code had to be included. The first place winner took home $50 for his impressive work recreating a spooky graveyard. Many of the entries in this contest were made by new GL programmers. All the entries are extemely well done! <br /><br /> Keep in mind that almost all of these demos include full source code. If you see a cool effect you can check out the source code to see how it's done! <br /><br /> * Check out the <strong>Glow Inc.</strong> website for super cool glow in the dark paint. They also have some project information for Halloween decorating and haunting including two great articles on creating a dot room and a glow room. Visit <a href="http://www.hobbyglow.com/haunted_houses.htm" target="_blank">http://www.hobbyglow.com/haunted_houses.htm</a> for more information! <br /><br /></p>
+<center><strong>* * * CONTEST IS NOW OVER. ENTRIES CAN BE FOUND BELOW * * *</strong></center>
+<table border="1" align="left">
+<tbody>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2000_halloween/martin_cietwierkowski.jpg" alt="" /></td>
+<td><strong>The Graveyard by Martin Cietwierkowski (1st Place Winner)</strong><br /> The graphics are smooth, the music is excellent, and the theme is definitely erie! Very funny tombstones, make sure you read them :) Excellent job by Martin Cietwierkowski! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/martin_cietwierkowski.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/martin_cietwierkowski.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2000_halloween/justin_eslinger.jpg" alt="" /></td>
+<td><strong>Evil Dead by Justin Eslinger (2nd Place Winner)</strong><br /> A must see! One human equipt with a chainsaw and a gun. Hundreds of skeletons out to kill. Amazing graphics and sound effects! A Halloween you'll never forget! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/justin_eslinger.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/justin_eslinger.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2000_halloween/jonathan_brenner.jpg" alt="" /></td>
+<td><strong>Halloween Nightfall by Jonathan Brenner (3rd Place Winner)</strong><br /> An amazing job at creating a realistic environment. The first scene in this demo is a must see! The rolling hills, setting sun, and crystal clear lake is impressive. Dark rolling clouds really set the mood! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/jonathan_brenner.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/jonathan_brenner.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2000_halloween/antoine_pruitt.jpg" alt="" /></td>
+<td><strong>Halloween Demo by Antoine Pruitt</strong><br /> Visual C++ entry from a new GL programmer. Features a fire red box with lid and Halloween texture. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/antoine_pruitt.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/antoine_pruitt.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2000_halloween/arseny_livshitz.jpg" alt="" /></td>
+<td><strong>Halloween 2000 by Arseny Livshitz (code) &amp; Dennis Przhendzinsky (models)</strong><br /> This entry pans through a very chilling graveyard scene. Excellent attention to detail! Great textures and Chilling Sound! No Source. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/arseny_livshitz.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/arseny_livshitz.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2000_halloween/ben_hamlet.jpg" alt="" /></td>
+<td><strong>Frightmare by Ben Hamlet</strong><br /> Music, sound effects, mouse control, human interaction, and very colorful graphics! Lots of pumpkins too :) <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/ben_hamlet.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/ben_hamlet.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2000_halloween/chris_roe.jpg" alt="" /></td>
+<td><strong>Spooky McRoe by Chris Roe</strong><br /> A pretty cool first attempt at a GL demo! Twisted looking background with a cool 3D axe spinning around. Nice music as well! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/chris_roe.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/chris_roe.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2000_halloween/francis_shanahan.jpg" alt="" /></td>
+<td><strong>OGLM Halloween by Francis Shanahan</strong><br /> Noise bump mapped terrain, linear camera movement, blending and lots more. The home of Eleanour Rigby, high on the moors... Watch for her ghost! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/francis_shanahan.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/francis_shanahan.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2000_halloween/george_ziniewicz.jpg" alt="" /></td>
+<td><strong>CatacombZ by George Ziniewicz</strong><br /> Make sure you press ? when you start the program. There are alot of features in this entry. Blowing up the pumpkins (?) is very cool, along with the tracer bullets! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/george_ziniewicz.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/george_ziniewicz.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2000_halloween/james_elliott.jpg" alt="" /></td>
+<td><strong>October Sky by James Elliott</strong><br /> This entry features a dark and erie graveyard scene complete with a run down church, pouring rain and lightning. Make sure you read the Entry Form text to find out all the cool features. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/james_elliott.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/james_elliott.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2000_halloween/jim_strong.jpg" alt="" /></td>
+<td><strong>GLween by Jim Strong</strong><br /> The coffins in this demo are literally amazing. I sure wouldn't want to be stuck inside one! The rippling pumpkins, and the sparkling particles are also very cool! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/jim_strong.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/jim_strong.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2000_halloween/julien_amsellem.jpg" alt="" /></td>
+<td><strong>Evil Pumpkin by Julien Amsellem</strong><br /> Very cool particle effects in this entry created by Julien Amsellem. Make sure you move the mouse around to tilt and turn the scene. Very cool pumpkin model as well, unfortunately the author did not include source code :( <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/julien_amsellem.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/julien_amsellem.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2000_halloween/luigi_pino.jpg" alt="" /></td>
+<td><strong>Halloween Fighter 2D00 by Luigi Pino</strong><br /> One of the most unique entries. Literally crazy! Rid the earth of all evil. Battle the incredibly disfigured monsters on Halloween Night. Must see! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/luigi_pino.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/luigi_pino.zip">Source</a></td>
+</tr>
+</tbody>
+</table>
+            </div>
+            <div>
+            	<p>
+            		<strong><a href="../../article/contest_halloween_2000/5629499534213120/index.html">CONTINUE READING</a></strong>
+            	</p>
+            </div>
+        </div>        
+    
+        <div class="news_box">
+            <div class="title">
+                OLD NEHE PROJECTS
+            </div>
+            <div class="body">
+                <table border="1" align="left">
+<tbody>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/acid_burn_2/acid_burn_2_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Acid Burn II</h2>
+<br /> Being the huge Atari fan that I am... It was only a matter of time before I ported one of my favorite Atari ST(e) demos over the the PC. I hope you guys enjoy the port as much as I enjoyed making it. Coding the demos was not all that hard. Unpacking the original .exe to get the fonts, images and sound was brutal! Sound was found by playing through the entire program until I heard what sounded like music. I found the graphics by using a modified version of my Atari 8bit rom viewer. Once the audio was found, it was ripped, cleaned up and resampled. The original song was composed on the fly using different samples (many parts repeated). This version is one long sample with the repeating parts already mixed in. The audio quality is MUCH better in this version. The size of this demo has been reduced from 2.14megs to 693k. Some people had said there were stray pixels over top of the scroll text. I think the problem has been fixed (hard to tell, because I never saw the problem before). Most important... the text in the scroller now bends, just like the original demo! Greets to -An Cool- and the rest of the Carebears... Atari Forever!!! <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Pixel Perfect Graphics...?</li>
+<li>Audio Converted, Cleaned Up, Rebuilt.</li>
+<li>Funky Scrolling Text &amp; Flashing Colors!</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/acid_burn_2/acid_burn_2.zip">acid_burn_2.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/acid_burn_2/acid_burn_2_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/acid_burn_2/acid_burn_2_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/box-in/box-in_1.jpg" alt="" /></td>
+<td rowspan="2">
+<h2>Box-In</h2>
+<br /> Another fun filled game by J.D. Casten. This game is not nearly as complex as Escape From Epsilon but it's definitely fun! Try to trap the bad guy by pushing blocks around the screen. Sounds easy, but it's definitely not! The bad guy can move at angles, and easily squeezes through cracks. Hope someone finds this game entertaining... took about 30 minutes to convert from Atari Basic to OpenGL for Windows (Visual C++). F1 - Toggle Fullscreen<br /> F3 - Select Level<br /> F4 - Start Game Greets to J.D. Casten Wherever you are... P.S. Some video cards break the tiles for some reason (lines appear between tiles). Atari Forever!!! <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Animation</li>
+<li>Sound Effects</li>
+<li>Custom Plot and Drawto Routines</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/box-in/box-in.zip">box-in.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/box-in/box-in_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/calendar/calendar_1.jpg" alt="" /></td>
+<td rowspan="2">
+<h2>OpenGL Calendar</h2>
+<br /> Had to stay up late and needed something to kill the time. Coded this in about 20 minutes. It's a simple conversion of a Java calendar I wrote for my old web page way back in 1991. Lighting definitely makes a difference when the calendar is spinning. Without it you can barely tell the letters are 3D. Use the Up / Down / Left / Right arrow keys to spin it around. Like I said... Nothing more than a time waster. I should probably convert it to a screensaver. <br /> <br /><strong>Features:</strong>
+<ul>
+<li>3D Comic Font</li>
+<li>Simple Lighting</li>
+<li>Grabbing The Current Date</li>
+<li>Keyboard Interaction</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/calendar/calendar.zip">calendar.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/calendar/calendar_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/christmas_2000/christmas_2000_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Christmas 2000</h2>
+<br /> Christmas was one of my favorite projects. It was almost Christmas day, I had already written a Halloween demo, but had nothing on my site to do with Christmas. So, I started browsing the net for ideas. While browsing I came across a 3D model of a cabin. One winter I rented a cabin in Jasper Provincial Park (Alberta) for the weekend. The view from our cabin loft was the most incredible view ever. An endless ice covered lake and lots of snow. Just beautiful! <br /><br /> Immediately my mind went into over drive. I started with the big field of snow, added the insanely detailed cabin (piece by piece), and finally I added the falling snow. The candy canes are just eye candy {grin}. After coding the demo it still needed something. I added day to night, and a very cool soundtrack. Who doesn't like "Holly Jolly Christmas"!?! Voila a Christmas demo just in time for Christmas! Experiment with code. If you find you're stumped or stressed out, take a break. Browse the net or leave your computer for a while. I've come up with most my ideas by looking around me. Taking a break from the code every now and then is almost like a recharge. Burning out on code is no fun... I know :) <br /> <br /><strong>Features:</strong>
+<ul>
+<li>MP3 Soundtrack</li>
+<li>Complex Models</li>
+<li>Cool Blended Falling Snow</li>
+<li>Moving Camera (Tilts Up/Down, Etc)</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/christmas_2000/christmas_2000.zip">christmas_2000.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/christmas_2000/christmas_2000_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/christmas_2000/christmas_2000_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/color/color_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Color</h2>
+<br /> Color is a small demo that rotates through all the colors of the rainbow. The color cycling is so gradual, you barely notice it happening. The Wavy pattern gradually changes as well. I wrote this demo after coding a similar ASP demo featuring color cycling with calculations done on the fly. Of course the GL version looks much nicer :) <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Smooth Cycling Colors</li>
+<li>Color Calculation On The Fly (No Precalculations)</li>
+<li>Nice Wavy Line Pattern That Gradually Changes</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/color/color.zip">color.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/color/color_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/color/color_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/colors/colors_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Colors</h2>
+<br /> Colors is a mini demo. I have always been a huge fan of the demo scene and wanted to see how much work goes into writing a demo, and whether or not I had enough creativity to write a mini demo of my own. Colors is both eye candy, and a wonderful way to show off some of the cool things that can be done in OpenGL. The models used in this demo were designed by my brother Sean Molofee ( Kismet ), and a friend of ours Jeff Carlson ( Leper Tomato ). I designed the graphics and textures, and Rymix wrote the music. Unfortunately I don't know Rymix, so I am unable to thank him for writing such a cool song. Without it, the demo wouldn't be the same. I think the song compliments the effects quite nicely! This demo was written in roughly 1 week, a few hours of coding each day. I hope this demo not only peaks your interest in OpenGL, but inspires you to create demos and effects of your own! <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Animation Synchronized To Music</li>
+<li>Blending Of Multiple Colors And 3D Objects</li>
+<li>Complex 3D Models Demonstrating Environment Mapping</li>
+<li>Rolling Textures, Movement Based On Object Direction And More!</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/colors/colors.zip">colors.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/colors/colors_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/colors/colors_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/cubes/cubes_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Cubes</h2>
+<br /> I received an email from someone asking how to eliminate the jaggies around cubes placed closely together. Although I wasn't able to eliminate the problem completely, I was able to reduce the jaggies considerably. A combination of blending and modifying the depth testing. It's important to note that the jaggies are only visible when lighting is enabled. As usual, while coding this project, I got carried away and threw in a few keys to make things more exciting. 1 and 2 toggle blending modes. W toggles wireframe mode. L enables and disables lighting and S causes the cubes to spin. This demo is nothing more than eye candy. A few minutes worth of coding. If you've read through the first 12 tutorials, this effect to should be easy to recreate on your own. <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Display Lists</li>
+<li>Keyboard Interaction</li>
+<li>Color Material / Lighting / Blending</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/cubes/cubes.zip">cubes.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/cubes/cubes_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/cubes/cubes_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/dancing_quad/dancing_quad_1.jpg" alt="" /></td>
+<td rowspan="2">
+<h2>Dancing Quad</h2>
+<br /> A simple demo that distorts a quad to music. Copy any .MP3 to the DATA directory and rename to Song.Dat. Use songs with silent portions, bass and a good range of sound for the best effect. A tiny sound clip was included to demonstrate the effect. Use the Up / Down arrow keys to enhance/decrease the effect. Spacebar toggles the effect to rolling hills. This project was made in under 20 minutes. It started out as a spectrum analyzer, and quickly changed to an animated quad. Nothing fancy... nice to look at :) <br /> <br /><strong>Features:</strong>
+<ul>
+<li>MP3 Playback</li>
+<li>Use of FFT data</li>
+<li>Color blending</li>
+<li>Keyboard interaction</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/dancing_quad/dancing_quad.zip">dancing_quad.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/dancing_quad/dancing_quad_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/dolphin/dolphin_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Dolphin</h2>
+<br /> I wrote dolphin as a test to see if I could animate a mesh. I ripped two models from the popular 3 dolphin .3DS file. I then converted the two models into usable data for my program. The animation is done by morphing from one mesh to the other. It's not the best way to animate the dolphin but it requires very little code. The hardest part was making all the points move at the correct speed. Without timing, the body may bend before the tail even starts moving. You'll notice the model is a wireframe. I did this for two reasons. I never bothered to create texture coordinates, so texturing would require some extra work. Using smooth colors looks ok, but not very realistic. So I decided to use wireframe and points. If you'd like to switch to point mode, press M. Up and Down arrows make the dolphin roll. Perhaps in the future I'll spend some more time animating models. I'd like to play around with skeletal animation. Just have to figure out how it's done :) Although this project is quite small, I hope it inspires you to play around with code of your own. Playing is the best way to discover new effects and come up with original ways to get things done! <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Cool Soundtrack</li>
+<li>Keyboard Interaction</li>
+<li>Wireframe &amp; Point Drawing</li>
+<li>Model Animation Done With Simple Morphing</li>
+<li>Random Animation (Dolphin Jumps From Each Side)</li>
+<li>Fancy Water Blending (Dolphin Enters Water In The Middle)</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/dolphin/dolphin.zip">dolphin.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/dolphin/dolphin_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/dolphin/dolphin_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/escape_from_epsilon/escape_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Escape From Epsilon</h2>
+<br /> A long time ago, when my world revolved around the Atari 8-Bit, one of my favorite things to do was type in programs from magazines like Antic and Analog. Most of the programs were pretty simple and most of them were pretty dull... BUT... once in a blue moon, an extremely talented individual would send in their masterpiece and the magazine would publish it. One of these talented individuals was a guy named J.D. Casten. He wrote games that were both fun, and brilliant! He wasn't afraid to use 6502 assembly code, and his basic code was clean and very organized. Any way... One of the first games I ever typed into my computer by J.D. Casten was a game called Escape from Epsilon. It was a multi-level, multi-screen platform game. The goal was to jump over pits, avoid spikes, ride conveyors, get the key and get the heck out! Being the kind of person that just jumps into a project without really considering the difficulty, I decided I would convert this game to OpenGL for Windows. It started off not to bad. Basic engine took little time to code. Then it came time to rebuild the custom font, convert the asm code, rebuild the levels, handle the display lists and deal with the delay created by swapping the buffer in GL. Not all that fun! Two days later, this is the final product. I have tested the first three games, and they work perfect (alpha, beta, gamma). I didn't have time to go through all 80 levels in Epsilon, so there may be a few bugs. Hope you guys enjoy it... nothing compared to games of today, but definitely a classic! F1 - Toggle Fullscreen<br /> F3 - Select Level<br /> F4 - Start Game Greets to J.D. Casten Wherever you are... P.S. Some video cards break the tiles for some reason (lines appear between tiles). Atari Forever!!! <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Animation</li>
+<li>Sound Effects</li>
+<li>Custom Graphics</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/escape_from_epsilon/escape_from_epsilon.zip">escape_from_epsilon.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/escape_from_epsilon/escape_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/escape_from_epsilon/escape_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/fake_rasters/fake_rasters_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Fake Rasters</h2>
+<br /> Back when I was a kid, I was fortunate enough to own an Atari 8-Bit. Yes I am biased, but I believe the Atari was one of the most incredible lines of computers ever made. The raster trick was the first 6502-assembly program I wrote on the Atari. It was called a trick because on the Atari (C64 too I believe) you either had graphics or text. If you wanted graphics on a text screen you had to do a few tricks. In text modes you were usually limited to 16 colors at most (and no graphics). Using assembly language you could change the background color of the screen on each individual scan line to any one of the 256 available colors. Rasters were bars of color that moved behind the text. By controlling what color each line changed to, you could create moving bars of color. These days we don't have limited colors, and tricks are not needed to create the effect. It's still a cool effect though. Kind of hypnotizing :) <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Display Lists</li>
+<li>Texture Mapping</li>
+<li>Keyboard Interaction</li>
+<li>Color Mapped Texture</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/fake_rasters/fake_rasters.zip">fake_rasters.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/fake_rasters/fake_rasters_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/fake_rasters/fake_rasters_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/fern/fern_1.jpg" alt="" /></td>
+<td rowspan="2">
+<h2>Fern</h2>
+<br /> An enhanced version of an old Pascal program I wrote back in 1996. Nothing more than a fractal spinning around the screen as it's drawn. Deep colors like purple, dark blue and red look best. There are no precalculations which is why it takes so long for the fern to fill in. This demo runs in 1024x768... Hopefully in this day and age, everyone has a monitor capable of more than 800x600. <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Fractal Math</li>
+<li>Arced Rotation On Y &amp; Z Axes</li>
+<li>Random Colors (Nothing To Dark)</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/fern/fern.zip">fern.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/fern/fern_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/gamedev/gamedev_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>GameDev</h2>
+<br /> I wrote GameDev in 1999. Swedie from DemoNews had just contacted me. He had seen a few of my OpenGL demos and wanted to host me. This project was originally called DemoNews. But now that GameDev hosts me, the demo has been modified to reflect the change. I wrote this demo as a way to celebrate being hosted and to advertise the site. This invitro didn't take that long to code, but coming up with the idea took up quite a bit of my time. The background swings from left to right while moving down the screen. A string of GL balls dance around the screen, a transparent teapot floats around the screen reflecting the background off its glass surface, and a message rolls at the bottom overtop a colorful rainbow pattern. The teapot was hand coded from data I found on the net, the GL balls were drawn by Jeff Carlson (Leper Tomato), the music was composed on the C64 (title Last Ninja). Everything else was drawn and coded by myself. When I wrote this demo I wanted to capture the look and feel of older Atari Demos. Lots of action, and a cool chip tune. I'm happy with the final result, hopefully you enjoy it as well! This project is a good example of what can be done with a little imagination. I took ideas that I already knew and combined them to create the invitro. <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Fancy Blending (Balls And Message)</li>
+<li>Fast Moving String Of Animated GL Balls</li>
+<li>Environment Mapped Teapot (Glass Effect)</li>
+<li>Rolling Textures (Message And Background)</li>
+<li>Cool Chip Tune (Last Ninja C64... Thanks To Thomas Olsen For The Info!)</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/gamedev/gamedev.zip">gamedev.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/gamedev/gamedev_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/gamedev/gamedev_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/goblet/goblet_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Goblet</h2>
+<br /> I wrote GL goblet when I was learning how to load in 3D models. I asked my brother if he could create me a low polygon model so that I'd have something to work with. He got a little carried away with the polygons, but the model was too cool to not use. I removed almost 50% of the polygons by hand. The model looks almost identical, although it's not quite as smooth as the one he sent me. Thank god for smooth shading :) After reducing the number of polygons I started adding some cool effects like sphere mapping, blending, and a special draw mode that draws the goblet polygon by polygon as it spins on the screen (press D to activate). The code could still be optimized more, but I got side tracked. It's still pretty fast considering there are still a few thousand polygons making up the goblet. Keys 1 and 2 select the texture to use, B enables blending, E enable environment mapping, M selects the drawing mode (point, line, solid), enter toggles the background on and off, page up and down zoom in and out and finally the arrow keys spin the goblet. I've always been fascinated by 3D models. You'll notice quite a few of my projects include a 3D model of some sort. If you're interested in loading models into your own code with little to no effort, search the net for a program called Deep Exploration (no longer free as it was when it was called 3D Exploration... pout). It does most the work for you. However if you want complete control over the model, it's better to load the data in yourself. <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Fancy Blending</li>
+<li>3D Model Usage</li>
+<li>Special Draw Mode</li>
+<li>Display List Usage</li>
+<li>Keyboard Interaction</li>
+<li>Environment Mapping</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/goblet/goblet.zip">goblet.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/goblet/goblet_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/goblet/goblet_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/halloween_2000/halloween_2000_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Halloween 2000</h2>
+<br /> I started on the project 2 days before Halloween, and had it posted on the net Halloween morning (just about didn't make it). I originally wanted to do a much larger project, but time was limited, and my creativity wasn't flowing. I tried to make the demo fun to watch. There's dripping blood, a flying witch, a pumpkin that pops out of the screen and more. I especially like the music (grin). Nice mood music. Halloween is another good example of what can be done with a little time, and a bit of creativity. The demo was built in layers. I started with the tombstones, the music, the background, rolling blood, pumpkin and lastly I added the flying witch :) All simple effects on their own, but combined they look pretty cool! <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Scary Music</li>
+<li>3D Model Usage</li>
+<li>Simple Blending</li>
+<li>Moving Background</li>
+<li>Display List Usage</li>
+<li>Cool Dripping Blood</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/halloween_2000/halloween_2000.zip">halloween_2000.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/halloween_2000/halloween_2000_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/halloween_2000/halloween_2000_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/hearts/hearts_1.jpg" alt="" /></td>
+<td rowspan="2">
+<h2>Hearts</h2>
+<br /> I wrote hearts on Valentines Day for my GF. She's a big fan of Scooter (rave), and I wanted to surprise her when she woke up. The version I gave her was a little more personal, but pretty much the same thing. I modified the orignal version to allow a personal voice message of your own (.WAV file), and a custom text message of your own. Space bar plays your personal voice message. Hearts was one of them projects I felt motivated to do. I guess you could call it an electronic Valentines Day card for my GF. She enjoyed it so I must have done something right :) <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Blending</li>
+<li>Audio Soundtrack</li>
+<li>Recorded Message (.WAV)</li>
+<li>Text Message (read from a file)</li>
+<li>Keyboard Interaction (space bar)</li>
+<li>Lots of Movement On The Screen</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/hearts/hearts.zip">hearts.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/hearts/hearts_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/hellraiser/hellraiser_1.jpg" alt="" /></td>
+<td rowspan="2">
+<h2>Hellraiser</h2>
+<br /> Hellraiser was one of the first programs I wrote that used lighting. I was a big fan of the movie Hellraiser, and that little box always fascinated me. So when I lucked out and found textures from the box, I just had to code something :) I think the lighting looks really cool in this project. You can see the sides of the cube fade in as it spins. Arrow keys allow you to spin the cube, page up and down zoom in and out, and 'a' and 'z' rotate the cube on the z-axis. Even though Hellraiser is not a very complex program, it's still nice to look at. All the effects come together to create a very nice onscreen image. Hellraiser is a good example of what new GL programmers can accomplish once they've mastered the basics. <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Lighting</li>
+<li>Texture Filtering</li>
+<li>High Detail Textures</li>
+<li>Keyboard Interaction</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/hellraiser/hellraiser.zip">hellraiser.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/hellraiser/hellraiser_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/lights/lights_1.jpg" alt="" /></td>
+<td rowspan="2">
+<h2>OpenGL Lights</h2>
+<br /> Lights was my first attempt at moving lights. The objects are now hand coded (no more aux library). Each light points at the object as it spins around the object. Any part of the object that is hit by the light will light up with the correct color. <br /><br /> If more than one light hits the object, the colors mix. All three lights mixed together create white light. There is a steady white light hitting the front of the object. This light can be turned off and on with '0'. Keys 1, 2 &amp; 3 turn the red, green and blue lights on/off. L turns on/off lighting. S turns on/off smooth shading (I like flat shading). Space changes to another object, and finally R turns reflections off and on. Reflections are cool. You can see the lights reflecting in each other. Lights was a big project. The effect used in lights can be used to light up a hallway as a missile flies down the middle of it, etc. It's good to learn about spotlights. Having control over the light really adds to the scene. <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Multiple 3D Shapes</li>
+<li>Keyboard Interaction</li>
+<li>MP3 Soundtrack (Enya)</li>
+<li>Lighting (Reflective, Spotlight, Etc)</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/lights/lights.zip">lights.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/lights/lights_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/meteors/meteors_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Meteors</h2>
+<br /> Meteors was my first BIG break in the GL community. I was browsing one of my favorite sites (3D Files) when I happened to see a posting about an OpenGL screensaver contest they were having. Unfortunately the contest was over in 2 days. I wrote to the guys at 3Dfiles and asked if I could still enter. Luckily they said yes. I programmed for 2 days straight. At the end of two days I had finished programming Meteors. I ran into quite a few problems while making the demo. The biggest problem was the fact that I had never written a screensaver before. I couldn't find any helpful information so I wrote code of my own to allow the program to work as a screensaver. In actuality it's a normal .exe made to watch for Windows screensaver messages. Although I was extremely happy with the final project, I didn't think I'd place. At the end of judging, my screensaver won! The prize I won was the Elsa Erazor II TNT card. I'd like to thank 3Dfiles once again. This card helped me out so much while learning GL. The GL support on this card was excellent at the time. This project is the standalone version of the demo. This program was the breaking point for my GL hobby. Not only did I get recognition from Meteors, winning inspired me to learn even more! If you're interested in getting your stuff noticed, be persistent. Don't give up! <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Midi Soundtrack</li>
+<li>Texture Blending</li>
+<li>Object Animation</li>
+<li>Texture Smoothing</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/meteors/meteors.zip">meteors.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/meteors/meteors_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/meteors/meteors_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/nehe_cd/nehe_cd_1.jpg" alt="" /></td>
+<td rowspan="2">
+<h2>NeHe CD</h2>
+<br /> This project was created to advertise the release of my first NeHe Productions OpenGL CD. Creating the CD was a huge undertaking on my part, and I wanted to get word out so that people unfamiliar with NeHe Productions might be interested enough to purchase a CD, or to at least stop by and check the site out. This is the result of a few late night coding sessions. Please distribute this demo freely! You have full permission to include it on CDs, in Magazines, etc. Thanks to everyone that contributed to the CD! Your work is greatly appreciated! Thanks so much to everyone that has already purchased a CD! Happy Coding! <br /> <br /><strong>Features:</strong>
+<ul>
+<li>A Complex CD Model Created By Hand</li>
+<li>Bilinear Filtering For Smooth Graphics</li>
+<li>Complex Blending (Subtractive Blending)</li>
+<li>Animated Background Synchronized To The Music</li>
+<li>A Catchy Oldschool Soundtrack</li>
+<li>Scanned Textures For Realism</li>
+<li>Lighting (Proper Normals)</li>
+<li>Scrolling Credits</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/nehe_cd/nehe_cd.zip">nehe_cd.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/nehe_cd/nehe_cd_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/nehe_world/nehe_world_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>NeHe World</h2>
+<br /> I wrote NeHe World to see if I could write a simple 3D world. Back when I started working on it, I didn't know a lot about OpenGL. Everything was painfully put into place with quads. The original NeHe World had a lot more stuff in it, such as spheres with a moving pattern on them, etc, but I decided to remove it all because you could walk through them. The updated version does have a UFO though. It's a neat little program nonetheless. I've managed to add a nice bouncy feel, a rock pool (?) with some nice clear water in it, etc. Plus the clouds move quite nicely and there's a cool wind sound :) This little world wasn't hard to program. I wrote it back when I was still learning the basics. I'm sure anyone with a good understanding of the basics could do the same. Don't be afraid to try. A lot of the time, the things you may think are hard to do are quite easy. <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Blending</li>
+<li>3D Movement</li>
+<li>Rolling Clouds</li>
+<li>Character Bobbing</li>
+<li>Audio (Nice Wind Sound)</li>
+<li>Travel Limits (Can't Go Through Outside Walls)</li>
+<li>Texture Mapped Lighting</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/nehe_world/nehe_world.zip">nehe_world.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/nehe_world/nehe_world_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/nehe_world/nehe_world_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/porsche/porsche_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Porsche</h2>
+<br /> Porsche was one of the first 3D models that I converted to OpenGL code. The original model was just one solid car. I broke the car into seperate pieces. Mags, Underbody, Trim, Tires, Tail Lights, Roof Trim, Park Lights, Mirrors, Head Lights, Glass, Fenders and the Body. Each of the pieces are stored in a display list so I can easily remove them from the scene. <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Blending</li>
+<li>Display Lists</li>
+<li>Complex 3D Model</li>
+<li>Keyboard Interaction</li>
+<li>Point, Line &amp; Solid Modes</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/porsche/porsche.zip">porsche.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/porsche/porsche_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/porsche/porsche_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/reflection/reflection_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Reflection</h2>
+<br /> I wrote reflections to see if I could recreate the reflection effect I saw while playing Unreal (wicked game). Unfortunately I didn't know anything about the stencil buffer at the time so it's just a trick, but as long as the user doesn't go through the floor, no one will ever know :) The effect is fairly convincing. The image reflected is dimmer like it should be. Lighting can appear on the floor, lighting the reflection, and the textures are inverted just like they should be. Notice everything is backwards, the same way it would look in a mirror. Although it's always good to know the right way to do things, you can usually pull off the same effect with tricks, and most the time it can be done faster using your own code. It's nice to say "yeah, I did that too, but I did it this way". <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Blending</li>
+<li>Texture Mapping</li>
+<li>Negative Scaling</li>
+<li>Keyboard Interaction</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/reflection/reflection.zip">reflection.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/reflection/reflection_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/reflection/reflection_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/rings/rings_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Rings</h2>
+<br /> Rings started out as a time waster. I had nothing better to do, so I decided to draw a ring on the screen. Then I decided it would be cool to have a smaller ring inside the big ring. To make a long story short, I got carried away, added some cool textures, and some keyboard interaction. S toggles Flat/Smooth Shading. B toggles Blending and the spacebar changes the background texture. Another good example of what can be accomplished by playing around. I could have done a lot more, but I got bored with the rings and stopped working on the program :) <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Blending</li>
+<li>Lighting</li>
+<li>Torus Code</li>
+<li>Rolling Textures</li>
+<li>Moving 3D Models</li>
+<li>Keyboard Interaction</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/rings/rings.zip">rings.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/rings/rings_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/rings/rings_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/risky_rescue/risky_1.jpg" alt="" /></td>
+<td rowspan="2">
+<h2>Risky Rescue</h2>
+<br />Another J.D. Casten game converted to OpenGL. This game was a total nightmare to convert to GL. There's a lot of stuff going on, even if it does not look like it, and handling things like the moving platforms, disappearing floor and the arrows took a lot of fancy coding. Taken right from the magazine: In Risky Rescue, you play the part of a creature named Igneous. Your arch enemy, Greedo the goblin, has kidnapped your sweet baby Iggy and holds him captive in his creepy caves. He's put Iggy in a trance, and your only hope of rescuing the baby is to get medicine from three medicine pots and then touch him. To get medicine from a pot, land on it. Meanwhile, Greedo is throwing deadly arrows at you. The best way to avoid them is usually to move up and hover while they fly by. Sometimes, though, there's no room to maneuver, so you must use careful timing to get through the tight spots. Hope someone finds this game entertaining... took about 3 hours to convert from Atari Basic to OpenGL for Windows (Visual C++).
+<table border="0">
+<tbody>
+<tr>
+<td class="text">F1</td>
+<td class="text" align="center" width="20px">-</td>
+<td class="text">Toggle Fullscreen</td>
+</tr>
+<tr>
+<td class="text">ARROWS</td>
+<td class="text" align="center">-</td>
+<td class="text">Move</td>
+</tr>
+<tr>
+<td class="text">CTRL</td>
+<td class="text" align="center">-</td>
+<td class="text">Fly</td>
+</tr>
+</tbody>
+</table>
+<br /> Greets to J.D. Casten Wherever you are... P.S. Some video cards break the tiles for some reason (lines appear between tiles). Run Windowed and adjust the window until the screen looks correct. Atari Forever!!! <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Animation</li>
+<li>Sound Effects</li>
+<li>Custom Plot and Drawto Routines</li>
+<li>Custom Routines To Move Platforms, Arrows, etc</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/risky_rescue/risky_rescue.zip">risky_rescue.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/risky_rescue/risky_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/ship/ship_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Ship</h2>
+<br /> Ship was one of my favorite projects. It was one of the first complex models that I managed to get on the screen. My friend <a href="mailto:jcarlson@mysticarts.com">Jeff Carlson</a> designed the ship. The requirements were simple. Make it as low poly as humanly possible. He came through and sent me an incredible looking low polygon ship. The wings actually required the most polygons. The two wings use more polygons than the entire body of the ship, but damn do they look nice! This project has quite a few effects. 'M' toggles the mode. We have point, line and solid. 'B' enables blending. Keys '1' and '2' change the texture. 'E' enables environment mapping. Space resets the view, and the arrow keys spin the ship. For the rest of the features, read the readme file. Playing with 3D models can be alot of fun. Getting reasonable FPS is another story! It's very important that if you plan to include models in your projects that they use as few polygons as humanly possible. Do whatever it takes to make them look nice. Use fancy textures or whatever, but don't go overboard with the polygons. The more you add, the smaller your audience becomes. Ship will run fine on a Pentium 133 :) <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Blending</li>
+<li>Multiple Textures</li>
+<li>Complex 3D Model</li>
+<li>Environment Mapping</li>
+<li>Keyboard Interaction</li>
+<li>Points, Lines &amp; Solid Polygons</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/ship/ship.zip">ship.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/ship/ship_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/ship/ship_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/skull/skull_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Skull</h2>
+<br /> I wrote 'skull' around the same time I wrote 'ship'. At that point in time I was extremely impressed by environment mapping, and 3D models. The environment map textures I decided to use are quite cool. The skull actually looks metallic and shiny. Blending also looks pretty cool. Arrows spin the skull, page up/down zooms, space resets, '1' &amp; '2' selects the texture, 'E' enables environment mapping, 'B' enables blending, 'M' changes the drawing mode and 'L' makes the skull laugh :) Skull was fairly easy to write. I borrowed the code from my ship project, took out the ship data, added in the skull data, and then made a few changes. Once you've written enough code, borrowing code from your other projects can help you save time and brainpower. Taking the time to make your code understandable (commenting, etc) will make it easier for others to follow through your code, and may help you save time when you're searching for a specific section of code in one of your own programs. <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Blending</li>
+<li>Environment Mapping</li>
+<li>Keyboard Interaction</li>
+<li>Point, Line And Solid Polygons</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/skull/skull.zip">skull.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/skull/skull_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/skull/skull_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/space_scene/space_scene_1.jpg" alt="" /></td>
+<td rowspan="2">
+<h2>Space Scene</h2>
+<br /> My artist friend Jeff Carlson sent me a video clip he rendered of a ship flying past mars. After watching the beautifully rendered animation, ideas started bouncing around in my head. Rendering big animations using art software can take ages, even on a fast computer. My goal... To recreate his animation (real-time) using OpenGL and as few polygons as possible. I wanted to keep the incredible detail. Could it be done!?! After about 3 hours of coding I had the stars and the planet. I wasn't able to reproduce the same type of stars. His animation has stars of all sizes and shapes. It could be done, but performance is an issue so I decided the stars would have to suffer. The planet uses an incredibly high-resolution picture of mars for the texture. The texture will work on all graphics cards, even the ones that don't support textures larger than 256x256. However... If your graphics card only supports 256x256, the planet detail is reduced by 75%. If you're graphics card supports large textures, you're in for a treat because the planet will look amazing! After a few more hours of coding (about 10 in total) I had the camera movement done, the portal effect done, and the ship flying across the face of the planet. I think I did a pretty good job of recreating the animation. The planet on my system looks real just like his, and the motion is smooth and believable. The ship is environment mapped (more than likely wont show up on Voodoo cards) for a cool metallic look. The portal animation in my program is a lot more simplistic (a lot), and I have no light flare. I could have added the light flare, but I wanted to keep extras to a minimum. The planet looks bump mapped. Pressing 'B' will turn on / off the bump mapping. I learned the effect while coding the demo... It requires 3 passes and is not TRUE bump mapping. I added it because it makes the planet look really cool and because I was happy that I got the effect working :) So I wasn't able to recreate the rendered animation look, but the outcome is still fairly impressive. The project in general was a great experience. I had an idea, acted on it, and dealt with problems as they arose. While tackling the issue of realism I learned a new effect :) So my message to everyone... If you want to do something but you're not sure it can be done... TRY! The results may be great, and you may learn new things along the way. <strong>Final Note:</strong> This demo requires alot of power. If you have a slow computer or a bad video card it may not run! <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Midi Music</li>
+<li>Environment Mapping</li>
+<li>Keyboard Interaction</li>
+<li>Complex Blending / Bump Mapping</li>
+<li>Mip Mapping / High Resolution Textures</li>
+<li>Timing Code / Movement Is Based On Time Passed</li>
+<li>High Level Of Realism (High Poly Ship, Smooth Planet)</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/space_scene/space_scene.zip">space_scene.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/space_scene/space_scene_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/stars/stars_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Stars</h2>
+<br /> Stars was my second attempt at a screensaver. After having so much positive feedback from Meteors, I decided to stick with the space theme. I wanted this screensaver to have the same relaxing music that meteors had, along with lots of on screen action. The two side images I used are actual images taken by the Hubble telescope. The center planet was drawn by my brother Sean Molofee (aka Kismet), and Jeff Carlson of Mystic Arts created the flaming sun. I did the flame animation, along with the various stars flying around the screen. The coding is similar to meteors although I spent alot more time optimizing, and cleaning things up. Theres also a lot more keyboard interaction, along with a simulated high-resolution effect. 3Dfiles appears in the bottom corner because this was a thank you to them for the TNT card I won. Although the theme in stars and meteors is similar, the code is different. Instead of borrowing code from meteors I decided to rewrite the program from scratch. That way any mistakes I may have made in meteors wouldn't be copied to stars. Every now and then it's good to start from scratch. A lot of the time, you may come up with a new way to accomplish something. Sometimes a better way! <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Blending</li>
+<li>Cool Images</li>
+<li>Secret Image :)</li>
+<li>Cool .XM Soundtrack</li>
+<li>Keyboard Interaction</li>
+<li>Remembers Current Settings</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/stars/stars.zip">stars.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/stars/stars_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/stars/stars_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/sun/sun_1.jpg" alt="" /></td>
+<td rowspan="2">
+<h2>Sun</h2>
+<br /> I wrote sun to thank all those people that supported me and my web site with positive feedback, news and new ideas. If it wasn't for the people mentioned supplying steady feedback, I'm not sure the site would be as big as it is today. So thank you to everyone listed, and also to all my NEW visitors! The 'B' key enables the weird trailing effect, and spacebar toggles the music on and off. Again, I took ideas that I had used before (spinning object in the center, etc), and expanded the program to include even more new features. Nothing really major in this screensaver, but enough to make 'Sun' a unique project. <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Blending</li>
+<li>Cool 3D Model</li>
+<li>Keyboard Interaction</li>
+<li>Strange Trailing Effect</li>
+<li>Relaxing MP3 Soundtrack</li>
+<li>Warping Background Stars</li>
+<li>Stores Settings In The Registry</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/sun/sun.zip">sun.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/sun/sun_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/swirl/swirl_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Swirl</h2>
+<br /> A good friend of mine Maxwell Sayles (programmed Tetrisphere and The New Tetris) sent me a cool program that he wrote, that had quads overlapping and spinning at different rates. The effect was mesmerizing. Not only did the quads spin at different rates, the textures rolled across the surface of each quad. It was a simple effect for him,but I had no idea how to do it. I fired up VC, and started coding. After a few minutes I had the textured quads spinning. I then added keyboard control, multiple textures, 3 blending modes, and the cool rolling effect. So I guess I managed to recreate the effect and add lots more while doing it :) Keys '1', '2' and '3' toggle the blending mode, 'Space' changes the pattern, 'END' activates rolling textures and the arrows control the rotation speed. It's always interesting to see if you can recreate effects from games, demos, etc. I spent most my youth trying to recreate the effects I saw in demos from Future Crew, Orange, Complex and other cool groups. There's nothing more rewarding that figuring out how something is done. Usually by playing around with code. A lot of the time the effects you think are impossible to reproduce are not that hard at all once you know what's going on! <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Rolling Textures</li>
+<li>Multiple Textures</li>
+<li>3 Blending Modes</li>
+<li>Keyboard Interaction</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/swirl/swirl.zip">swirl.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/swirl/swirl_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/swirl/swirl_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/teapot/teapot_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Teapot</h2>
+<br /> I made teapot because I was tired of the painfully slow auxSolidTeapot crap. Being new to OpenGL I didn't know how to create 3D objects. Then one day I was reading about the history of the 'GL Teapot', and at the end of the article was the data for the original teapot. The original teapot was actually 2x taller, and did not have a bottom. I modified the data so that the teapot was back to the size we're all used to, and added a bottom myself. When I ran the program I was blown away! I had a teapot on my screen spinning at over 60fps, while the aux teapot would spin at roughly 5 fps at most. Of course I had to texture map the teapot, and after learning how to environment map, I added code to environment map the teapot. I'd have to say the overall result is very nice. This project shows off some really cool texturing effects. Notice how environment mapping seems to increase the resolution. It gives the object a very professional look, making the teapot look more realistic. <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Blending</li>
+<li>Texture Mapping</li>
+<li>Environment Mapping</li>
+<li>Keyboard Interaction</li>
+<li>Point, Line &amp; Solid Polygons</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/teapot/teapot.zip">teapot.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/teapot/teapot_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/teapot/teapot_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/textured_beam/textured_beam_1.jpg" alt="" /></td>
+<td rowspan="2">
+<h2>Textured Beam</h2>
+<br /> A small demonstration of an effect that I think is pretty cool. Very similar to a radial blur! This is an upgrade to the 'Spinning blocks with rays' demo I put on the downloads page. Hope you guys like the effect. You can replace pattern.jpg with any image you want. Use the up and down arrow keys to adjust the intensity! This demo including the time it took to make the original 'Spinning blocks with rays' demo took less than 30 minutes to make. You never know what's possible unless you invest the time to find out! <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Fancy Blending</li>
+<li>Texture Loading</li>
+<li>Keyboard Interaction</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/textured_beam/textured_beam.zip">textured_beam.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/textured_beam/textured_beam_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/the_snowman/the_snowman_1.jpg" alt="" /></td>
+<td rowspan="2">
+<h2>The Snowman</h2>
+<br /> This was one of my favorite Atari ST demos back in the day. I toyed with the idea of porting it to the PC many years ago, but always ran into problems trying to grab both the graphics and the sounds from this demo. The original soundtrack is a raw audio format. Sounded raspy on my Atari STe and just as bad using Steem (emulator). After converting the audio I was happy to hear that the quality of the sample is not really all that bad. The resulting WAV file sounds good, and is almost the exact same size as the original audio file. The audio file is the only file from the original Atari ST demo that must be replaced. I didn't feel like making a player :( The video was a completely different story, and took many hours of late night coding and many more hours reading documentation from the net. The file snowbit1.neo contains the text you see on either side of the animation. NEO for those of you that have never heard of it is an Atari ST format created by an art program called NeoChrome. NeoChrome is not all that complex. However, it's a 4bpp image with a resolution of 320x200. Not exactly an OpenGL friendly format. The bits are reversed, and each palette index is created by calculating the bits on all 4 bitplanes per pixel (alot of work). Alot of struggling, alot of reading the .NEO specs and alot more struggling. Many hours later, I finished coding a basic loader able to convert the image to a 24bit RGB format. YAY!!! The video file snowmain.dat was a little trickier. I wasn't really sure what type of data was in the file. I spent almost an entire day trying to extract data. I went through the entire file with a hex editor at least 20 times. I searched the net for information on the "grabber" software mentioned on the main screen. In the long run, I discovered that the data inside this file is actually NeoChrome images without the header (YAY again!!!). 75 images to be exact. Each image 160 x 100 x 4bpp. Which means each image is 16000/2 bytes or 8000 bytes. 8000 * 75 = 600000 which is exactly the size of snowmain.dat. I wrote a quick console application to rip all the images from the file. I did this in order to map out each frame and so I could grab the colors from each frame using Adobe. The exported files are .IFF format... a nice AMIGA format that is very similar to .NEO. Instead of every bitplane being stored one after another, .IFF's store each bitplane on a seperate line. Plus Irfanview loads .IFF files (more good news). After extracting the data, building a palette, resampling the sound, and coding the NeoChrome loader, I started on the animation. More work! It turns out that the 75 frames of animation are not in order, and some frames are used multiple times. I actually had to watch the original demo MANY times at 10% speed in order to write out a list of which frame to display and how long to keep it on the screen. All in all, it was a long process, but like any project I pushed myself, and learned alot of new things in the process. I hope you enjoy the port as much as I do! * It's interesting to note that there is a frame of animation (frame 13) that is not used in the demo. It's a single picture of a house. Not sure if the original coder forgot to include it or if it's just one of them mysteries :) As mentioned above, if you already have the ST version of this demo... copy The Snowman.exe into the directory. This demo works with the original Atari ST files! ** HUGE RESPECT to the original coders!!! Please share this file with as many people as you can. Hopefully this demo will motivate other Atari fans out there. It would be nice to see some of the classics brought to life on the PC! <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Nice Looping Soundtrack</li>
+<li>An Animated Story</li>
+<li>NeoChrome File Loader</li>
+<li>Grabber Animation Player</li>
+<li>Filtering Option</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/the_snowman/the_snowman.zip">the_snowman.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/the_snowman/the_snowman_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/walker/walker_1.jpg" alt="" /></td>
+<td rowspan="3">
+<h2>Walker</h2>
+<br /> Walker was my first BIG attempt at texture animation. My friend Jeff Carlson drew 8 frames of a skeleton walking 8 different directions. I load in all the textures then flip through them according to the direction the character is moving. I've added a few soundtracks, along with the ability to make the skeleton moan :) Nothing fancy, but it was a fun project. The coding isn't great, but like I said, the project was fun. The final result is what I wanted, and in general, it was a good learning experience! <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Texture Animation</li>
+<li>Keyboard Interaction</li>
+<li>Multiple Sound Tracks</li>
+<li>Multiple Sound Effects Playing At Once</li>
+<li>Loading .JPG Images From The Resource File</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/walker/walker.zip">walker.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/walker/walker_2.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/walker/walker_3.jpg" alt="" /></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/water/water_1.jpg" alt="" /></td>
+<td rowspan="2">
+<h2>Water</h2>
+<br /> Water is a small mini project inspired by a post in my message forum. The post was talking about whether or not it would be possible to create a water effect by modifying the waving flag tutorial. I stripped the flag of it's texture, put stars in the background, set up 3 layers of waving material, and used some simple blending to make it look as though the three layers were waves rippling across the screen. The effect isn't great, but it's cool looking! Please don't be to critical of this project, it took less than 20 minutes to code, and was done for fun! Experiment with the code. With some fancy math, you should be able to create groups of waves moving around the grid at different rates. You might want to add a scene of your own around the water. If you have an imagination, the effects can be endless! <br /> <br /><strong>Features:</strong>
+<ul>
+<li>Simple Blending</li>
+<li>3 Animated Meshes</li>
+<li>Basic Keyboard Interaction</li>
+</ul>
+<strong>Download:</strong> <a href="http://nehe.gamedev5.net/data1/projects/water/water.zip">water.zip</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/projects/water/water_2.jpg" alt="" /></td>
+</tr>
+</tbody>
+</table>
+            </div>
+            <div>
+            	<p>
+            		<strong><a href="../../article/old_nehe_projects/5631986051842048/index.html">CONTINUE READING</a></strong>
+            	</p>
+            </div>
+        </div>        
+    
+        <div class="news_box">
+            <div class="title">
+                CONTEST: THE FELLOWSHIP OF THE RING 2002
+            </div>
+            <div class="body">
+                <center><span style="font-size: medium;"><strong><span style="text-decoration: underline;"><span>Welcome To The Fourth NeHe Productions OpenGL Challenge!</span></span></strong></span></center>
+<p><br /><br /> The demos for this contest had to have something to do with The Lord Of The Rings - The Fellowship of the Ring (the first movie or book). Not books 2 or 3! The demos had to include source code, and had to compile without any major problems. The winner was decided based on visitor feedback, and feedback from a few close friends of mine. <br /><br /> The prize for this contest was an NVIDIA GeForce4 Ti 4600 (fully loaded... TV out / in, etc). At the time this contest was announced, the Ti 4600 had just been released and not many people could afford one, let alone get their hands on one. I had to special order the card at just over $800. <br /><br /></p>
+<center><strong>* * * CONTEST IS NOW OVER. ENTRIES CAN BE FOUND BELOW * * *</strong></center>
+<table border="1" align="left">
+<tbody>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/mirko_teran_ravnikar.jpg" alt="" /></td>
+<td><strong>Mirko Teran Ravnikar (Winning Demo)</strong><br /> Watching this demo, you will see why it won! It's full of effects, and very nicely put together. The only thing that could use improvement is the soundtrack. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/mirko_teran_ravnikar.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/mirko_teran_ravnikar.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/adam_king.jpg" alt="" /></td>
+<td><strong>Adam King</strong><br /> Watch out for the ring wraiths. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/adam_king.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/adam_king.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/alex_mizrahi.jpg" alt="" /></td>
+<td><strong>Alex Mizrahi</strong><br /> Remember the fireworks dragon? This demo does a pretty good job of recreating it. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/alex_mizrahi.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/alex_mizrahi.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/alexander_zaprjagaev.jpg" alt="" /></td>
+<td><strong>Alexander Zaprjagaev</strong><br /> Very cool looking ring with an incredible amount of detail. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/alexander_zaprjagaev.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/alexander_zaprjagaev.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/alexandre_couture.jpg" alt="" /></td>
+<td><strong>Alexandre Couture</strong><br /> The fire in this demo is awesome!!! Love the way it reflects off the ring. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/alexandre_couture.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/alexandre_couture.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/alexandre_jasmin.jpg" alt="" /></td>
+<td><strong>Alexandre Jasmin</strong><br /> One of the most bizaar entries. The idea is very cool. Love how the film distorts at the end. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/alexandre_jasmin.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/alexandre_jasmin.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/ananth_balasubramaniam.jpg" alt="" /></td>
+<td><strong>Ananth Balasubramaniam</strong><br /> The graphics in this demo are just cool! Watch it and you'll see what I mean. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/ananth_balasubramaniam.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/ananth_balasubramaniam.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/baldur_scott_karlsson.jpg" alt="" /></td>
+<td><strong>Baldur Scott Karlsson</strong><br /> This demo acts out each scene as it tells the story. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/baldur_scott_karlsson.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/baldur_scott_karlsson.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/bruno_loff.jpg" alt="" /></td>
+<td><strong>Bruno Loff</strong><br /> This demo pans through the shire. Warning... the hobbits are creepy looking :) <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/bruno_loff.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/bruno_loff.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/daniel_harrington.jpg" alt="" /></td>
+<td><strong>Daniel Harrington</strong><br /> Another very nice ring, with an original fire effect behind it. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/daniel_harrington.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/daniel_harrington.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/daniel_schaeppi.jpg" alt="" /></td>
+<td><strong>Daniel Schaeppi</strong><br /> The scene with Gandolf and the Balrog is great. Very nice graphics! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/daniel_schaeppi.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/daniel_schaeppi.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/flavien_brebion.jpg" alt="" /></td>
+<td><strong>Flavien Brebion</strong><br /> This demo has some amazing graphics. The opening scene is incredible. Crank the detail up! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/flavien_brebion.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/flavien_brebion.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/george_ziniewicz.jpg" alt="" /></td>
+<td><strong>George Ziniewicz</strong><br /> This demo has some great effects. Make sure you check it out. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/george_ziniewicz.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/george_ziniewicz.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/graeme_harris.jpg" alt="" /></td>
+<td><strong>Graeme Harris</strong><br /> A short demo with a nice soundtrack. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/graeme_harris.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/graeme_harris.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/graham_aldridge.jpg" alt="" /></td>
+<td><strong>Graham Aldridge</strong><br /> This demo has some cool scenes, although most of them are a little dark. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/graham_aldridge.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/graham_aldridge.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/henrique_tavares_alves.jpg" alt="" /></td>
+<td><strong>Henrique Tavares Alves</strong><br /> One of the craziest demos submitted. See if you can figure it out :) <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/henrique_tavares_alves.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/henrique_tavares_alves.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/hugh_sanderson.jpg" alt="" /></td>
+<td><strong>Hugh Sanderson</strong><br /> Watch as the wizards battle it out. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/hugh_sanderson.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/hugh_sanderson.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/ildar_sagdejev.jpg" alt="" /></td>
+<td><strong>Ildar Sagdejev</strong><br /> Very nice scene with butterflies and cool particles. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/ildar_sagdejev.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/ildar_sagdejev.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/jesper_ek.jpg" alt="" /></td>
+<td><strong>Jesper Ek</strong><br /> A nice slideshow type demo. Very cool first effect! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/jesper_ek.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/jesper_ek.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/kiel_mark_gilleade.jpg" alt="" /></td>
+<td><strong>Kiel Mark Gilleade</strong><br /> You'll have bad dreams after watching this demo. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/kiel_mark_gilleade.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/kiel_mark_gilleade.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/kristoffer_boman.jpg" alt="" /></td>
+<td><strong>Kristoffer Boman</strong><br /> This demo takes so long to load I actually thought my system crashed the first time I ran it. Definitely worth the wait thought! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/kristoffer_boman.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/kristoffer_boman.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/krzysztof_topolski.jpg" alt="" /></td>
+<td><strong>Krzysztof Topolski</strong><br /> A recap of the story along with some short animations. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/krzysztof_topolski.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/krzysztof_topolski.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/markus_ilmola.jpg" alt="" /></td>
+<td><strong>Markus Ilmola</strong><br /> This is one huge battle. Very impressive engine! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/markus_ilmola.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/markus_ilmola.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/mauricio_garcia_serrano.jpg" alt="" /></td>
+<td><strong>Mauricio Garcia Serrano</strong><br /> Demo features the shire and some cool visual effects. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/mauricio_garcia_serrano.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/mauricio_garcia_serrano.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/michael_hanslik.jpg" alt="" /></td>
+<td><strong>Michael Hanslik</strong><br /> I like the butterflies flying through the trees. Nice music as well. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/michael_hanslik.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/michael_hanslik.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/michael_pote.jpg" alt="" /></td>
+<td><strong>Michael Pote</strong><br /> This demo has some wicked effects. Love the water outside the mines and the super cool purple torches! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/michael_pote.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/michael_pote.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/mike_samsonov.jpg" alt="" /></td>
+<td><strong>Mike Samsonov</strong><br /> A very cool demo with some amazing graphics. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/mike_samsonov.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/mike_samsonov.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/mircea_marghidanu.jpg" alt="" /></td>
+<td><strong>Mircea Marghidanu</strong><br /> A very cool effect, with some nice techno music. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/mircea_marghidanu.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/mircea_marghidanu.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/mirsad_makalic.jpg" alt="" /></td>
+<td><strong>Mirsad Makalic</strong><br /> A high resolution trip through the mines of moria. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/mirsad_makalic.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/mirsad_makalic.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/nils_scheuschner.jpg" alt="" /></td>
+<td><strong>Nils Scheuschner</strong><br /> This demo looks incredible as long as your video card can handle it. It also takes a very long time to start... be patient. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/nils_scheuschner.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/nils_scheuschner.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/paul_kitchin.jpg" alt="" /></td>
+<td><strong>Paul Kitchin</strong><br /> A nice demo with voice narration. A nice variety of graphics. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/paul_kitchin.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/paul_kitchin.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/paul_robello.jpg" alt="" /></td>
+<td><strong>Paul Robello</strong><br /> I think this is the only demo that shows fire being used to see the rings markings. Very cool Effect, and great hobbit like music! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/paul_robello.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/paul_robello.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/peter_esculier.jpg" alt="" /></td>
+<td><strong>Peter Esculier</strong><br /> War is brewing in this demo. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/peter_esculier.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/peter_esculier.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/petr_stetina.jpg" alt="" /></td>
+<td><strong>Petr Stetina</strong><br /> Some really nice graphics. Love the flyby views. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/petr_stetina.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/petr_stetina.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/richard_glass.jpg" alt="" /></td>
+<td><strong>Richard Glass</strong><br /> A very dark and rainy Isengard. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/richard_glass.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/richard_glass.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/robert_merrison.jpg" alt="" /></td>
+<td><strong>Robert Merrison</strong><br /> A marker moves over the map and at each stop, the story is told. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/robert_merrison.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/robert_merrison.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/rudolf_florian.jpg" alt="" /></td>
+<td><strong>Rudolf Florian</strong><br /> A very dark and very short demo. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/rudolf_florian.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/rudolf_florian.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/sharif_elcott.jpg" alt="" /></td>
+<td><strong>Sharif Elcott</strong><br /> The graphics in this demo are absolutely incredible! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/sharif_elcott.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/sharif_elcott.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/shree_kumar.jpg" alt="" /></td>
+<td><strong>Shree Kumar</strong><br /> Nice landscapes with bits of the story thrown in. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/shree_kumar.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/shree_kumar.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/stein_nygaard.jpg" alt="" /></td>
+<td><strong>Stein Nygaard</strong><br /> A very bizaar demo with some really nice effects. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/stein_nygaard.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/stein_nygaard.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/stephen_cook.jpg" alt="" /></td>
+<td><strong>Stephen Cook</strong><br /> A nice trip through middle earth? Love the waterfall and stream. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/stephen_cook.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/stephen_cook.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/steven_winsor.jpg" alt="" /></td>
+<td><strong>Steven Winsor</strong><br /> Features a cool scroller and a nice water effect. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/steven_winsor.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/steven_winsor.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/troy_moure.jpg" alt="" /></td>
+<td><strong>Troy Moure</strong><br /> Very nice landscape. I especially like the fast fly over effect with rain falling. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/troy_moure.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/troy_moure.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/valdemar_rorbech.jpg" alt="" /></td>
+<td><strong>Valdemar Rorbech</strong><br /> Don't let the screenshot of Frodo and Gandalf fool you, this demo has some great effects! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/valdemar_rorbech.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/valdemar_rorbech.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/vincent_david.jpg" alt="" /></td>
+<td><strong>Vincent David</strong><br /> Very cool loading screen featuring the One Ring. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/vincent_david.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/vincent_david.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../nehe.gamedev5.net/data1/contests/2002_lotr/william_brander.jpg" alt="" /></td>
+<td><strong>William Brander</strong><br /> Trees, a hill and a very nicely etched ring. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/demo/william_brander.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2002_lotr/source/william_brander.zip">Source</a></td>
+</tr>
+</tbody>
+</table>
+            </div>
+            <div>
+            	<p>
+            		<strong><a href="../../article/contest_the_fellowship_of_the_ring_2002/5644406560391168/index.html">CONTINUE READING</a></strong>
+            	</p>
+            </div>
+        </div>        
+    
+    <div>
+    	<div style="text-align: center; width: 150px; float: left;"></div>
+    	<div style="text-align: center; width: 150px; float:right;"><a href="../2/index.html">Older Posts</a></div>
+    	<div style="clear:both;"></div>
+    </div>
+</div>
+
+
+            <div style="width:728px;padding:0px;margin:auto; margin-top: 10px;">
+            
+                <!-- Leaderboard_NeHe -->
+                <div id='div-gpt-ad-1327940144417-0' style='width:728px; height:90px;'>
+                <script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1327940144417-0'); });
+                </script>
+                </div>
+                                       
+            </div>   
+        </td>
+        <td class="col2">
+            
+			<div style="text-align: center; padding:10px;">
+                <!-- Skyscraper_NeHe -->
+                <div id='div-gpt-ad-1327940144417-1' style="width:160px; height:600px; margin:auto;">
+                <script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1327940144417-1'); });
+                </script>
+                </div>
+			</div>
+                        
+        </td>
+    </table>
+    <div id="footer">
+        <p>
+            
+			© 1997-2012 <a href="http://www.gamedev.net/">Gamedev.net</a>. All rights reserved.<br/>
+			
+			NeHe™ and NeHe Productions™ are trademarks of GameDev.net, LLC<br/>
+			OpenGL® is a registered trademark of Silicon Graphics Inc.<br/>
+		</p>        
+		<br/>
+    </div>
+
+    
+	    <script type="text/javascript" src="../../static/js/syntax_highlighter/shCore.js"></script>
+        <script type="text/javascript" src="../../static/js/syntax_highlighter/shBrushCpp.js"></script>
+	    <script type="text/javascript" src="../../static/js/syntax_highlighter/shBrushJScript.js"></script>
+	    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    
+    
+<!-- GoogleAnalytics code -->
+<script src="../../../www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-279474-2"; // Gamedev
+urchinTracker();
+</script> 
+  </body>
+
+<!-- Mirrored from nehe.gamedev.net/article_index/1/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jan 2019 02:35:24 GMT -->
+</html>

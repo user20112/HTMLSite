@@ -1,0 +1,314 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    dir="ltr"
+    xml:lang="en"
+    lang="en">
+  
+<!-- Mirrored from nehe.gamedev.net/article/contest_the_two_towers_2003/6192449487634432/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jan 2019 02:34:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>NeHe Productions: Contest: The Two Towers 2003</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../static/css/public_base.css" />
+    <link type="text/css" rel="stylesheet" href="../../../static/css/syntax_highlighter/shThemeMidnight.css"/>
+    
+    <link rel="alternate" type="application/atom+xml" title="Atom feed" href="../../../atom/index.html" />
+    <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../rss/index.html" />
+    
+    <meta name="author" content="Luke Benstead + Carsten Haubold" />
+    <meta name="description" content="OpenGL Tutorials, Demos, Games and More..." />
+    <meta name="keywords" content="opengl, tutorial, article, demo, game, blend, texturemap, lighting, contest, 3D" />
+
+    
+    
+
+    
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '../../../../button.flattr.com/loadera0da.js?mode=auto&amp;uid=cars10';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+
+</script>
+
+
+    
+    
+    
+        <script type='text/javascript'>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') + 
+        '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+        })();
+        </script>
+
+        <script type='text/javascript'>
+        googletag.cmd.push(function() {
+        googletag.defineSlot('/1004699/Leaderboard_NeHe', [728, 90], 'div-gpt-ad-1327940144417-0').addService(googletag.pubads());
+        googletag.defineSlot('/1004699/Skyscraper_NeHe', [160, 600], 'div-gpt-ad-1327940144417-1').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        });
+        </script>
+    
+    
+  </head>
+
+  <body>
+    
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "../../../../connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+    <table cellpadding="0" cellspacing="0" border="0" id="layout_table">
+    <tr><td>
+        <div id="header">
+                <a href="../../../index.html"><img class="logo" class="logo" src="../../../static/images/nehe.png" border="0" alt="Nehe" /></a>
+        </div>            
+    </td></tr>
+    <tr><td colspan="2">
+            
+<div class="navbar">
+    <a href="../../../index.html">HOME</a>
+    <a href="http://twitter.com/#!/nehegl">TWITTER</a>  
+    <a href="http://www.facebook.com/pages/NeHe/300582493323181">FACEBOOK</a>     
+    <a href="../../../rss/index.html">RSS</a>    
+    <a href="../../../atom/index.html">ATOM</a>    
+    <a href="http://www.gamedev.net/forum/27-nehe-productions/page__forum_title__NeHe+Productions">FORUM</a>    
+</div>
+    
+    </td></tr>
+    <tr>
+        <td class="col1">
+
+            
+<div id="article_container">
+
+
+<h1 class="article-header">Contest: The Two Towers 2003</h1>
+<div class="social-media">
+<!-- Place this tag where you want the +1 button to render -->
+<div class="g-plusone" data-size="medium" data-width="120" data-annotation="inline"></div>
+<div class="fb-like" data-send="false" data-layout="button_count" data-width="60" data-show-faces="false" data-colorscheme="dark" data-font="arial"></div>
+</div>
+<div style="clear:both;"></div>
+<center><span style="font-size: medium;"><strong><span style="text-decoration: underline;"><span>Welcome To The Seventh NeHe Productions OpenGL Challenge!</span></span></strong></span></center>
+<p>&nbsp;</p>
+<center><strong>SPONSORED BY: Creative</strong></center>
+<p><br /> <strong>Theme:</strong> A Demo based on The Two Towers Movie or Book! <br /><br /> <strong>Prize:</strong> <a href="http://uk.europe.creative.com/estore" target="_blank">Creative Labs Europe</a> will offer the latest high-end video card (NVIDIA) to the winner and two runner up prizes for 2nd and 3rd place! <br /><br /> <strong>Rules:</strong></p>
+<ul>
+<li>All demos <span style="text-decoration: underline;">must</span> use OpenGL.</li>
+<li>Full source code <span style="text-decoration: underline;">must</span> be included with each entry.</li>
+<li>Code <span style="text-decoration: underline;">must</span> compile as is. Code that will not compile will not win.</li>
+<li>You are not required to use the NeHeGL basecode. Any basecode can be used as long as it's included in the source .ZIP.</li>
+<li>All files must be compressed with <strong>ZIP</strong> or <strong>RAR</strong>. Do not send Ace, Tar, Etc.</li>
+<li>The source should be in it's <span style="text-decoration: underline;">own</span> zip file and must include all files required to compile and run.</li>
+<li>The exe should be in it's <span style="text-decoration: underline;">own</span> zip file and must include all files required to run.</li>
+<li>Freeware libraries are allowed, but remember to <span style="text-decoration: underline;">include</span> any files required to compile the source.</li>
+<li>The maximum size of your zipped demo and all required libraries and data files can be no more than 7.5 Megs.</li>
+<li>The demo <span style="text-decoration: underline;">must</span> run without any user interaction from start to finish... An options / startup screen is allowed.</li>
+<li>Code should have some type of commenting (even if it's minimal).</li>
+<li>If you use extensions, you better have something to fall back on if the card doesn't support it!</li>
+<li>There is no target hardware, your demo should run bearably at the very least on a 450MHz system w/ TNT2.</li>
+<li>All entries must include a <span style="text-decoration: underline;">README.TXT</span> file with the following information: Your Full Name, Your Disclaimer &amp; Your System Specs.</li>
+<li>On the same note: Disclaimers must be included... This site is not responsible for user submitted content, so protect yourself.</li>
+<li>Use of music or graphics protected by copyright without the authors permission is forbidden!</li>
+<li>Do not overplay scenes, do not overuse effects. Try to be original while sticking to the Theme.</li>
+<li>I will not be converting Linux and Mac code this time around, keep that in mind when thinking about your audience.</li>
+<li>The demo <span style="text-decoration: underline;">must</span> provide a quick way to exit the demo without crashing (ESC, Q, SPACEBAR, Etc).</li>
+<li>All entries must be in by September 1st, 2003... 12:00pm MST.</li>
+<li>This contest is open to everyone!</li>
+</ul>
+<p><strong>Summary:</strong> <br /><br /> Create a cool demo based on Lord Of The Rings: The Two Towers. The demo must run without user interaction from start to end. The demo can loop at the end, but must provide a quick way to exit <span style="text-decoration: underline;">any</span> time during the demo. A readme file is required, and must include your FULL NAME (so I know who made the demo), Your own personal disclaimer (protect yourself and your code... it's not my job) and system specs! The reason for system specs is so that someone having problems with your demo has a general idea what type of hardware was used to make the demo. If you do not wish to include your system specs, you must at the very least include a list of video cards that you know run the demo without problems. <br /><br /> <strong>Creative Labs:</strong> <br /><br /> I would like to personally thank Creative Labs Europe for sponsoring this contest. They went out of their way to contact me in regards to sponsoring the contest and talked highly of the programming scene in general. It's great to see companies taking interest in the people that purchase their hardware! Especially when the majority of companies could care less about the end user. <br /><br /> The number of entries I receive will directly impact future sponsorship. If everything goes well and the contest is successful, Creative Labs has mentioned they would be very interested in sponsoring future contests... and perhaps a few surprises along the way :) <br /><br /></p>
+<center><strong>* * * CONTEST IS NOW OVER. ENTRIES CAN BE FOUND BELOW. * * *</strong></center>
+<table border="1" align="left">
+<tbody>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/michael_wallace.jpg" alt="" /></td>
+<td><strong>LOTR Two Towers Demo by Michael Wallace (WINNING DEMO)</strong><br /> A beautiful demo starting with the "funeral" of Boromir (amazing water scene). <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/michael_wallace.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/michael_wallace.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/andreas_hammar.jpg" alt="" /></td>
+<td><strong>The Return of Gandalf by Andreas "neoztar" Hammar (SECOND PLACE)</strong><br /> Some excellent artwork in this demo, along with a good story and some very nice models. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/andreas_hammar.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/andreas_hammar.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/paul_kitchin.jpg" alt="" /></td>
+<td><strong>LOTR TTT demo by Paul Kitchin "Enigma" (THIRD PLACE)</strong><br /> The water in this demo is very original, and the rain in the second scene is awesome. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/paul_kitchin.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/paul_kitchin.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/akos_ludanyi.jpg" alt="" /></td>
+<td><strong>Rings by &Aacute;kos Lud&aacute;nyi</strong><br /> This demo has a cool scene with the ents in battle. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/akos_ludanyi.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/akos_ludanyi.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/brian_truitt.jpg" alt="" /></td>
+<td><strong>Runes by Brian Truitt</strong><br /> Super cool morphing font in this demo. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/brian_truitt.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/brian_truitt.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/daniel_brewer.jpg" alt="" /></td>
+<td><strong>Shadow and Flame by Daniel Brewer</strong><br /> The opening scene with Gandalf fighting the Balrog is very well done. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/daniel_brewer.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/daniel_brewer.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/francisco_lopez.jpg" alt="" /></td>
+<td><strong>The Front Line by Francisco Lopez</strong><br /> A huge battle scene... make sure you have vsync on or it runs a little fast. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/francisco_lopez.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/francisco_lopez.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/hermanns_christophe.jpg" alt="" /></td>
+<td><strong>ExNihilo Two Towers Demo by Hermanns Christophe</strong><br /> The battle at Helm's Deep. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/hermanns_christophe.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/hermanns_christophe.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/jaanus_uri.jpg" alt="" /></td>
+<td><strong>Two Towers Demo by Jaanus Uri</strong><br /> The Ents battle the Orcs. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/jaanus_uri.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/jaanus_uri.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/james_trotter.jpg" alt="" /></td>
+<td><strong>Two Towers Demo by James Trotter</strong><br /> Cool scene with a winged rider and the eye. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/james_trotter.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/james_trotter.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/joao_filipe_cunha_lopes.jpg" alt="" /></td>
+<td><strong>2 Towers by Jo&atilde;o Filipe Cunha Lopes</strong><br /> Very entertaining demo... done in cutout cartoon images :) <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/joao_filipe_cunha_lopes.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/joao_filipe_cunha_lopes.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/lasse_ebdrup_pedersen.jpg" alt="" /></td>
+<td><strong>Demoen by Lasse Ebdrup Pedersen</strong><br /> This demo features some really nice artwork, along with a nice relaxing soundtrack. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/lasse_ebdrup_pedersen.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/lasse_ebdrup_pedersen.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/luke_benstead.jpg" alt="" /></td>
+<td><strong>The Darkness of Middle Earth by Luke Benstead</strong><br /> A nice looking tower with some cool effects inside. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/luke_benstead.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/luke_benstead.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/mark_turner.jpg" alt="" /></td>
+<td><strong>Two Towers Demo by Mark Turner</strong><br /> Beautiful landscape scene. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/mark_turner.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/mark_turner.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/philip_leszczynski.jpg" alt="" /></td>
+<td><strong>Land of Blood by Philip Leszczynski "Bloody Hand"</strong><br /> Lots of killing in this demo. Runs a little slow at time. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/philip_leszczynski.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/philip_leszczynski.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/remco_blewanus.jpg" alt="" /></td>
+<td><strong>Desperation by Remco Blewanus "NeoKenobi"</strong><br /> Battle at Helm's Deep with some very nice looking models. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/remco_blewanus.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/remco_blewanus.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/rishi_ramraj.jpg" alt="" /></td>
+<td><strong>May It Be by Rishi Ramraj "llvllatrix"</strong><br /> An extremely short demo with some awesome models and a nice soundtrack. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/rishi_ramraj.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/rishi_ramraj.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/shawn_silsbee.jpg" alt="" /></td>
+<td><strong>Sauron's Tower by Shawn Silsbee</strong><br /> A demo showing the demise of Sauron at the hands of the all-powerful sun. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/shawn_silsbee.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/shawn_silsbee.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/vincent_david.jpg" alt="" /></td>
+<td><strong>t^3 by Vincent David</strong><br /> A ring loading animation with a forest scene following. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/vincent_david.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/vincent_david.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2003_lotr/wei_chong_ng.jpg" alt="" /></td>
+<td><strong>TTT Mini Demo by Wei Chong, Ng</strong><br /> An interesting demo showing the battles between good and evil in a chess like environment. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/demo/wei_chong_ng.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2003_lotr/source/wei_chong_ng.zip">Source</a></td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+
+
+
+            <div style="width:728px;padding:0px;margin:auto; margin-top: 10px;">
+            
+                <!-- Leaderboard_NeHe -->
+                <div id='div-gpt-ad-1327940144417-0' style='width:728px; height:90px;'>
+                <script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1327940144417-0'); });
+                </script>
+                </div>
+                                       
+            </div>   
+        </td>
+        <td class="col2">
+            
+
+
+<h3 style="text-align: center">Support this Author</h3>
+<p style="text-align: center">
+<a class="FlattrButton" style="display:none;"
+    title="Contest: The Two Towers 2003"
+    rel="flattr;uid:cars10;category:text;tags:opengl,article,nehe,gamedev;"
+    href="index.html">
+</a>
+</p>
+
+
+            
+        </td>
+    </table>
+    <div id="footer">
+        <p>
+            
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">
+        <img alt="Creative Commons Licence" style="border-width:0" src="../../../../licensebuttons.net/l/by-nc/3.0/88x31.png" />
+    </a>
+    <br/><br/>
+    This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">work</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.
+    <br/><br/>
+    
+    © 1997-2014 Carsten Haubold. All rights reserved.<br/>
+
+			NeHe™ and NeHe Productions™ are trademarks of GameDev.net, LLC<br/>
+			OpenGL® is a registered trademark of Silicon Graphics Inc.<br/>
+		</p>        
+		<br/>
+    </div>
+
+    
+    
+	    <script type="text/javascript" src="../../../static/js/syntax_highlighter/shCore.js"></script>
+        <script type="text/javascript" src="../../../static/js/syntax_highlighter/shBrushCpp.js"></script>
+	    <script type="text/javascript" src="../../../static/js/syntax_highlighter/shBrushJScript.js"></script>
+	    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    
+
+    <!-- Place this render call where appropriate -->
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = '../../../../apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+
+    
+<!-- GoogleAnalytics code -->
+<script src="../../../../www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-279474-2"; // Gamedev
+urchinTracker();
+</script> 
+  </body>
+
+<!-- Mirrored from nehe.gamedev.net/article/contest_the_two_towers_2003/6192449487634432/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jan 2019 02:34:45 GMT -->
+</html>

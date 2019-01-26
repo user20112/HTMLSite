@@ -1,0 +1,263 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    dir="ltr"
+    xml:lang="en"
+    lang="en">
+  
+<!-- Mirrored from nehe.gamedev.net/article/contest_halloween_2000/5629499534213120/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jan 2019 02:34:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>NeHe Productions: Contest: Halloween 2000</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../static/css/public_base.css" />
+    <link type="text/css" rel="stylesheet" href="../../../static/css/syntax_highlighter/shThemeMidnight.css"/>
+    
+    <link rel="alternate" type="application/atom+xml" title="Atom feed" href="../../../atom/index.html" />
+    <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../rss/index.html" />
+    
+    <meta name="author" content="Luke Benstead + Carsten Haubold" />
+    <meta name="description" content="OpenGL Tutorials, Demos, Games and More..." />
+    <meta name="keywords" content="opengl, tutorial, article, demo, game, blend, texturemap, lighting, contest, 3D" />
+
+    
+    
+
+    
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '../../../../button.flattr.com/loadera0da.js?mode=auto&amp;uid=cars10';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+
+</script>
+
+
+    
+    
+    
+        <script type='text/javascript'>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') + 
+        '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+        })();
+        </script>
+
+        <script type='text/javascript'>
+        googletag.cmd.push(function() {
+        googletag.defineSlot('/1004699/Leaderboard_NeHe', [728, 90], 'div-gpt-ad-1327940144417-0').addService(googletag.pubads());
+        googletag.defineSlot('/1004699/Skyscraper_NeHe', [160, 600], 'div-gpt-ad-1327940144417-1').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        });
+        </script>
+    
+    
+  </head>
+
+  <body>
+    
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "../../../../connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+    <table cellpadding="0" cellspacing="0" border="0" id="layout_table">
+    <tr><td>
+        <div id="header">
+                <a href="../../../index.html"><img class="logo" class="logo" src="../../../static/images/nehe.png" border="0" alt="Nehe" /></a>
+        </div>            
+    </td></tr>
+    <tr><td colspan="2">
+            
+<div class="navbar">
+    <a href="../../../index.html">HOME</a>
+    <a href="http://twitter.com/#!/nehegl">TWITTER</a>  
+    <a href="http://www.facebook.com/pages/NeHe/300582493323181">FACEBOOK</a>     
+    <a href="../../../rss/index.html">RSS</a>    
+    <a href="../../../atom/index.html">ATOM</a>    
+    <a href="http://www.gamedev.net/forum/27-nehe-productions/page__forum_title__NeHe+Productions">FORUM</a>    
+</div>
+    
+    </td></tr>
+    <tr>
+        <td class="col1">
+
+            
+<div id="article_container">
+
+
+<h1 class="article-header">Contest: Halloween 2000</h1>
+<div class="social-media">
+<!-- Place this tag where you want the +1 button to render -->
+<div class="g-plusone" data-size="medium" data-width="120" data-annotation="inline"></div>
+<div class="fb-like" data-send="false" data-layout="button_count" data-width="60" data-show-faces="false" data-colorscheme="dark" data-font="arial"></div>
+</div>
+<div style="clear:both;"></div>
+<center>
+<h1><span style="font-size: medium;"><strong><span style="text-decoration: underline;"><span>Welcome To The First NeHe Productions OpenGL Challenge!</span></span></strong></span></h1>
+<h1><img src="../../../../nehe.gamedev5.net/data1/projects/halloween_2000/halloween_2000_3.jpg" alt="" width="160" height="120" /></h1>
+</center>
+<p><br /> The point of this contest was to create an OpenGL Halloween demo using basecode from this web site. The demo had to run in Windows, and full source code had to be included. The first place winner took home $50 for his impressive work recreating a spooky graveyard. Many of the entries in this contest were made by new GL programmers. All the entries are extemely well done! <br /><br /> Keep in mind that almost all of these demos include full source code. If you see a cool effect you can check out the source code to see how it's done! <br /><br /> * Check out the <strong>Glow Inc.</strong> website for super cool glow in the dark paint. They also have some project information for Halloween decorating and haunting including two great articles on creating a dot room and a glow room. Visit <a href="http://www.hobbyglow.com/haunted_houses.htm" target="_blank">http://www.hobbyglow.com/haunted_houses.htm</a> for more information! <br /><br /></p>
+<center><strong>* * * CONTEST IS NOW OVER. ENTRIES CAN BE FOUND BELOW * * *</strong></center>
+<table border="1" align="left">
+<tbody>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2000_halloween/martin_cietwierkowski.jpg" alt="" /></td>
+<td><strong>The Graveyard by Martin Cietwierkowski (1st Place Winner)</strong><br /> The graphics are smooth, the music is excellent, and the theme is definitely erie! Very funny tombstones, make sure you read them :) Excellent job by Martin Cietwierkowski! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/martin_cietwierkowski.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/martin_cietwierkowski.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2000_halloween/justin_eslinger.jpg" alt="" /></td>
+<td><strong>Evil Dead by Justin Eslinger (2nd Place Winner)</strong><br /> A must see! One human equipt with a chainsaw and a gun. Hundreds of skeletons out to kill. Amazing graphics and sound effects! A Halloween you'll never forget! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/justin_eslinger.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/justin_eslinger.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2000_halloween/jonathan_brenner.jpg" alt="" /></td>
+<td><strong>Halloween Nightfall by Jonathan Brenner (3rd Place Winner)</strong><br /> An amazing job at creating a realistic environment. The first scene in this demo is a must see! The rolling hills, setting sun, and crystal clear lake is impressive. Dark rolling clouds really set the mood! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/jonathan_brenner.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/jonathan_brenner.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2000_halloween/antoine_pruitt.jpg" alt="" /></td>
+<td><strong>Halloween Demo by Antoine Pruitt</strong><br /> Visual C++ entry from a new GL programmer. Features a fire red box with lid and Halloween texture. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/antoine_pruitt.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/antoine_pruitt.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2000_halloween/arseny_livshitz.jpg" alt="" /></td>
+<td><strong>Halloween 2000 by Arseny Livshitz (code) &amp; Dennis Przhendzinsky (models)</strong><br /> This entry pans through a very chilling graveyard scene. Excellent attention to detail! Great textures and Chilling Sound! No Source. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/arseny_livshitz.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/arseny_livshitz.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2000_halloween/ben_hamlet.jpg" alt="" /></td>
+<td><strong>Frightmare by Ben Hamlet</strong><br /> Music, sound effects, mouse control, human interaction, and very colorful graphics! Lots of pumpkins too :) <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/ben_hamlet.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/ben_hamlet.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2000_halloween/chris_roe.jpg" alt="" /></td>
+<td><strong>Spooky McRoe by Chris Roe</strong><br /> A pretty cool first attempt at a GL demo! Twisted looking background with a cool 3D axe spinning around. Nice music as well! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/chris_roe.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/chris_roe.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2000_halloween/francis_shanahan.jpg" alt="" /></td>
+<td><strong>OGLM Halloween by Francis Shanahan</strong><br /> Noise bump mapped terrain, linear camera movement, blending and lots more. The home of Eleanour Rigby, high on the moors... Watch for her ghost! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/francis_shanahan.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/francis_shanahan.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2000_halloween/george_ziniewicz.jpg" alt="" /></td>
+<td><strong>CatacombZ by George Ziniewicz</strong><br /> Make sure you press ? when you start the program. There are alot of features in this entry. Blowing up the pumpkins (?) is very cool, along with the tracer bullets! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/george_ziniewicz.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/george_ziniewicz.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2000_halloween/james_elliott.jpg" alt="" /></td>
+<td><strong>October Sky by James Elliott</strong><br /> This entry features a dark and erie graveyard scene complete with a run down church, pouring rain and lightning. Make sure you read the Entry Form text to find out all the cool features. <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/james_elliott.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/james_elliott.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2000_halloween/jim_strong.jpg" alt="" /></td>
+<td><strong>GLween by Jim Strong</strong><br /> The coffins in this demo are literally amazing. I sure wouldn't want to be stuck inside one! The rippling pumpkins, and the sparkling particles are also very cool! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/jim_strong.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/jim_strong.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2000_halloween/julien_amsellem.jpg" alt="" /></td>
+<td><strong>Evil Pumpkin by Julien Amsellem</strong><br /> Very cool particle effects in this entry created by Julien Amsellem. Make sure you move the mouse around to tilt and turn the scene. Very cool pumpkin model as well, unfortunately the author did not include source code :( <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/julien_amsellem.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/julien_amsellem.zip">Source</a></td>
+</tr>
+<tr>
+<td><img src="../../../../nehe.gamedev5.net/data1/contests/2000_halloween/luigi_pino.jpg" alt="" /></td>
+<td><strong>Halloween Fighter 2D00 by Luigi Pino</strong><br /> One of the most unique entries. Literally crazy! Rid the earth of all evil. Battle the incredibly disfigured monsters on Halloween Night. Must see! <br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/demo/luigi_pino.zip">Executable</a><br /> &bull;<a href="http://nehe.gamedev5.net/data1/contests/2000_halloween/source/luigi_pino.zip">Source</a></td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+
+
+
+            <div style="width:728px;padding:0px;margin:auto; margin-top: 10px;">
+            
+                <!-- Leaderboard_NeHe -->
+                <div id='div-gpt-ad-1327940144417-0' style='width:728px; height:90px;'>
+                <script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1327940144417-0'); });
+                </script>
+                </div>
+                                       
+            </div>   
+        </td>
+        <td class="col2">
+            
+
+
+<h3 style="text-align: center">Support this Author</h3>
+<p style="text-align: center">
+<a class="FlattrButton" style="display:none;"
+    title="Contest: Halloween 2000"
+    rel="flattr;uid:cars10;category:text;tags:opengl,article,nehe,gamedev;"
+    href="index.html">
+</a>
+</p>
+
+
+            
+        </td>
+    </table>
+    <div id="footer">
+        <p>
+            
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">
+        <img alt="Creative Commons Licence" style="border-width:0" src="../../../../licensebuttons.net/l/by-nc/3.0/88x31.png" />
+    </a>
+    <br/><br/>
+    This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">work</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.
+    <br/><br/>
+    
+    © 1997-2014 Carsten Haubold. All rights reserved.<br/>
+
+			NeHe™ and NeHe Productions™ are trademarks of GameDev.net, LLC<br/>
+			OpenGL® is a registered trademark of Silicon Graphics Inc.<br/>
+		</p>        
+		<br/>
+    </div>
+
+    
+    
+	    <script type="text/javascript" src="../../../static/js/syntax_highlighter/shCore.js"></script>
+        <script type="text/javascript" src="../../../static/js/syntax_highlighter/shBrushCpp.js"></script>
+	    <script type="text/javascript" src="../../../static/js/syntax_highlighter/shBrushJScript.js"></script>
+	    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    
+
+    <!-- Place this render call where appropriate -->
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = '../../../../apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+
+    
+<!-- GoogleAnalytics code -->
+<script src="../../../../www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-279474-2"; // Gamedev
+urchinTracker();
+</script> 
+  </body>
+
+<!-- Mirrored from nehe.gamedev.net/article/contest_halloween_2000/5629499534213120/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jan 2019 02:34:05 GMT -->
+</html>
