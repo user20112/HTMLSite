@@ -16,9 +16,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 		break;
 		
 		case "AddMessage":
-		$result = AddMessage(); 
+		$result = AddMessage($_POST['DisplayName'],$_POST['Message'],date('H:i'),$_POST['ID']); 
 		break;
-		
+	case "GetID":
+		$result = GetID();
+		break;
 	case "GetMessages":
 		$result = get_all_messages(); 
 		break;

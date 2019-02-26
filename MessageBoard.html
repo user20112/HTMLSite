@@ -88,7 +88,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="center gap fade-down section-heading">
-                                    <h2 class="main-title">Message Board</h2>
+                                    <h2 class="main-title" Id="Title" >Message Board</h2>
                                     	
                                 </div>
                             </div>   
@@ -106,10 +106,9 @@
 				<div class="center">
                  <section id="section_center"></section>
 					<div class="row-center">
-						<form action="/request.php" method="POST">
-							<input type="text" name="DisplayName" placeholder="Display name">
-							<input type="text" name="Message" placeholder="Message">
-							<input type="hidden" name="request" value="AddMessage">
+						<form  onsubmit="SubmissionFunction()">
+							<input id="DisplayName" type="text" name="DisplayName" placeholder="Display name">
+							<input id="Message" type="text" name="Message" placeholder="Message">
 							<input type="submit" value="Submit">
 						</form>	
 					</div>
@@ -155,7 +154,8 @@
     <script src="js/init.js"></script>
 	<script>
 			window.onload = function() { RequestMessageBoard() };
-		var request;		
+		var request;
+		var request2;		
 		var Fname="";
 		var Lname="";
 		var City="";
@@ -164,22 +164,32 @@
 		var Zip="";
 		var CurrentForm=100;
 		var NonPlus=0;
-	function RequestMessageBoard(){
+		var x=0;
+		function SubmissionFunction()
+		{
 
+			request2 = new XMLHttpRequest(); // message sent to server 
+
+			var fd = new FormData(); 
+			fd.append("request", "AddMessage"); 
+			fd.append("DisplayName",document.getElementById("DisplayName").value); 
+			fd.append("Message", document.getElementById("Message").value); 
+			fd.append("ID", x); 
+			request.open("POST", "request.php"); // prepare POST message
+			request.send(fd); 
+		}
+	function RequestMessageBoard(){
 			// form data objects found at: 
 			// https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects
-
-			document.getElementById("section_center").innerHTML = "loading Messages..."; 
-
 			request = new XMLHttpRequest(); // message sent to server 
-
+			document.getElementById("Message").value=x;
 			var fd = new FormData(); 
 			fd.append("request", "GetMessages"); 
 
 			request.onreadystatechange = authors_arrived; // setup callback (Asynchronous)
-			request.open("POST", "process_req.php"); // prepare POST message
+			request.open("POST", "request.php"); // prepare POST message
 			request.send(fd); 
-
+		setTimeout(RequestMessageBoard, 5000);
 		}// end req_authors
 
 	
@@ -198,7 +208,7 @@
 			}
 
 			var i; 
-			var tbl_data = "<table id='id_tbl'>"; 
+			var tbl_data = '<table class="table text-center">'; 
 			
 			tbl_data += "<colgroup>"; 
 
@@ -244,8 +254,10 @@
 				tbl_data += row.TimeSent; 
 				tbl_data += "</td>"; 
 				tbl_data += "</tr>"; // end item
+				x=row.MessageID;
 			}
 			tbl_data += "</table>"; 
+			x+=1;
 			document.getElementById("section_center").innerHTML = "<div class='scrollable'>" + tbl_data + "</div>"; // display table 
 		}
 	</script>

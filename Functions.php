@@ -17,7 +17,7 @@ function AddMessage($Name,$Message,$Time,$ID)
 	}catch(PDOException $ex){
 		return "open error: " . mysqli_connect_error() ;
 	}
-	$sql = 'insert MessageBoard values ('+Message+','+Time+','+Name+','+GetID()+');';
+	$sql = 'insert MessageBoard values ('.$Message.','.$Time.','.$Name.','.$ID.');';
 	$proc_get_authors = $conn->prepare($sql);
 	
 	try{
@@ -48,7 +48,7 @@ function GetID()
 	}catch(PDOException $ex){
 		return "open error: " . mysqli_connect_error() ;
 	}
-	$sql = 'select max(4) From MessageBoard;'; // stored procedure 
+	$sql = 'select MessageID,max(MessageID) From MessageBoard;'; // stored procedure 
 	$proc_get_authors = $conn->prepare($sql);
 	
 	try{
@@ -58,10 +58,18 @@ function GetID()
 		$conn = null; // close connection 
 		return "Bad sql";
 	}
+
+
+	$rows = array(); 
+
+	while($row = $proc_get_authors->fetch(PDO::FETCH_ASSOC)){
+		$rows[] = $row; // add row to array
+	}
+
+	$retVal = json_encode($rows); 
 	$conn = null; // close connection 
 
-	return $proc_get_authors->fetch(PDO::FETCH_ASSOC)+1; 
-
+	return $retVal; 
 }// end get_all_authors
 
 function get_schedule()
