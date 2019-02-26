@@ -13,10 +13,11 @@ CREATE TABLE MessageBoard
 (
    Message         varchar(255)     NOT NULL,
    TimeSent        varchar(20)      NOT NULL,
+   Name            varchar(20)      NOT NULL,
    MessageID       varchar(20)      NOT NULL,
    PRIMARY KEY(MessageID)
 );
 insert Schedule values ('Mlem','mlem','Mlem');
-insert MessageBoard values ('Mlem','mlem','Mlem');
+insert MessageBoard values ('Mlem','mlem','Mlem','Mlem');
 
 

@@ -9,6 +9,61 @@ function connect_to_pubs()
 	return $handle; 
 }
 
+function AddMessage($Name,$Message,$Time,$ID)
+{
+	$conn; 
+	try{
+		$conn = connect_to_pubs(); 
+	}catch(PDOException $ex){
+		return "open error: " . mysqli_connect_error() ;
+	}
+	$sql = 'insert MessageBoard values ('+Message+','+Time+','+Name+','+GetID()+');';
+	$proc_get_authors = $conn->prepare($sql);
+	
+	try{
+
+		$rs = $proc_get_authors->execute(); // result set = sql query 
+	}catch(PDOException $ex){
+		$conn = null; // close connection 
+		return "Bad sql";
+	}
+
+	$rows = array(); 
+
+	while($row = $proc_get_authors->fetch(PDO::FETCH_ASSOC)){
+		$rows[] = $row; // add row to array
+	}
+
+	$retVal = json_encode($rows); 
+	$conn = null; // close connection 
+
+	return $retVal; 
+
+}// end get_all_authors
+function GetID()
+{
+	$conn; 
+	try{
+		$conn = connect_to_pubs(); 
+	}catch(PDOException $ex){
+		return "open error: " . mysqli_connect_error() ;
+	}
+	$sql = 'select max(4) From MessageBoard;'; // stored procedure 
+	$proc_get_authors = $conn->prepare($sql);
+	
+	try{
+
+		$rs = $proc_get_authors->execute(); // result set = sql query 
+	}catch(PDOException $ex){
+		$conn = null; // close connection 
+		return "Bad sql";
+	}
+	$conn = null; // close connection 
+
+	return $proc_get_authors->fetch(PDO::FETCH_ASSOC)+1; 
+
+}// end get_all_authors
+
 function get_schedule()
 {
 	$conn; 

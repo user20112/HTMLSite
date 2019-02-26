@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Message Board | Devlin</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/pe-icons.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <script src="js/jquery.js"></script>
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/images/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57x57.png">
+
+    <script type="text/javascript">
+    jQuery(document).ready(function($){
+    'use strict';
+        jQuery('body').backstretch([
+            "images/Background.jpg",
+            "images/Background.jpg",
+            "images/Background.jpg"
+        ], {duration: 5000, fade: 500});
+
+        $("#mapwrapper").gMap({ controls: false,
+            scrollwheel: false,
+            markers: [{     
+                latitude:40.7566,
+                longitude: -73.9863,
+            icon: { image: "images/marker.png",
+                iconsize: [44,44],
+                iconanchor: [12,46],
+                infowindowanchor: [12, 0] } }],
+            icon: { 
+                image: "images/marker.png", 
+                iconsize: [26, 46],
+                iconanchor: [12, 46],
+                infowindowanchor: [12, 0] },
+            latitude:40.7566,
+            longitude: -73.9863,
+            zoom: 14 });
+    });
+    </script>
+</head><!--/head-->
+<body>
+<div id="preloader"></div>
+    <header class="navbar navbar-inverse navbar-fixed-top " role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                </button>
+                 <a class="navbar-brand" href="index.html"><h1><span class="pe-7s-gleam bounce-in"></span> AboutMe</h1></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-me.html">About Me</a></li>
+                    <li><a href="services.html">Menero/other</a></li>
+                    <li><a href="portfolio.html">Skills/Projects</a></li>
+                    <li><a href="http://24.60.48.74:5000">AspNetSite</a></li> 
+                    <li><a href="contact-me.html">Contact Info</a></li>
+                    <li><a href="CubeWorld.html">CubeWorld</a></li>  
+                    <li><a href="Archive/index.html">Archive</a></li>  
+                    <li><a href="ArchiveIndex.html">Archived Tutorials</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </header><!--/header-->
+
+    <section id="single-page-slider" class="no-margin">
+        <div class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="center gap fade-down section-heading">
+                                    <h2 class="main-title">Message Board</h2>
+                                    	
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div><!--/.item-->
+            </div><!--/.carousel-inner-->
+        </div><!--/.carousel-->
+    </section><!--/#main-slider-->
+
+    <div id="content-wrapper">
+        <section id="about-us" class="white">
+            <div class="container">
+                <div class="row">
+				<div class="center">
+                 <section id="section_center"></section>
+					<div class="row-center">
+						<form action="/request.php" method="POST">
+							<input type="text" name="DisplayName" placeholder="Display name">
+							<input type="text" name="Message" placeholder="Message">
+							<input type="hidden" name="request" value="AddMessage">
+							<input type="submit" value="Submit">
+						</form>	
+					</div>
+				</div>
+                </div>
+            </div>      
+        </section>
+    </div>
+
+    <div id="footer-wrapper">
+        <section id="bottom" class="">
+            <div class="container">
+                <div class="row">
+                    <div >
+                        <h4>Not finding what you want?</h4>
+                        <p>Go to the Contact Info Page and send me a text or email with the suggestion you want i get very few and would implement it rather rapidly.</p>
+                    </div><!--/.col-md-3-->
+
+                </div>
+            </div>
+        </section><!--/#bottom-->
+
+        <footer id="footer" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                       Go to top of the page
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="pull-right">
+                            <li><a id="gototop" class="gototop" href="#"><i class="fa fa-chevron-up"></i></a></li><!--#gototop-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer><!--/#footer-->
+    </div>
+
+
+    <script src="js/plugins.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>   
+    <script src="js/init.js"></script>
+	<script>
+			window.onload = function() { RequestMessageBoard() };
+		var request;		
+		var Fname="";
+		var Lname="";
+		var City="";
+		var State="";
+		var Address="";
+		var Zip="";
+		var CurrentForm=100;
+		var NonPlus=0;
+	function RequestMessageBoard(){
+
+			// form data objects found at: 
+			// https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects
+
+			document.getElementById("section_center").innerHTML = "loading Messages..."; 
+
+			request = new XMLHttpRequest(); // message sent to server 
+
+			var fd = new FormData(); 
+			fd.append("request", "GetMessages"); 
+
+			request.onreadystatechange = authors_arrived; // setup callback (Asynchronous)
+			request.open("POST", "process_req.php"); // prepare POST message
+			request.send(fd); 
+
+		}// end req_authors
+
+	
+	function authors_arrived(){ // called when the server responds to message 
+
+			if(request.readyState !== XMLHttpRequest.DONE) { return; } 
+			if(request.status !== 200){ return; } // check for HTTP OK 
+
+			var json_arr; 
+			var json; 
+
+			try{ 
+				json_arr = JSON.parse(request.responseText); 
+			}catch(ex){
+				alert(ex.message);  
+			}
+
+			var i; 
+			var tbl_data = "<table id='id_tbl'>"; 
+			
+			tbl_data += "<colgroup>"; 
+
+
+			for(i = 0; i < 6; i++)
+			{
+				tbl_data += "<col></col>"; 
+
+			}
+
+			tbl_data += "</colgroup>"; 
+
+			
+			for(i = 0; i < json_arr.length; i++)
+			{
+				var row = json_arr[i]; 
+				if ( i==0 )
+				{
+				if (json_arr.length>15)
+				{
+				i=json_arr.length-15;
+				}
+				tbl_data += "<tr id=" + row.MessageID + ">";
+				tbl_data += "<td>"; 
+				tbl_data += "Name"; 
+				tbl_data += "</td>"; 
+				tbl_data += "<td>"; 
+				tbl_data += "Message"; 
+				tbl_data += "</td>"; 
+				tbl_data += "<td >"; 
+				tbl_data += "Time"; 
+				tbl_data += "</td>"; 
+				tbl_data += "</tr>"; // end item
+				}
+				tbl_data += "<tr id=" + row.MessageID + ">";
+				tbl_data += "<td>"; 
+				tbl_data += row.Name;  
+				tbl_data += "</td>"; 
+				tbl_data += "<td>"; 
+				tbl_data += row.Message; 
+				tbl_data += "</td>";
+				tbl_data += "<td>"; 
+				tbl_data += row.TimeSent; 
+				tbl_data += "</td>"; 
+				tbl_data += "</tr>"; // end item
+			}
+			tbl_data += "</table>"; 
+			document.getElementById("section_center").innerHTML = "<div class='scrollable'>" + tbl_data + "</div>"; // display table 
+		}
+	</script>
+</body>
+</html>

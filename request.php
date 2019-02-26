@@ -15,6 +15,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 		$result = get_schedule(); 
 		break;
 		
+		case "AddMessage":
+		$result = AddMessage(); 
+		break;
+		
 	case "GetMessages":
 		$result = get_all_messages(); 
 		break;
