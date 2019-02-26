@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title> Pubs Interface </title> 
+</head> 
+
+<body>
+	<div class="mid_wrapper"> 
+
+	<section id="section_center"> Hello
+	</section>
+	
+	</div> 
+	<header>
+	<h1 id="ActionHeader"></h1>
+	<p id="OutputArea"> </p>
+	<p id="bottom"> </p>
+	</header>
+	<footer id="bottom_footer">
+	</footer> 
+
+	<script>
+		window.onload = function() { OnLoad() }; // load authors when page loads
+		var request;		
+		var Fname="";
+		var Lname="";
+		var City="";
+		var State="";
+		var Address="";
+		var Zip="";
+		var CurrentForm=100;
+		var NonPlus=0;
+		function OnLoad(){
+
+			// form data objects found at: 
+			// https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects
+
+			document.getElementById("section_center").innerHTML = "loading authors......"; 
+			request = new XMLHttpRequest(); // message sent to server 
+			var fd = new FormData(); 
+			fd.append("request", "GetSchedule"); 
+			request.onreadystatechange = ServerResponded; // setup callback (Asynchronous)
+			request.open("POST", "request.php"); // prepare POST message
+			request.send(fd); 
+			
+
+		}// end OnLoad
+
+		function ServerResponded(){ // called when the server responds to message 
+
+			if(request.readyState !== XMLHttpRequest.DONE) { return; } 
+			if(request.status !== 200){ return; } // check for HTTP OK 
+
+			var json_arr; 
+			var json; 
+			document.getElementById("section_center").innerHTML += "<p>" + request.responseText + "</p>"; // display table 
+		}
+
+	</script> 
+
+</body> 
+
+</html>
