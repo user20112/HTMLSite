@@ -17,7 +17,7 @@ function AddMessage($Name,$Message,$Time,$ID)
 	}catch(PDOException $ex){
 		return "open error: " . mysqli_connect_error() ;
 	}
-	$sql = 'insert MessageBoard values ('.$Message.','.$Time.','.$Name.','.$ID.');';
+	$sql = "insert MessageBoard values ('".$Message."','".$Time."','".$Name."','".$ID."');";
 	$proc_get_authors = $conn->prepare($sql);
 	
 	try{
@@ -29,16 +29,7 @@ function AddMessage($Name,$Message,$Time,$ID)
 	}
 
 	$rows = array(); 
-
-	while($row = $proc_get_authors->fetch(PDO::FETCH_ASSOC)){
-		$rows[] = $row; // add row to array
-	}
-
-	$retVal = json_encode($rows); 
 	$conn = null; // close connection 
-
-	return $retVal; 
-
 }// end get_all_authors
 function GetID()
 {
@@ -117,7 +108,44 @@ function get_all_messages()
 	}
 
 
-	$sql = 'SELECT * FROM MessageBoard;'; // stored procedure 
+	$sql = 'SELECT * FROM MessageBoard ORDER BY LENGTH(MessageID) Desc, MessageID Desc LIMIT 10;'; // stored procedure 
+
+	$proc_get_authors = $conn->prepare($sql);
+	
+	try{
+
+		$rs = $proc_get_authors->execute(); // result set = sql query 
+	}catch(PDOException $ex){
+		$conn = null; // close connection 
+		return "Bad sql";
+	}
+
+	$rows = array(); 
+
+	while($row = $proc_get_authors->fetch(PDO::FETCH_ASSOC)){
+		$rows[] = $row; // add row to array
+	}
+
+	$retVal = json_encode($rows); 
+	$conn = null; // close connection 
+
+	return $retVal; 
+
+}// end get_all_authors
+function get_all_projects()
+{
+	$conn; 
+
+	try{
+
+		$conn = connect_to_pubs(); 
+
+	}catch(PDOException $ex){
+		return "open error: " . mysqli_connect_error() ; 
+	}
+
+
+	$sql = 'SELECT * FROM ProjectBoard ORDER BY LENGTH(ProjectID), ProjectID;'; // stored procedure 
 
 	$proc_get_authors = $conn->prepare($sql);
 	

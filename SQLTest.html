@@ -39,23 +39,47 @@
 
 			document.getElementById("section_center").innerHTML = "loading authors......"; 
 			request = new XMLHttpRequest(); // message sent to server 
-			var fd = new FormData(); 
-			fd.append("request", "GetSchedule"); 
+			var fd = new FormData();  
+			fd.append("request", "GetProjects"); 
+			fd.append("DisplayName","name"); 
+			fd.append("Message", 'name'); 
+			fd.append("ID", "100"); 
 			request.onreadystatechange = ServerResponded; // setup callback (Asynchronous)
 			request.open("POST", "request.php"); // prepare POST message
 			request.send(fd); 
-			
 
 		}// end OnLoad
 
 		function ServerResponded(){ // called when the server responds to message 
-
 			if(request.readyState !== XMLHttpRequest.DONE) { return; } 
 			if(request.status !== 200){ return; } // check for HTTP OK 
 
 			var json_arr; 
 			var json; 
-			document.getElementById("section_center").innerHTML += "<p>" + request.responseText + "</p>"; // display table 
+
+			try{ 
+				json_arr = JSON.parse(request.responseText); 
+			}catch(ex){
+				alert(ex.message);  
+			}
+
+			var i; 
+			
+			var Section_data = '<div class="container">';
+			Section_data += '<div class="gap"></div>' ; 
+			for(i = 0; i < json_arr.length; i++)
+			{
+				var row = json_arr[i]; 
+				Section_data += '<div class="row"> <div class="col-md-4 col-sm-6"><div class="service-block"> <div class="pull-left bounce-in"></div><div class="media-body fade-up">';
+				Section_data += '<h3 class="media-heading" id='+row.ProjectID+' >' + row.Title + "</h3>";
+				Section_data += '<p>'; 
+				Section_data += row.Description;  
+				Section_data += '</p></div></div></div>'; 
+				x=parseInt(row.ProjectID, 10);
+			}
+			Section_data += '</div></div><div class="gap"></div>'; 
+			x+=1;
+			document.getElementById("section_center").innerHTML =Section_data; // display table 
 		}
 
 	</script> 

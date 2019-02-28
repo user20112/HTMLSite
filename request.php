@@ -11,19 +11,28 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 	case "Test":
 		$result = "Test"; 
 		break;
+		
 	case "GetSchedule":
 		$result = get_schedule(); 
 		break;
 		
-		case "AddMessage":
-		$result = AddMessage($_POST['DisplayName'],$_POST['Message'],date('H:i'),$_POST['ID']); 
+		case "GetProjects":
+		$result = get_all_projects(); 
 		break;
+		
+		case "AddMessage":
+		AddMessage($_POST['DisplayName'],$_POST['Message'],date('H:i'),$_POST['ID']);
+		$result = get_all_messages(); 
+		break;
+		
 	case "GetID":
 		$result = GetID();
 		break;
+		
 	case "GetMessages":
 		$result = get_all_messages(); 
 		break;
+		
 	echo $result;
 	
 	default: 

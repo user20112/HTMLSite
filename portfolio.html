@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>About Us | Devlin</title>
+    <title>Finished Projects</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/pe-icons.css" rel="stylesheet">
@@ -55,29 +55,13 @@
 <body>
 <div id="preloader"></div>
     <header class="navbar navbar-inverse navbar-fixed-top " role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle n+avigation</span>
-                    <i class="fa fa-bars"></i>
-                </button>
-                 <a class="navbar-brand" href="index.html"><h1><span class="pe-7s-gleam bounce-in"></span> Skills/Projects</h1></a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-me.html">About Me</a></li>
-                    <li><a href="services.html">Menero/other</a></li>
-                    <li><a href="portfolio.html">Skills/Projects</a></li>
-                    <li><a href="http://24.60.48.74:5000">AspNetSite</a></li> 
-                    <li><a href="contact-me.html">Contact Info</a></li>
-                    <li><a href="CubeWorld.html">CubeWorld</a></li>  
-                    <li><a href="Archive/index.html">Archive</a></li>
-                    <li><a href="ArchiveIndex.html">Archived Tutorials</a></li>
-                    
-                </ul>
-            </div>
-        </div>
+       		<div id="nav-placeholder" class="collapse navbar-collapse">
+			<script>
+			$(function(){
+			$("#nav-placeholder").load("nav.html");
+			});
+			</script>
+			</div>
     </header><!--/header-->
 
     <section id="single-page-slider" class="no-margin">
@@ -90,7 +74,7 @@
                                 <div class="center gap fade-down section-heading">
                                     <h2 class="main-title">Completed Projects</h2>
                                     <hr>
-                                    <p>Examples  of some of my completed projects.</p>
+                                    <p>List of some of my completed projects.</p>
                                 </div>
                             </div>   
                         </div>
@@ -101,171 +85,8 @@
     </section><!--/#main-slider-->
 
     <div id="content-wrapper">
-       <section id="services" class="white">
-            <div class="container">
-            <div class="gap"></div>             
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="service-block">
-                            <div class="pull-left bounce-in">
-                            </div>
-                            <div class="media-body fade-up">
-                                <h3 class="media-heading">TeamViewer Clone</h3>
-                                
-				<div>
-    				<em>Basicly a teamviewer clone. sent screenshots of one pc over the network to master pc where input was taken and transfered back. ran at about 30 frames per second on a decent computer. worked well but needed some optimization to really be usefull. supported multiple clients at once however.</em>
-				</div>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="service-block">
-                            <div class="pull-left bounce-in">
-                            </div>
-                            <div class="media-body fade-up">
-                                <h3 class="media-heading"> menero mining service installer and manager.</h3>
-                                <p>Ran a menero mining script as a service in the background then had a client to manage it allowing for more specific management then available with the windows service manager.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="service-block">
-                            <div class="pull-left bounce-in">
-                                
-                            </div>
-                            <div class="media-body fade-up">
-                                <h3 class="media-heading">Bank Manager</h3>
-                                <p> Took csv out from td bank and alloud for better transaction management to view finances. really surprised td bank didnt have anything along this line as a service available already.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-                </div><!--/.row-->
-                <div class="gap"></div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="service-block">
-                            <div class="pull-left bounce-in">
-                            </div>
-                            <div class="media-body fade-up">
-                                <h3 class="media-heading">Everything on the other page</h3>
-                                <p>The other page has all of my html5 projects such as snake a weird liquid simulator menero miner and some email and text things.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="service-block">
-                            <div class="pull-left bounce-in">
-                            </div>
-                            <div class="media-body fade-up">
-                                <h3 class="media-heading">Server's hosted</h3>
-                                <p>Tekkit classic 24.60.48.74:25565</p>
-								<p>Minecraft 24.60.48.74:25566</p>
-								<p>CubeWorld 24.60.48.74:12345</p>
-								<p>Terraria 24.60.48.74:7777</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="service-block">
-                            <div class="pull-left bounce-in">
-                            </div>
-                            <div class="media-body fade-up">
-                                <h3 class="media-heading">Key Logger/auto clicker</h3>
-                                <p> a c++ keyboard hook keylogger. and a c++ auto clicker that uses the windows api to simulate clicks whereever the mouse currently is. </p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-                </div><!--/.row-->
-				<div>
-				<div class="col-md-4 col-sm-6">
-                        <div class="service-block">
-                            <div class="pull-left bounce-in">
-                                
-                            </div>
-                            <div class="media-body fade-up">
-                                <h3 class="media-heading">Decoders</h3>
-                                <p> GIF,PNG,JPG, and zlib deocders in c# and a zlib decoder in c++.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-					<div class="col-md-4 col-sm-6">
-                        <div class="service-block">
-                            <div class="pull-left bounce-in">
-                                
-                            </div>
-                            <div class="media-body fade-up">
-                                <h3 class="media-heading">External Harddrive power enclosure</h3>
-                                <p> Used ac -> 12 v adapter then used voltage switching regulators and capacitors to get 3.3 v 5v and 12v rails to power some external harddrives for my dell poweredge server.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-					<div class="col-md-4 col-sm-6">
-                        <div class="service-block">
-                            <div class="pull-left bounce-in">
-                                
-                            </div>
-                            <div class="media-body fade-up">
-                                <h3 class="media-heading">Automated IC Drill</h3>
-                                <p> c++ code to drive a drill press using an arduino mega, an outboard to use a seperate powersupply to drive 2 stepper mottors to move the drill location from side to side then 1 to drill down then back up.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-					</div>
-					<div>
-					<div class="col-md-4 col-sm-6">
-                        <div class="service-block">
-                            <div class="pull-left bounce-in">
-                            </div>
-                            <div class="media-body fade-up">
-                                <h3 class="media-heading">.sh startup script</h3>
-                                <p>Uses a .sh file to spawn all my game servers and dynamicly served webpages at once in different tabs and uses expect's to respond to server querries and add initial parameters on launch.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-					<div class="col-md-4 col-sm-6">
-                        <div class="service-block">
-                            <div class="pull-left bounce-in">
-                            </div>
-                            <div class="media-body fade-up">
-                                <h3 class="media-heading">C++ Menero, and bitcoin miner</h3>
-                                <p>a c++ menero miner and a seperate c++ bitcoin miner. both are outdated compared to asics or modern programs i jsut wanted to get used to creating code to run certain algorithms as fast as i could.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-										<div class="col-md-4 col-sm-6">
-                        <div class="service-block">
-                            <div class="pull-left bounce-in">
-                            </div>
-                            <div class="media-body fade-up">
-                                <h3 class="media-heading">SQL Schedule Manager</h3>
-                                <p>A c# schedule manager interface that interfaces with my servers website that then comunicates with SQL to store a copy of my schedule that i can look at.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-					<div class="col-md-4 col-sm-6">
-                        <div class="service-block">
-                            <div class="pull-left bounce-in">
-                            </div>
-                            <div class="media-body fade-up">
-                                <h3 class="media-heading">Ubuntu Samba share </h3>
-                                <p>I setup my ubuntu server to use a samba share accross the network to help with html deploying as it was really tedios to copy the files over as the site grew. now its a one click deployment! </p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-					</div>
-            </div>
-            <div class="gap"></div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="center gap fade-down section-heading">
-                        <h2 class="main-title">Aspnet site</h2>
-                        <hr>
-                        <p>There i s also an aspnet site linked in the nav bar above.</p>
-                    </div>               
-                </div>
-            </div>
-            <div class="container">     
-        </section>
+       <section id="section_center" class="white">
+	   </section>
     </div>
 
       <div id="footer-wrapper">
@@ -301,7 +122,79 @@
     <script src="js/plugins.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>   
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWDPCiH080dNCTYC-uprmLOn2mt2BMSUk&amp;sensor=true"></script> 
     <script src="js/init.js"></script>
+		<script>
+			window.onload = function() { OnLoad() };
+		var request;
+		var request2;		
+		var Fname="";
+		var Lname="";
+		var City="";
+		var State="";
+		var Address="";
+		var Zip="";
+		var CurrentForm=100;
+		var NonPlus=0;
+		var x=0;
+		function OnLoad(){
+
+			// form data objects found at: 
+			// https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects
+
+			document.getElementById("section_center").innerHTML = "loading authors......"; 
+			request = new XMLHttpRequest(); // message sent to server 
+			var fd = new FormData();  
+			fd.append("request", "GetProjects"); 
+			fd.append("DisplayName","name"); 
+			fd.append("Message", 'name'); 
+			fd.append("ID", "100"); 
+			request.onreadystatechange = ServerResponded; // setup callback (Asynchronous)
+			request.open("POST", "request.php"); // prepare POST message
+			request.send(fd); 
+			
+
+		}// end OnLoad
+
+	
+		function ServerResponded(){ // called when the server responds to message 
+			if(request.readyState !== XMLHttpRequest.DONE) { return; } 
+			if(request.status !== 200){ return; } // check for HTTP OK 
+
+			var json_arr; 
+			var json; 
+
+			try{ 
+				json_arr = JSON.parse(request.responseText); 
+			}catch(ex){
+				alert(ex.message);  
+			}
+
+			var i; 
+			var y;
+			var Section_data = '<div class="container">';
+			Section_data += '<div class="gap"></div>' ; 
+			for(i = 0; i*3 < json_arr.length; i++)
+			{
+			Section_data += '<div class="row">';
+				
+			for(y=0;y+i*3<json_arr.length&&y<3;y++)
+			{
+				var row = json_arr[i*3+y];
+				Section_data += '<div class="col-md-4 col-sm-6"><div class="service-block"> <div class="pull-left bounce-in"></div><div class="media-body fade-up">';
+				Section_data += '<h3 class="media-heading" id='+row.ProjectID+' >' + row.Title + "</h3>";
+				Section_data += '<p>'; 
+				Section_data += row.Description;  
+				Section_data += '</p></div></div></div>'; 
+				x=parseInt(row.ProjectID, 10);
+			}
+				Section_data += '</div>';
+			}
+			Section_data += '</div><div class="gap"></div>'; 
+			x+=1;
+			document.getElementById("section_center").innerHTML =Section_data; // display table 
+			document.getElementById("section_center").id ="services";
+		}
+
+	</script>
 </body>
 </html>
