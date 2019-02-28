@@ -1,7 +1,6 @@
 <?php
 require '/usr/share/php/libphp-phpmailer/class.phpmailer.php';
 require '/usr/share/php/libphp-phpmailer/class.smtp.php';
-
 $name =$_POST['name'];
 $email =$_POST['email'];
 $website =$_POST['website'];

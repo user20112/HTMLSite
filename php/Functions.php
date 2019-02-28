@@ -31,6 +31,38 @@ function AddMessage($Name,$Message,$Time,$ID)
 	$rows = array(); 
 	$conn = null; // close connection 
 }// end get_all_authors
+
+function EditSchedule($Task,$Hour,$Day)
+{
+	$conn; 
+	try{
+		$conn = connect_to_pubs(); 
+	}catch(PDOException $ex){
+		return "open error: " . mysqli_connect_error() ;
+	}
+	$sql = "Update Schedule Set Task='".$Task."' where Hour='".$Hour."'and day='".$Day."';"; // stored procedure 
+	$proc_get_authors = $conn->prepare($sql);
+	
+	try{
+
+		$rs = $proc_get_authors->execute(); // result set = sql query 
+	}catch(PDOException $ex){
+		$conn = null; // close connection 
+		return "Bad sql";
+	}
+
+	$rows = array(); 
+
+	while($row = $proc_get_authors->fetch(PDO::FETCH_ASSOC)){
+		$rows[] = $row; // add row to array
+	}
+
+	$retVal = json_encode($rows); 
+	$conn = null; // close connection 
+
+	return $retVal; 
+
+}// end get_all_authors
 function GetID()
 {
 	$conn; 
@@ -71,7 +103,7 @@ function get_schedule()
 	}catch(PDOException $ex){
 		return "open error: " . mysqli_connect_error() ;
 	}
-	$sql = 'SELECT * FROM Schedule;'; // stored procedure 
+	$sql = 'SELECT * FROM Schedule order by Length(Hour),Hour,Length(Day),Day;'; // stored procedure 
 	$proc_get_authors = $conn->prepare($sql);
 	
 	try{

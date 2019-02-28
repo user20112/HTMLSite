@@ -145,11 +145,9 @@
 			request = new XMLHttpRequest(); // message sent to server 
 			var fd = new FormData();  
 			fd.append("request", "GetProjects"); 
-			fd.append("DisplayName","name"); 
-			fd.append("Message", 'name'); 
 			fd.append("ID", "100"); 
 			request.onreadystatechange = ServerResponded; // setup callback (Asynchronous)
-			request.open("POST", "request.php"); // prepare POST message
+			request.open("POST", "php/request.php"); // prepare POST message
 			request.send(fd); 
 			
 
@@ -194,7 +192,6 @@
 			document.getElementById("section_center").innerHTML =Section_data; // display table 
 			document.getElementById("section_center").id ="services";
 		}
-
 	</script>
 </body>
 </html>

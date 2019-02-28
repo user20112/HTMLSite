@@ -19,9 +19,6 @@
     <![endif]-->       
     <script src="js/jquery.js"></script>
     <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/images/ico/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57x57.png">
 
     <script type="text/javascript">
@@ -154,7 +151,7 @@
 			fd.append("Message", document.getElementById("Message").value); 
 			fd.append("ID", x.toString()); 
 			request.onreadystatechange = authors_arrived; // setup callback (Asynchronous)
-			request2.open("POST", "request.php"); // prepare POST message
+			request2.open("POST", "php/request.php"); // prepare POST message
 			request2.send(fd);
 			document.getElementById("Message").value="";
 		}
@@ -165,7 +162,7 @@
 			var fd = new FormData(); 
 			fd.append("request", "GetMessages"); 
 			request.onreadystatechange = authors_arrived; // setup callback (Asynchronous)
-			request.open("POST", "request.php"); // prepare POST message
+			request.open("POST", "php/request.php"); // prepare POST message
 			request.send(fd); 
 		setTimeout(RequestMessageBoard, 5000);
 		}// end req_authors

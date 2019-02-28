@@ -16,6 +16,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 		$result = get_schedule(); 
 		break;
 		
+	case "EditSchedule":
+		$result = EditSchedule($_POST['Task'],$_POST['Hour'],$_POST['Day']); 
+		break;
+		
 		case "GetProjects":
 		$result = get_all_projects(); 
 		break;

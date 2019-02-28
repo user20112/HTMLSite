@@ -45,7 +45,7 @@
 			fd.append("Message", 'name'); 
 			fd.append("ID", "100"); 
 			request.onreadystatechange = ServerResponded; // setup callback (Asynchronous)
-			request.open("POST", "request.php"); // prepare POST message
+			request.open("POST", "php/request.php"); // prepare POST message
 			request.send(fd); 
 
 		}// end OnLoad
