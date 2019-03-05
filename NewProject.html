@@ -86,8 +86,9 @@
                 <div class="gap"></div>
                 <div class="row-center">
                 <form>
-					<input id="DisplayName" type="text" name="DisplayName" placeholder="Display name">
-					<input id="Message" type="text" name="Message" placeholder="Message">
+					<input id="Title" type="text" name="DisplayName" placeholder="Title">
+					<input id="Desc" type="text" name="Message" placeholder="Desc">
+					<input type="file" name="pic" accept="image/*">
 					<input type="button" value="Submit" onclick="SubmissionFunction()" >
 				</form>	
                 </div>
@@ -139,11 +140,11 @@
 		{
 			request2 = new XMLHttpRequest(); // message sent to server 
 			var fd = new FormData(); 
-			fd.append("request", "AddMessage"); 
+			fd.append("request", "AddPost"); 
 			fd.append("Title",document.getElementById("Title").value); 
 			fd.append("Desc", document.getElementById("Desc").value); 
 			request.onreadystatechange = authors_arrived; // setup callback (Asynchronous)
-			request2.open("POST", "request.php"); // prepare POST message
+			request2.open("POST", "php/request.php"); // prepare POST message
 			request2.send(fd);
 			document.getElementById("Message").value="";
 		}

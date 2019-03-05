@@ -1,5 +1,5 @@
 <?php
-function connect_to_pubs()
+function ConnectToDataBase()
 {
 	$dsn = 'mysql:host=localhost;port=3306;dbname=MainDataBase'; 
 	$user = 'root';
@@ -8,12 +8,57 @@ function connect_to_pubs()
 	$handle->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 	return $handle; 
 }
+function AddCard($Time,$Cert,$Account,$Balance)
+{
+	$conn; 
+	try{
+		$conn = ConnectToDataBase(); 
+	}catch(PDOException $ex){
+		return "open error: " . mysqli_connect_error() ;
+	}
+	$sql = "insert GiftCardTable values ('".$Time."','".$Cert."','".$Account."','".$Balance."');";
+	$proc_get_authors = $conn->prepare($sql);
+	
+	try{
+
+		$rs = $proc_get_authors->execute();
+	}catch(PDOException $ex){
+		$conn = null; 
+		return "Bad sql";
+	}
+
+	$rows = array(); 
+	$conn = null; 
+}
+
+function AddProjIdea($Title,$Desc,$ID)
+{
+	$conn; 
+	try{
+		$conn = ConnectToDataBase(); 
+	}catch(PDOException $ex){
+		return "open error: " . mysqli_connect_error() ;
+	}
+	$sql = "insert NewProjectBoard values ('".$Title."','".$Desc."','".$ID."');";
+	$proc_get_authors = $conn->prepare($sql);
+	
+	try{
+
+		$rs = $proc_get_authors->execute();
+	}catch(PDOException $ex){
+		$conn = null; 
+		return "Bad sql";
+	}
+
+	$rows = array(); 
+	$conn = null; 
+}
 
 function AddMessage($Name,$Message,$Time,$ID)
 {
 	$conn; 
 	try{
-		$conn = connect_to_pubs(); 
+		$conn = ConnectToDataBase(); 
 	}catch(PDOException $ex){
 		return "open error: " . mysqli_connect_error() ;
 	}
@@ -22,63 +67,64 @@ function AddMessage($Name,$Message,$Time,$ID)
 	
 	try{
 
-		$rs = $proc_get_authors->execute(); // result set = sql query 
+		$rs = $proc_get_authors->execute();
 	}catch(PDOException $ex){
-		$conn = null; // close connection 
+		$conn = null; 
 		return "Bad sql";
 	}
 
 	$rows = array(); 
-	$conn = null; // close connection 
-}// end get_all_authors
+	$conn = null;
+}
+
 
 function EditSchedule($Task,$Hour,$Day)
 {
 	$conn; 
 	try{
-		$conn = connect_to_pubs(); 
+		$conn = ConnectToDataBase(); 
 	}catch(PDOException $ex){
 		return "open error: " . mysqli_connect_error() ;
 	}
-	$sql = "Update Schedule Set Task='".$Task."' where Hour='".$Hour."'and day='".$Day."';"; // stored procedure 
+	$sql = "Update Schedule Set Task='".$Task."' where Hour='".$Hour."'and day='".$Day."';";
 	$proc_get_authors = $conn->prepare($sql);
 	
 	try{
 
-		$rs = $proc_get_authors->execute(); // result set = sql query 
+		$rs = $proc_get_authors->execute();
 	}catch(PDOException $ex){
-		$conn = null; // close connection 
+		$conn = null; 
 		return "Bad sql";
 	}
 
 	$rows = array(); 
 
 	while($row = $proc_get_authors->fetch(PDO::FETCH_ASSOC)){
-		$rows[] = $row; // add row to array
+		$rows[] = $row; 
 	}
 
 	$retVal = json_encode($rows); 
-	$conn = null; // close connection 
+	$conn = null; 
 
 	return $retVal; 
 
-}// end get_all_authors
+}
 function GetID()
 {
 	$conn; 
 	try{
-		$conn = connect_to_pubs(); 
+		$conn = ConnectToDataBase(); 
 	}catch(PDOException $ex){
 		return "open error: " . mysqli_connect_error() ;
 	}
-	$sql = 'select MessageID,max(MessageID) From MessageBoard;'; // stored procedure 
+	$sql = 'select MessageID,max(MessageID) From MessageBoard;';
 	$proc_get_authors = $conn->prepare($sql);
 	
 	try{
 
-		$rs = $proc_get_authors->execute(); // result set = sql query 
+		$rs = $proc_get_authors->execute();
 	}catch(PDOException $ex){
-		$conn = null; // close connection 
+		$conn = null;
 		return "Bad sql";
 	}
 
@@ -86,46 +132,46 @@ function GetID()
 	$rows = array(); 
 
 	while($row = $proc_get_authors->fetch(PDO::FETCH_ASSOC)){
-		$rows[] = $row; // add row to array
+		$rows[] = $row; 
 	}
 
 	$retVal = json_encode($rows); 
-	$conn = null; // close connection 
+	$conn = null;  
 
 	return $retVal; 
-}// end get_all_authors
+}
 
 function get_schedule()
 {
 	$conn; 
 	try{
-		$conn = connect_to_pubs(); 
+		$conn = ConnectToDataBase(); 
 	}catch(PDOException $ex){
 		return "open error: " . mysqli_connect_error() ;
 	}
-	$sql = 'SELECT * FROM Schedule order by Length(Hour),Hour,Length(Day),Day;'; // stored procedure 
+	$sql = 'SELECT * FROM Schedule order by Length(Hour),Hour,Length(Day),Day;';
 	$proc_get_authors = $conn->prepare($sql);
 	
 	try{
 
-		$rs = $proc_get_authors->execute(); // result set = sql query 
+		$rs = $proc_get_authors->execute(); 
 	}catch(PDOException $ex){
-		$conn = null; // close connection 
+		$conn = null;  
 		return "Bad sql";
 	}
 
 	$rows = array(); 
 
 	while($row = $proc_get_authors->fetch(PDO::FETCH_ASSOC)){
-		$rows[] = $row; // add row to array
+		$rows[] = $row; 
 	}
 
 	$retVal = json_encode($rows); 
-	$conn = null; // close connection 
+	$conn = null; 
 
 	return $retVal; 
 
-}// end get_all_authors
+}
 
 function get_all_messages()
 {
@@ -133,72 +179,144 @@ function get_all_messages()
 
 	try{
 
-		$conn = connect_to_pubs(); 
+		$conn = ConnectToDataBase(); 
 
 	}catch(PDOException $ex){
 		return "open error: " . mysqli_connect_error() ; 
 	}
 
 
-	$sql = 'SELECT * FROM MessageBoard ORDER BY LENGTH(MessageID) Desc, MessageID Desc LIMIT 10;'; // stored procedure 
+	$sql = 'SELECT * FROM MessageBoard ORDER BY LENGTH(MessageID) Desc, MessageID Desc LIMIT 10;';  
 
 	$proc_get_authors = $conn->prepare($sql);
 	
 	try{
 
-		$rs = $proc_get_authors->execute(); // result set = sql query 
+		$rs = $proc_get_authors->execute(); 
 	}catch(PDOException $ex){
-		$conn = null; // close connection 
+		$conn = null; 
 		return "Bad sql";
 	}
 
 	$rows = array(); 
 
 	while($row = $proc_get_authors->fetch(PDO::FETCH_ASSOC)){
-		$rows[] = $row; // add row to array
+		$rows[] = $row; 
 	}
 
 	$retVal = json_encode($rows); 
-	$conn = null; // close connection 
+	$conn = null; 
 
 	return $retVal; 
 
-}// end get_all_authors
+}
+function GetList()
+{
+	$conn; 
+
+	try{
+
+		$conn = ConnectToDataBase(); 
+
+	}catch(PDOException $ex){
+		return "open error: " . mysqli_connect_error() ; 
+	}
+
+
+	$sql = 'SELECT * FROM NewProjectBoard ORDER BY LENGTH(ProjectID), ProjectID;'; 
+
+	$proc_get_authors = $conn->prepare($sql);
+	
+	try{
+
+		$rs = $proc_get_authors->execute(); 
+	}catch(PDOException $ex){
+		$conn = null;
+		return "Bad sql";
+	}
+
+	$rows = array(); 
+
+	while($row = $proc_get_authors->fetch(PDO::FETCH_ASSOC)){
+		$rows[] = $row; 
+	}
+
+	$retVal = json_encode($rows); 
+	$conn = null; 
+
+	return $retVal; 
+
+}
 function get_all_projects()
 {
 	$conn; 
 
 	try{
 
-		$conn = connect_to_pubs(); 
+		$conn = ConnectToDataBase(); 
 
 	}catch(PDOException $ex){
 		return "open error: " . mysqli_connect_error() ; 
 	}
 
 
-	$sql = 'SELECT * FROM ProjectBoard ORDER BY LENGTH(ProjectID), ProjectID;'; // stored procedure 
+	$sql = 'SELECT * FROM ProjectBoard ORDER BY LENGTH(ProjectID), ProjectID;'; 
 
 	$proc_get_authors = $conn->prepare($sql);
 	
 	try{
-
-		$rs = $proc_get_authors->execute(); // result set = sql query 
+		$rs = $proc_get_authors->execute(); 
 	}catch(PDOException $ex){
-		$conn = null; // close connection 
+		$conn = null; 
 		return "Bad sql";
 	}
 
 	$rows = array(); 
 
 	while($row = $proc_get_authors->fetch(PDO::FETCH_ASSOC)){
-		$rows[] = $row; // add row to array
+		$rows[] = $row; 
 	}
 
 	$retVal = json_encode($rows); 
-	$conn = null; // close connection 
+	$conn = null;  
 
 	return $retVal; 
 
-}// end get_all_authors
+}
+function GetallGiftCards()
+{
+	$conn; 
+
+	try{
+
+		$conn = ConnectToDataBase(); 
+
+	}catch(PDOException $ex){
+		return "open error: " . mysqli_connect_error() ; 
+	}
+
+
+	$sql = 'SELECT * FROM GiftCardTable ORDER BY LENGTH(Balance), Balance;'; 
+
+	$proc_get_authors = $conn->prepare($sql);
+	
+	try{
+		$rs = $proc_get_authors->execute(); 
+	}catch(PDOException $ex){
+		$conn = null; 
+		return "Bad sql";
+	}
+
+	$rows = array(); 
+
+	while($row = $proc_get_authors->fetch(PDO::FETCH_ASSOC)){
+		$rows[] = $row; 
+	}
+
+	$retVal = json_encode($rows); 
+	$conn = null;  
+
+	return $retVal; 
+
+}
 ?> 

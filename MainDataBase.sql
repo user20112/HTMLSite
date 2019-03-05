@@ -24,6 +24,21 @@ CREATE TABLE ProjectBoard
    ProjectID     varchar(20)      NOT NULL,
    PRIMARY KEY(ProjectID)
 );
+CREATE TABLE NewProjectBoard
+(
+   Title         varchar(255)     NOT NULL,
+   Description   varchar(2550)    NOT NULL,
+   ProjectID     varchar(20)      NOT NULL,
+   PRIMARY KEY(ProjectID)
+);
+CREATE TABLE GiftCardTable
+(
+   TimeOfSale         varchar(255)     NOT NULL,
+   CERTNumber   varchar(10)    NOT NULL,
+   AccountNumber     varchar(10)      NOT NULL,
+   Balance     varchar(10)      NOT NULL,
+   PRIMARY KEY(CERTNumber)
+);
 insert Schedule values ('Sleep','23:00','0');
 insert Schedule values ('Sleep','22:00','0');
 insert Schedule values ('Sleep','21:00','0');
@@ -214,3 +229,4 @@ insert ProjectBoard values ('C++ Menero, and bitcoin miner','a c++ menero miner 
 insert ProjectBoard values ('SQL Schedule Manager','A c# schedule manager interface that interfaces with my servers website that then comunicates with SQL to store a copy of my schedule that i can look at.',11);
 insert ProjectBoard values ('Ubuntu Samba share','I setup my ubuntu server to use a samba share accross the network to help with html deploying as it was really tedios to copy the files over as the site grew. now its a one click deployment!',12);
 insert ProjectBoard values ('Aspnet site','There i s also an aspnet site linked in the nav bar above.',13);
+insert NewProjectBoard values ('test idea','Create a sql stored Project idea board.',0);

@@ -15,28 +15,34 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 	case "GetSchedule":
 		$result = get_schedule(); 
 		break;
-		
+	case "GetCards":
+		$result = GetallGiftCards(); 
+		break;
+	case "GetList":
+		$result = GetList(); 
+		break;
+	case "AddProjIdea":
+		$result = AddProjIdea($_POST['Title'],$_POST['Desc'],$_POST['ID']); 
+		break;
+	case "AddCard":
+		$result = AddCard($_POST['TimeOfSale'],$_POST['CERT'],$_POST['Account'],$_POST['Balance']);
+		break;
 	case "EditSchedule":
 		$result = EditSchedule($_POST['Task'],$_POST['Hour'],$_POST['Day']); 
-		break;
-		
-		case "GetProjects":
+		break;	
+	case "GetProjects":
 		$result = get_all_projects(); 
 		break;
-		
-		case "AddMessage":
+	case "AddMessage":
 		AddMessage($_POST['DisplayName'],$_POST['Message'],date('H:i'),$_POST['ID']);
 		$result = get_all_messages(); 
 		break;
-		
 	case "GetID":
 		$result = GetID();
 		break;
-		
 	case "GetMessages":
 		$result = get_all_messages(); 
 		break;
-		
 	echo $result;
 	
 	default: 

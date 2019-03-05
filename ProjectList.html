@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Default Page</title>
+    <title>New Projects</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/pe-icons.css" rel="stylesheet">
@@ -18,6 +18,10 @@
     <![endif]-->       
     <script src="js/jquery.js"></script>
     <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/images/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57x57.png">
 
     <script type="text/javascript">
     jQuery(document).ready(function($){
@@ -51,7 +55,7 @@
 <body>
 <div id="preloader"></div>
     <header class="navbar navbar-inverse navbar-fixed-top " role="banner">
-		<div id="nav-placeholder" class="collapse navbar-collapse">
+       		<div id="nav-placeholder" class="collapse navbar-collapse">
 			<script>
 			$(function(){
 			$("#nav-placeholder").load("nav.html");
@@ -68,9 +72,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="center gap fade-down section-heading">
-                                    <h2 class="main-title">DefaultPage</h2>
+                                    <h2 class="main-title">Project Ideas</h2>
                                     <hr>
-                                    <p>MlemityMlemity</p>
+                                    <p>List of some Project ideas found on the internet. All apostrophes must be removed first.( it will refuse the string otherwise sorry:/)</p>
                                 </div>
                             </div>   
                         </div>
@@ -81,26 +85,16 @@
     </section><!--/#main-slider-->
 
     <div id="content-wrapper">
-        <section id="about-us" class="white">
-            <div class="container">
-                <div class="gap"></div>
-				
-                <div class="row">
-                <div class="col-md-12 fade-up">
-                       
-                 </div>
-                </div>
-				<div class="row">
-                    <div class="col-md-12 fade-up">
-                       
-                    </div>
-                    
-                </div>
-            </div>      
-        </section>
+	            <form>
+					<input id="Title" type="text" name="DisplayName" placeholder="Project Name">
+					<input id="Desc" type="text" name="Message" placeholder="Project Description">
+					<input type="button" value="Submit" onclick="SubmissionFunction()" >
+				</form>	
+       <section id="section_center" class="white">
+	   </section>
     </div>
 
-    <div id="footer-wrapper">
+      <div id="footer-wrapper">
         <section id="bottom" class="">
             <div class="container">
                 <div class="row">
@@ -117,7 +111,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                       Go to top of the page
+                        Go to top of the page
                     </div>
                     <div class="col-sm-6">
                         <ul class="pull-right">
@@ -134,5 +128,87 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>   
     <script src="js/init.js"></script>
+		<script>
+			window.onload = function() { OnLoad() };
+		var request;
+		var request2;		
+		var Fname="";
+		var Lname="";
+		var City="";
+		var State="";
+		var Address="";
+		var Zip="";
+		var CurrentForm=100;
+		var NonPlus=0;
+		var x=0;
+		function SubmissionFunction()
+		{
+		
+			request2 = new XMLHttpRequest(); // message sent to server 
+			var fd = new FormData(); 
+			fd.append("request", "AddProjIdea"); 
+			fd.append("Title",document.getElementById("Title").value); 
+			fd.append("Desc", document.getElementById("Desc").value); 
+			fd.append("ID", x); 
+			request2.open("POST", "php/request.php"); // prepare POST message
+			request2.send(fd);
+			document.getElementById("Desc").value="";
+			document.getElementById("Title").value="";
+			setTimeout(OnLoad, 1000);
+		}
+		function OnLoad(){
+		
+			document.getElementById("section_center").innerHTML = "";
+			request = new XMLHttpRequest(); // message sent to server 
+			var fd = new FormData();  
+			fd.append("request", "GetList");  
+			request.onreadystatechange = ServerResponded; // setup callback (Asynchronous)
+			request.open("POST", "php/request.php"); // prepare POST message
+			request.send(fd); 
+			 
+
+		}// end OnLoad
+
+	
+		function ServerResponded(){ // called when the server responds to message 
+			if(request.readyState !== XMLHttpRequest.DONE) { return; } 
+			if(request.status !== 200){ return; } // check for HTTP OK 
+
+			var json_arr; 
+			var json; 
+
+			try{ 
+				json_arr = JSON.parse(request.responseText); 
+			}catch(ex){
+				alert(ex.message);  
+			}
+
+			var i; 
+			var y;
+			var Section_data = '<div class="container">';
+			Section_data += '<div class="gap"></div>' ; 
+			for(i = 0; i*3 < json_arr.length; i++)
+			{
+			Section_data += '<div class="row">';
+				
+			for(y=0;y+i*3<json_arr.length&&y<3;y++)
+			{
+				var row = json_arr[i*3+y];
+				Section_data += '<div class="col-md-4 col-sm-6"><div class="service-block"> <div class="pull-left bounce-in"></div><div class="media-body fade-up">';
+				Section_data += '<h3 class="media-heading" id='+row.ProjectID+' >' + row.Title + "</h3>";
+				Section_data += '<p>'; 
+				Section_data += row.Description;  
+				Section_data += '</p></div></div></div>'; 
+				x=parseInt(row.ProjectID, 10);
+			}
+				Section_data += '</div>';
+			}
+			Section_data += '</div><div class="gap"></div>'; 
+			x+=1;
+			document.getElementById("section_center").innerHTML =Section_data; // display table 
+			
+			
+		}
+	</script>
 </body>
 </html>
