@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Contact me</title>
+    <title>Message Board</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/pe-icons.css" rel="stylesheet">
@@ -18,6 +19,7 @@
     <![endif]-->       
     <script src="js/jquery.js"></script>
     <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57x57.png">
 
     <script type="text/javascript">
     jQuery(document).ready(function($){
@@ -68,9 +70,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="center gap fade-down section-heading">
-                                    <h2 class="main-title">Get In Touch</h2>
-                                    <hr>
-                                    <p>Ill anwser emails within a day and texts within an hour.</p>
+                                    <h2 class="main-title" Id="Title" >Message Board</h2>
+                                    	
                                 </div>
                             </div>   
                         </div>
@@ -81,48 +82,21 @@
     </section><!--/#main-slider-->
 
     <div id="content-wrapper">
-        
-        <section id="contact" class="white">
+        <section id="about-us" class="white">
             <div class="container">
-                <div class="gap"></div>
                 <div class="row">
-                    <div class="col-md-4 fade-up">
-                        <h3>Contact Information</h3>
-                        <p><span class="icon icon-home"></span>819 AltonWoods Drive, Concord, NH<br/>
-                            <span class="icon icon-phone"></span>603 933 3797<br/>
-                            <span class="icon icon-mobile"></span>603 933 3797<br/>
-                            <span class="icon icon-envelop"></span> <a href="#">DevlinPaddock@Gmail.com</a> <br/>
-                            <span class="icon icon-facebook"></span> <a href="www.html.facebook.com/devlin.paddock">Devlin Paddock</a> <br/>
-                        </p>
-                    </div><!-- col -->
-                
-                    <div class="col-md-8 fade-up">
-                        <h3>Send me a message</h3>
-                        <br>
-                        <br>
-                        <div id="message"></div>
-                        <form method="post" action="php/sendemail.php" 					id="contactform">
-                            <input type="text" name="name" id="name" 					placeholder="Name" />
-                            <input type="text" name="email" id="email" 					placeholder="Email" />
-                            <input readonly type="text" name="website" id="website" value ="Email" placeholder="Website" />
-                            <textarea name="comments" id="comments" 					placeholder="Comments"></textarea>
-                            <input class="btn btn-outlined btn-primary" 				type="submit" name="submit" value="Submit" />
-                        </form>
-						<form method="post" action="php/sendemail.php" 					id="contactform">
-                            <input type="text" name="name" id="name" 					placeholder="Name" />
-                            <input type="text" name="email" id="email" 					placeholder="Email" />
-                            <input readonly type="text" name="website" id="website" value ="Text" placeholder="Website"  />
-                            <textarea name="comments" id="comments" 					placeholder="Comments"></textarea>
-                            <input class="btn btn-outlined btn-primary" 				type="submit" name="submit" value="Submit" />
-                        </form> 
-                    </div><!-- col -->
-                </div><!-- row -->  
-                <div class="gap"></div>         
-            </div>
+				<div class="center">
+                 <section id="section_center"></section>
+					<div class="row-center">	
+					</div>
+				</div>
+                </div>
+            </div>      
         </section>
     </div>
+	
 
-   <div id="footer-wrapper">
+    <div id="footer-wrapper">
         <section id="bottom" class="">
             <div class="container">
                 <div class="row">
@@ -139,7 +113,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                        Go to top of the page
+                       Go to top of the page
                     </div>
                     <div class="col-sm-6">
                         <ul class="pull-right">
@@ -155,7 +129,89 @@
     <script src="js/plugins.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>   
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWDPCiH080dNCTYC-uprmLOn2mt2BMSUk&amp;sensor=true"></script> 
     <script src="js/init.js"></script>
+	<script>
+			window.onload = function() { RequestMessageBoard() };
+		var request;
+		var request2;		
+		var CurrentForm=100;
+		var NonPlus=0;
+		var x=0;
+	function RequestMessageBoard(){
+			// form data objects found at: 
+			// https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects
+			request = new XMLHttpRequest(); // message sent to server 
+			var fd = new FormData(); 
+			fd.append("request", "GetCards"); 
+			request.onreadystatechange = authors_arrived; // setup callback (Asynchronous)
+			request.open("POST", "php/request.php"); // prepare POST message
+			request.send(fd); 
+		setTimeout(RequestMessageBoard, 5000);
+		}// end req_authors
+
+	
+	function authors_arrived(){ // called when the server responds to message 
+
+			if(request.readyState !== XMLHttpRequest.DONE) { return; } 
+			if(request.status !== 200){ return; } // check for HTTP OK 
+
+			var json_arr; 
+			var json; 
+
+			try{ 
+				json_arr = JSON.parse(request.responseText); 
+			}catch(ex){
+				alert(ex.message);  
+			}
+
+			var i; 
+			var tbl_data = '<table class="table text-center">'; 
+			
+			tbl_data += "<colgroup>"; 
+
+
+			for(i = 0; i < 3; i++)
+			{
+				tbl_data += "<col></col>"; 
+			}
+
+			tbl_data += "</colgroup>"; 
+
+			json_arr=json_arr.reverse();
+			for(i = 0; i < json_arr.length; i++)
+			{
+				var row = json_arr[i]; 
+				if ( i==0 )
+				{
+				tbl_data += "<tr>";
+				tbl_data += "<td>"; 
+				tbl_data += "TimeOfSale"; 
+				tbl_data += "</td>"; 
+				tbl_data += "<td>"; 
+				tbl_data += "AccountNumber"; 
+				tbl_data += "</td>"; 
+				tbl_data += "<td >"; 
+				tbl_data += "Balance"; 
+				tbl_data += "</td>"; 
+				tbl_data += "</tr>"; // end item
+				}
+				tbl_data += "<tr>";
+				tbl_data += "<td>"; 
+				tbl_data += row.TimeOfSale;  
+				tbl_data += "</td>"; 
+				tbl_data += "<td>"; 
+				tbl_data += row.AccountNumber; 
+				tbl_data += "</td>";
+				tbl_data += "<td>"; 
+				tbl_data += row.Balance; 
+				tbl_data += "</td>"; 
+				tbl_data += "</tr>"; // end item
+				x=parseInt(row.MessageID, 10);
+			}
+			tbl_data += "</table>"; 
+			x+=1;
+			document.getElementById("section_center").innerHTML = "<div class='scrollable'>" + tbl_data + "</div>"; // display table
+		}
+	</script>
 </body>
 </html>

@@ -32,6 +32,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 		break;	
 	case "GetProjects":
 		$result = get_all_projects(); 
+		break;	
+	case "GetUnits":
+		$result = get_all_units(); 
+		break;	
+	case "GetStructures":
+		$result = get_all_structures(); 
+		break;
+	case "GetUpgrades":
+		$result = get_all_upgrades(); 
+		break;
+	case "GetPlans":
+		$result = get_all_plans(); 
 		break;
 	case "AddMessage":
 		AddMessage($_POST['DisplayName'],$_POST['Message'],date('H:i'),$_POST['ID']);

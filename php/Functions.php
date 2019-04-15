@@ -283,6 +283,150 @@ function get_all_projects()
 	return $retVal; 
 
 }
+function get_all_units()
+{
+	$conn; 
+
+	try{
+
+		$conn = ConnectToDataBase(); 
+
+	}catch(PDOException $ex){
+		return "open error: " . mysqli_connect_error() ; 
+	}
+
+
+	$sql = 'SELECT * FROM Units ORDER BY LENGTH(UnitID), UnitID;'; 
+
+	$proc_get_authors = $conn->prepare($sql);
+	
+	try{
+		$rs = $proc_get_authors->execute(); 
+	}catch(PDOException $ex){
+		$conn = null; 
+		return "Bad sql";
+	}
+
+	$rows = array(); 
+
+	while($row = $proc_get_authors->fetch(PDO::FETCH_ASSOC)){
+		$rows[] = $row; 
+	}
+
+	$retVal = json_encode($rows); 
+	$conn = null;  
+
+	return $retVal; 
+
+}
+function get_all_structures()
+{
+	$conn; 
+
+	try{
+
+		$conn = ConnectToDataBase(); 
+
+	}catch(PDOException $ex){
+		return "open error: " . mysqli_connect_error() ; 
+	}
+
+
+	$sql = 'SELECT * FROM Structures ORDER BY LENGTH(StructureID), StructureID;'; 
+
+	$proc_get_authors = $conn->prepare($sql);
+	
+	try{
+		$rs = $proc_get_authors->execute(); 
+	}catch(PDOException $ex){
+		$conn = null; 
+		return "Bad sql";
+	}
+
+	$rows = array(); 
+
+	while($row = $proc_get_authors->fetch(PDO::FETCH_ASSOC)){
+		$rows[] = $row; 
+	}
+
+	$retVal = json_encode($rows); 
+	$conn = null;  
+
+	return $retVal; 
+
+}
+function get_all_upgrades()
+{
+	$conn; 
+
+	try{
+
+		$conn = ConnectToDataBase(); 
+
+	}catch(PDOException $ex){
+		return "open error: " . mysqli_connect_error() ; 
+	}
+
+
+	$sql = 'SELECT * FROM Upgrades ORDER BY LENGTH(UpgradeID), UpgradeID;'; 
+
+	$proc_get_authors = $conn->prepare($sql);
+	
+	try{
+		$rs = $proc_get_authors->execute(); 
+	}catch(PDOException $ex){
+		$conn = null; 
+		return "Bad sql";
+	}
+
+	$rows = array(); 
+
+	while($row = $proc_get_authors->fetch(PDO::FETCH_ASSOC)){
+		$rows[] = $row; 
+	}
+
+	$retVal = json_encode($rows); 
+	$conn = null;  
+
+	return $retVal; 
+
+}
+function get_all_plans()
+{
+	$conn; 
+
+	try{
+
+		$conn = ConnectToDataBase(); 
+
+	}catch(PDOException $ex){
+		return "open error: " . mysqli_connect_error() ; 
+	}
+
+
+	$sql = 'SELECT * FROM Plans ORDER BY LENGTH(PlanID), PlanID;'; 
+
+	$proc_get_authors = $conn->prepare($sql);
+	
+	try{
+		$rs = $proc_get_authors->execute(); 
+	}catch(PDOException $ex){
+		$conn = null; 
+		return "Bad sql";
+	}
+
+	$rows = array(); 
+
+	while($row = $proc_get_authors->fetch(PDO::FETCH_ASSOC)){
+		$rows[] = $row; 
+	}
+
+	$retVal = json_encode($rows); 
+	$conn = null;  
+
+	return $retVal; 
+
+}
 function GetallGiftCards()
 {
 	$conn; 

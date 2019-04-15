@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>IdleSwarm</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/pe-icons.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" href="images/ico/apple-touch-icon-57x57.png">
+
+    <script type="text/javascript">
+    jQuery(document).ready(function($){
+	'use strict';
+      	jQuery('body').backstretch([
+	        "images/Background.jpg",
+	        "images/Background2.png",
+	        "images/background3.png"
+	    ], {duration: 5000, fade: 500, centeredY: true });
+
+		$("#mapwrapper").gMap({ controls: false,
+         	scrollwheel: false,
+         	markers: [{ 	
+              	latitude:40.7566,
+				longitude: -73.9863,
+          	icon: { image: "images/marker.png",
+              	iconsize: [44,44],
+          		iconanchor: [12,46],
+          		infowindowanchor: [12, 0] } }],
+          	icon: { 
+              	image: "images/marker.png", 
+             	iconsize: [26, 46],
+              	iconanchor: [12, 46],
+              	infowindowanchor: [12, 0] },
+         	latitude:40.7566,
+         	longitude: -73.9863,
+          	zoom: 14 });
+    });
+    </script>
+</head><!--/head-->
+<body>
+<div id="preloader"></div>
+    <header class="navbar navbar-inverse navbar-fixed-top " role="banner">
+		<div id="nav-placeholder" class="collapse navbar-collapse">
+			<script>
+			$(function(){
+			$("#nav-placeholder").load("IdleNav.html");
+			});
+			</script>
+			</div>
+    </header><!--/header-->
+
+    <section id="main-slider" class="no-margin">
+        <div class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="carousel-content center centered">
+                                	<span class="home-icon pe-7s-gleam bounce-in"></span>
+                                    <h2 class="boxed animation animated-item-1 fade-down"> Welcome to the IdleSwarm Website</h2>
+                                    <br>
+                                    <a class="btn btn-md animation bounce-in" href="#services">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+            </div><!--/.carousel-inner-->
+        </div><!--/.carousel-->
+    </section><!--/#main-slider-->
+
+    <div id="content-wrapper">
+        <section id="services" class="white">
+            <div class="container">
+            <div class="gap"></div> 
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="center gap fade-down section-heading">
+                            <h2 class="main-title">Whats on this site</h2>
+                            <hr>
+                            <p> Quick description of navigation tabs.</p>
+                        </div>                
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                            </div>
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">Units</h3>
+                                <p>Displays a list of units and allows you to read a longer description on each unit.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                            </div>
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">Structures</h3>
+                                <p>Displays a list of Structures and allows you to read a longer description on each Structures.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                            </div>
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">Upgrades</h3>
+                                <p>Displays a list of Upgrades and allows you to read a longer description on each Upgrades.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                </div><!--/.row-->
+                <div class="gap"></div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                            </div>
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">Upcoming Plans</h3>
+                                <p>Displays a list of what i intend to add to the app over time.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                            </div>
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">User Feedback</h3>
+                                <p>Do you need to contact me ? Dont know where to find that info ? look no further!</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                </div><!--/.row-->
+            </div>
+            <div class="gap"></div>
+        </section>
+
+
+		<section id="single-quote" class="divider-section"> 	            	        
+	            <div class="container">
+	            	<div class="gap"></div> 
+	                <div class="row">                        
+	                    <div class='col-md-offset-2 col-md-8 fade-up'>
+	                        <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+	                            <div class="carousel-inner">
+	                                <div class="item active">
+	                                    <blockquote>
+	                                        <div class="row">
+	                                            <div class="col-sm-3 text-center">
+	                                                
+	                                            </div>
+	                                            <div class="col-sm-9">
+	                                                <p>He who has a why to live can bear almost any how.</p>
+	                                                <small>Friedrich Nietzsche</small>
+	                                            </div>
+	                                        </div>
+	                                    </blockquote>
+	                                </div>	                                
+	                            </div>                                     
+	                        </div> 
+	                    </div>
+	                </div>
+	                <div class="gap"></div>
+	      		</div>
+  		</section>
+
+        <section id="about-us" class="white">
+        	<div class="container">
+	            <div class="gap"></div>
+	            <div class="row">
+	                <div class="col-md-12">
+	                    <div class="center gap fade-down section-heading">
+	                        <h2 class="main-title">A little bit about me.</h2>
+	                        <hr>
+	                    </div>                
+	                </div>
+	            </div>
+	            <div class="row">
+	                <div class="col-md-10 col-md-offset-1 fade-up">
+	                    <p>I am currently a CPET student at NHTI in concord. my spare time is spent improving my sites, making small desktop applications, and maintaning my servers at home. In addition to that im currently working at baked in concord prepping for a project to rework their website using aspnet core and host it on a local server.</p>
+	                    <p>For more information about me You can head to this</p><a href="http://devlinpaddock.online/"> Site</a>
+	                </div>
+
+	            
+	            <div class="gap"></div>  
+	            <div class="gap"></div>   
+            </div>      
+        </section>
+        </div>
+
+    <div id="footer-wrapper">
+        <section id="bottom" class="">
+            <div class="container">
+                <div class="row">
+                    <div >
+                        <h4>Not finding what you want?</h4>
+                        <p>Go to the Contact Info Page and send me a text or email with the suggestion you want i get very few and would implement it rather rapidly.</p>
+                    </div><!--/.col-md-3-->
+
+                </div>
+            </div>
+        </section><!--/#bottom-->
+
+        <footer id="footer" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        Go to top of the page
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="pull-right">
+                            <li><a id="gototop" class="gototop" href="#"><i class="fa fa-chevron-up"></i></a></li><!--#gototop-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer><!--/#footer-->
+    </div>
+
+
+    <script src="js/plugins.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>   
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWDPCiH080dNCTYC-uprmLOn2mt2BMSUk&amp;sensor=true"></script> 
+    <script src="js/init.js"></script>
+</body>
+</html>

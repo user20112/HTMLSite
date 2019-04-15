@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Contact me</title>
+    <title>Structures</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/pe-icons.css" rel="stylesheet">
@@ -18,6 +18,10 @@
     <![endif]-->       
     <script src="js/jquery.js"></script>
     <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/images/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57x57.png">
 
     <script type="text/javascript">
     jQuery(document).ready(function($){
@@ -51,10 +55,10 @@
 <body>
 <div id="preloader"></div>
     <header class="navbar navbar-inverse navbar-fixed-top " role="banner">
-		<div id="nav-placeholder" class="collapse navbar-collapse">
+       		<div id="nav-placeholder" class="collapse navbar-collapse">
 			<script>
 			$(function(){
-			$("#nav-placeholder").load("nav.html");
+			$("#nav-placeholder").load("IdleNav.html");
 			});
 			</script>
 			</div>
@@ -68,9 +72,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="center gap fade-down section-heading">
-                                    <h2 class="main-title">Get In Touch</h2>
+                                    <h2 class="main-title">Structures</h2>
                                     <hr>
-                                    <p>Ill anwser emails within a day and texts within an hour.</p>
+                                    <p>List All Structures in the game</p>
                                 </div>
                             </div>   
                         </div>
@@ -81,56 +85,18 @@
     </section><!--/#main-slider-->
 
     <div id="content-wrapper">
-        
-        <section id="contact" class="white">
-            <div class="container">
-                <div class="gap"></div>
-                <div class="row">
-                    <div class="col-md-4 fade-up">
-                        <h3>Contact Information</h3>
-                        <p><span class="icon icon-home"></span>819 AltonWoods Drive, Concord, NH<br/>
-                            <span class="icon icon-phone"></span>603 933 3797<br/>
-                            <span class="icon icon-mobile"></span>603 933 3797<br/>
-                            <span class="icon icon-envelop"></span> <a href="#">DevlinPaddock@Gmail.com</a> <br/>
-                            <span class="icon icon-facebook"></span> <a href="www.html.facebook.com/devlin.paddock">Devlin Paddock</a> <br/>
-                        </p>
-                    </div><!-- col -->
-                
-                    <div class="col-md-8 fade-up">
-                        <h3>Send me a message</h3>
-                        <br>
-                        <br>
-                        <div id="message"></div>
-                        <form method="post" action="php/sendemail.php" 					id="contactform">
-                            <input type="text" name="name" id="name" 					placeholder="Name" />
-                            <input type="text" name="email" id="email" 					placeholder="Email" />
-                            <input readonly type="text" name="website" id="website" value ="Email" placeholder="Website" />
-                            <textarea name="comments" id="comments" 					placeholder="Comments"></textarea>
-                            <input class="btn btn-outlined btn-primary" 				type="submit" name="submit" value="Submit" />
-                        </form>
-						<form method="post" action="php/sendemail.php" 					id="contactform">
-                            <input type="text" name="name" id="name" 					placeholder="Name" />
-                            <input type="text" name="email" id="email" 					placeholder="Email" />
-                            <input readonly type="text" name="website" id="website" value ="Text" placeholder="Website"  />
-                            <textarea name="comments" id="comments" 					placeholder="Comments"></textarea>
-                            <input class="btn btn-outlined btn-primary" 				type="submit" name="submit" value="Submit" />
-                        </form> 
-                    </div><!-- col -->
-                </div><!-- row -->  
-                <div class="gap"></div>         
-            </div>
-        </section>
+       <section id="section_center" class="white">
+	   </section>
     </div>
 
-   <div id="footer-wrapper">
+      <div id="footer-wrapper">
         <section id="bottom" class="">
             <div class="container">
                 <div class="row">
                     <div >
                         <h4>Not finding what you want?</h4>
-                        <p>Go to the Contact Info Page and send me a text or email with the suggestion you want i get very few and would implement it rather rapidly.</p>
+                        <p>Go to the user feedback page and send me an email or message.</p>
                     </div><!--/.col-md-3-->
-
                 </div>
             </div>
         </section><!--/#bottom-->
@@ -155,7 +121,76 @@
     <script src="js/plugins.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>   
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWDPCiH080dNCTYC-uprmLOn2mt2BMSUk&amp;sensor=true"></script> 
     <script src="js/init.js"></script>
+		<script>
+			window.onload = function() { OnLoad() };
+		var request;
+		var request2;		
+		var Fname="";
+		var Lname="";
+		var City="";
+		var State="";
+		var Address="";
+		var Zip="";
+		var CurrentForm=100;
+		var NonPlus=0;
+		var x=0;
+		function OnLoad(){
+
+			// form data objects found at: 
+			// https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects
+
+			document.getElementById("section_center").innerHTML = "loading authors......"; 
+			request = new XMLHttpRequest(); // message sent to server 
+			var fd = new FormData();  
+			fd.append("request", "GetStructures"); 
+			fd.append("ID", "100"); 
+			request.onreadystatechange = ServerResponded; // setup callback (Asynchronous)
+			request.open("POST", "php/request.php"); // prepare POST message
+			request.send(fd); 
+			
+
+		}// end OnLoad
+
+	
+		function ServerResponded(){ // called when the server responds to message 
+			if(request.readyState !== XMLHttpRequest.DONE) { return; } 
+			if(request.status !== 200){ return; } // check for HTTP OK 
+
+			var json_arr; 
+			var json; 
+
+			try{ 
+				json_arr = JSON.parse(request.responseText); 
+			}catch(ex){
+				alert(ex.message);  
+			}
+
+			var i; 
+			var y;
+			var Section_data = '<div class="container">';
+			Section_data += '<div class="gap"></div>' ; 
+			for(i = 0; i*3 < json_arr.length; i++)
+			{
+			Section_data += '<div class="row">';
+				
+			for(y=0;y+i*3<json_arr.length&&y<3;y++)
+			{
+				var row = json_arr[i*3+y];
+				Section_data += '<div class="col-md-4 col-sm-6"><div class="service-block"> <div class="pull-left bounce-in"></div><div class="media-body fade-up">';
+				Section_data += '<h3 class="media-heading" id='+row.StructureID+' >' + row.Title + "</h3>";
+				Section_data += '<p>'; 
+				Section_data += row.Description;  
+				Section_data += '</p></div></div></div>'; 
+				x=parseInt(row.StructureID, 10);
+			}
+				Section_data += '</div>';
+			}
+			Section_data += '</div><div class="gap"></div>'; 
+			x+=1;
+			document.getElementById("section_center").innerHTML =Section_data; // display table 
+			document.getElementById("section_center").id ="services";
+		}
+	</script>
 </body>
 </html>
